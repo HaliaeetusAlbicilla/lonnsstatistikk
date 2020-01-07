@@ -1,41 +1,41 @@
 /* Alle verdier */
 select * from dbo.lonn2019dummy
 
-/* TRENGS IKKE: Lønn for de ulike sektorene */
-select Lønn 
+/* TRENGS IKKE: Lï¿½nn for de ulike sektorene */
+select LÃ¸nn 
 from dbo.lonn2019dummy 
 where Sektor LIKE 'Privat'
 
-select Lønn 
+select LÃ¸nn 
 from dbo.lonn2019dummy 
 where Sektor LIKE 'Stat'
 
-select Lønn 
+select LÃ¸nn 
 from dbo.lonn2019dummy 
 where Sektor LIKE 'Kommune'
 
-select Lønn 
+select LÃ¸nn 
 from dbo.lonn2019dummy
 
-/* Gjennomsnittslønn gruppert etter sektor */
-SELECT Sektor, AVG(Lønn) AS "Gjennomsnittslønn"
+/* Gjennomsnittslï¿½nn gruppert etter sektor */
+SELECT Sektor, AVG(LÃ¸nn) AS "GjennomsnittslÃ¸nn"
 FROM dbo.lonn2019dummy
 GROUP BY Sektor
 UNION ALL
-SELECT 'Alle' AS Sektor, AVG(Lønn) AS "Gjennomsnittslønn"
+SELECT 'Alle' AS Sektor, AVG(LÃ¸nn) AS "GjennomsnittslÃ¸nn"
 FROM dbo.lonn2019dummy
 
-/* TRENGS IKKE: Gjennomsnittslønn alle */
-SELECT AVG(Lønn) AS "Gjennomsnittslønn alle"
+/* TRENGS IKKE: Gjennomsnittslï¿½nn alle */
+SELECT AVG(LÃ¸nn) AS "GjennomsnittslÃ¸nn alle"
 FROM dbo.lonn2019dummy
 
-/* Tariffområder */
-SELECT Tariffavtale, AVG(Lønn) AS "Gjennomsnittslønn"
+/* Tariffomrï¿½der */
+SELECT Tariffavtale, AVG(LÃ¸nn) AS "GjennomsnittslÃ¸nn"
 FROM dbo.lonn2019dummy
 GROUP BY Tariffavtale
 
-/* Privat uten tariffområde */
-SELECT Sektor, AVG(Lønn) AS "Gjennomsnittslønn"
+/* Privat uten tariffomrï¿½de */
+SELECT Sektor, AVG(LÃ¸nn) AS "GjennomsnittslÃ¸nn"
 FROM dbo.lonn2019dummy
 WHERE Tariffavtale IS NULL
 GROUP BY Sektor;
