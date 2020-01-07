@@ -23,7 +23,12 @@ app.get('/einar/data', function (req, res) {
     const sql = require("mssql"); //require the drivers
 
     // Config object for Azure SQL connection
+<<<<<<< HEAD
     const config = require('./config')
+=======
+   const config = require('./config')
+
+>>>>>>> a0f3c9b4c36ef600548edccec0784b7f47072b9b
 
     //Connect to DB
     sql.connect(config.dbConfig, function (err) {
