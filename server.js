@@ -1,14 +1,18 @@
+//https://www.highcharts.com/blog/post/visualize-wikipedia-data-with-nodejs-and-highcharts/
 
-const express = require('express'); //Import Express
-const app = express(); // Init app
-const path = require('path');
-// const bodyParser = require('body-parser');
+var express = require('express'); //Import Express
+var app = express(); // Init app
+var router = express.Router();
+var path = require('path');
+var bodyParser = require('body-parser');
+var Highcharts = require('highcharts');
+var rp = require('request-promise');
 
 app.use(express.urlencoded({ extended: false }));
 // app.use(express.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
-// app.use(bodyParser.raw());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.raw());
 
 //home
 app.get('/', function (req, res) {
@@ -44,7 +48,9 @@ app.get('/einar/data', function (req, res) {
             res.send(result);
         });
 
-
+app.post('/myaction', function(req, res) {
+    res.send('This was sent: ' + req.body.result)
+});
 
         //    let sqlQueryKommune = 'select Lønn from lonn2019dummy where Sektor LIKE 'Kommune';');
         // let sqlQueryStat = 'select Lønn from lonn2019dummy where Sektor LIKE 'Stat';';
@@ -67,7 +73,7 @@ app.get('/einar/data', function (req, res) {
     });
 });
 
-
+module.exports = app;
 
 
 //start server
