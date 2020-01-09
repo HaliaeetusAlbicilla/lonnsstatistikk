@@ -7,12 +7,17 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var Highcharts = require('highcharts');
 var rp = require('request-promise');
+var multer = require('multer');
+var upload = multer();
+
 
 app.use(express.urlencoded({ extended: false }));
-// app.use(express.json());
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
+// require('highcharts/modules/exporting')(Highcharts);  
+
 
 //home
 app.get('/', function (req, res) {
@@ -22,7 +27,7 @@ app.get('/', function (req, res) {
 
 
 app.get('/einar/data', function (req, res) {
-    console.log("POST");
+    console.log("GET");
     // Import the mssql package
     const sql = require("mssql"); //require the drivers
 
@@ -45,12 +50,11 @@ app.get('/einar/data', function (req, res) {
             //Display data
             console.log(result);
             //Output data
-            res.send(result);
+             res.send(result);
+            sql.close(); //Trengs det?
         });
 
-app.post('/myaction', function(req, res) {
-    res.send('This was sent: ' + req.body.result)
-});
+ 
 
         //    let sqlQueryKommune = 'select Lønn from lonn2019dummy where Sektor LIKE 'Kommune';');
         // let sqlQueryStat = 'select Lønn from lonn2019dummy where Sektor LIKE 'Stat';';
@@ -72,6 +76,36 @@ app.post('/myaction', function(req, res) {
 
     });
 });
+
+// app.post('/einar/data', function(req, res) {
+//     res.send('This was sent: ' + req.body.result)
+// });
+
+// app.post('/einar/post',function(req,res){
+//     // console.log('i am in app post', req.body);
+//     res.json({"name" : req.body.first +' '+req.body.last});
+//   });
+
+// app.use("/test", urlencoded, function(req, res){
+//     res.send(req.body)
+// });
+
+// rp(options)
+//   .then((parseBody) => {
+//     var arrData = [];
+//     var year, month, day;
+
+//     for (i = 0; i < parseBody.items.length; i++) {
+//       year = parseBody.items[i].timestamp.slice(0, 4);
+//       month = parseBody.items[i].timestamp.slice(4, 6);
+//       day = parseBody.items[i].timestamp.slice(6, 8);
+//       arrData.push([new Date(year + '-' + month + '-' + day).toDateString(), parseBody.items[i].views]);
+//     }
+
+//     year = parseBody.items[0].timestamp.slice(0, 4);
+//     month = parseBody.items[0].timestamp.slice(4, 6);
+//     day = parseBody.items[0].timestamp.slice(6, 8);
+
 
 module.exports = app;
 
