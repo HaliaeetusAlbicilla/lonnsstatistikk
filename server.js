@@ -40,10 +40,17 @@ app.get('/einar/data', function (req, res) {
         request.query("SELECT Sektor, AVG(Lønn) AS \"Gjennomsnittslønn\" FROM dbo.lonn2019dummy GROUP BY Sektor UNION ALL SELECT 'Alle' AS Sektor, AVG(Lønn) AS \"Gjennomsnittslønn\" FROM dbo.lonn2019dummy", function (err, result) {
             if (err) console.log(err)
             //Display data
-            console.log(result);
+            
+            let recordset = result.recordset;
+
+            recordset.forEach(element => {
+                console.log("Sektor: ", element["Sektor"]);
+                console.log("Gjennomsnittslønn: ", element["Gjennomsnittslønn"]);
+            });
+
             //Output data
             //callback(result);
-            res.json(result);
+            res.json(recordset);
             sql.close(); //Trengs det?
         });
     });
