@@ -7,35 +7,56 @@
     <title>Page Title</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-    <script src="charts.js"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 
 <body>
 
     <h1>Naturviternes lønnsstatistikk</h1>
 
+    <button id="getData">Hent data</button>
+    <div id="output"></div>
     <div id="container" style="width:100%; height:400px;"></div>
 
     <script>
-    var chart1; // globally available
-    document.addEventListener('DOMContentLoaded', function() {
-        chart1 = Highcharts.stockChart('container', {
-            rangeSelector: {
-                selected: 1
-            },
-            series: [{
-                name: 'test',
-                data: result // predefined JavaScript array
-           }]
-       });  
-    });
+        document.getElementById('getData').addEventListener
+            ('click', getData);
+
+        function getData() {
+            // fetch('/einar/data')
+            //     .then(function (res) {
+            //         return (res.json());
+            //     })
+            //     .then(function (data) {
+            //         console.log(data)
+            //     })
+
+            fetch('/einar/data')
+                .then((res) => res.json())
+                .then((data) => {
+                    let output = '<h2>Lønn</h2>'
+                    Object.keys(data.recordsets[0][0]).forEach(function (noe) {
+                        console.log("INNI ARRAY " + noe)
+                        output += `
+                        <ul>
+                            <li>${noe}</li>
+
+                        </ul>
+                        `;
+                    });
+                    document.getElementById('output').innerHTML = output;
+                });
+        }
+        //         .then((data) => console.log(data.recordsets[0][0]["Sektor"]))
+        // }
+
+            // {
+            //     chart.series[0].addPoint({ x: data.timestamp * 1000, y: Number(data.ticker.price) })
+
+
     </script>
 
-<p><a href="/Lonn">Link til lønn</a></p>
+    <p><a href="/Lonn">Link til lønn</a></p>
 </body>
 
 </html>

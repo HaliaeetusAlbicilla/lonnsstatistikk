@@ -7,8 +7,6 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var Highcharts = require('highcharts');
 var rp = require('request-promise');
-var multer = require('multer');
-var upload = multer();
 
 
 app.use(express.urlencoded({ extended: false }));
@@ -16,7 +14,6 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
-// require('highcharts/modules/exporting')(Highcharts);  
 
 
 //home
@@ -35,45 +32,20 @@ app.get('/einar/data', function (req, res) {
     const config = require('./config')
     //Connect to DB
     sql.connect(config.dbConfig, function (err) {
-
-        if (err) console.log(err);
-
+        if (err) console.log(err)
         //New request object
         let request = new sql.Request();
-
         //query to DB and get record/fields in the data object
-
         // let sqlQueryAll = 'SELECT * FROM dbo.lonn2019dummy';
-
         request.query("SELECT Sektor, AVG(Lønn) AS \"Gjennomsnittslønn\" FROM dbo.lonn2019dummy GROUP BY Sektor UNION ALL SELECT 'Alle' AS Sektor, AVG(Lønn) AS \"Gjennomsnittslønn\" FROM dbo.lonn2019dummy", function (err, result) {
             if (err) console.log(err)
             //Display data
             console.log(result);
             //Output data
-             res.send(result);
+            //callback(result);
+            res.json(result);
             sql.close(); //Trengs det?
         });
-
- 
-
-        //    let sqlQueryKommune = 'select Lønn from lonn2019dummy where Sektor LIKE 'Kommune';');
-        // let sqlQueryStat = 'select Lønn from lonn2019dummy where Sektor LIKE 'Stat';';
-        // let sqlQueryPriv = 'select Lønn from lonn2019dummy where Sektor LIKE 'Privat';';
-
-        //Run the query. Send output to console for now.
-        // request.query(sqlQueryAll, function (err, data) {
-
-        //     if (err) console.log(err)
-
-        //     //Display data
-        //     console.log(data);
-
-        //     //res.send(data); //output raw data
-        //     //close connection
-
-        //     sql.close();
-        // });
-
     });
 });
 
@@ -105,8 +77,6 @@ app.get('/einar/data', function (req, res) {
 //     year = parseBody.items[0].timestamp.slice(0, 4);
 //     month = parseBody.items[0].timestamp.slice(4, 6);
 //     day = parseBody.items[0].timestamp.slice(6, 8);
-
-
 module.exports = app;
 
 
