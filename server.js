@@ -41,9 +41,10 @@ app.get('/einar/data', function (req, res) {
             if (err) console.log(err)
             //Display data
             console.log(result);
+            let recordset = result.recordset;
             //Output data
             //callback(result);
-            res.json(result);
+            res.json(recordset);
             sql.close(); //Trengs det?
         });
     });
