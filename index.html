@@ -15,18 +15,11 @@
 
     <h1>Naturviternes lønnsstatistikk</h1>
 
-    <button id="getData">Hent data</button>
-    <div id="output"></div>
     <div id="container" style="width:100%; height:400px;"></div>
 
+    <script>
 
-
-    <script type="module">
-
-        document.getElementById('getData').addEventListener
-            ('click', getData);
-
-        function getData() {
+      document.addEventListener('DOMContentLoaded', function () {
 
             fetch('/einar/data')
                 .then((res) => res.json())
@@ -78,11 +71,10 @@
                         color: 'green',
                     })
 
-                let chart = new Highcharts.Chart(options);
-                     
+                    let chart = new Highcharts.Chart(options); 
 
                 });
-        }
+            });
 
     </script>
 
