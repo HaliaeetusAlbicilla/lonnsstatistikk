@@ -7,6 +7,7 @@
     <title>Page Title</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 
@@ -39,6 +40,10 @@
                 .then((data) => {
 
                     let output = '<h2>Lønn</h2>'
+                    
+                    const privat = data.find(element => element["Sektor"] === 'Privat');
+                    const stat = data.find(element => element["Sektor"] === 'Stat');
+                    const kommune = data.find(element => element["Sektor"] === 'Kommune');
 
                     data.forEach(data => {
                         console.log("Sektor: ", data["Sektor"]);
@@ -50,6 +55,46 @@
 
                      });
                     document.getElementById('output').innerHTML = output;
+
+                    let options = {
+                        chart: {
+                            renderTo: 'container',
+                        },
+                        title: {
+                        text: 'Historisk lønnsutvikling etter sektor'
+                        },
+                        xAxis: {
+                            categories: [2012, 2013, 2014, 2015, 2016, 2017, 2018]
+                        },
+                        yAxis: {
+                            title: {
+                                text: 'Lønn'
+                            }
+                        },
+                        series: []
+                    };
+
+                    options.series.push({
+                        name: 'Kommune',
+                        data: [500, 520, 540, 520, 560],
+                        color: 'blue',
+                    })
+
+                     options.series.push({
+                        name: 'Stat',
+                        data: [600, 610, 640, 650, 660],
+                        color: 'red',
+                    })
+
+                     options.series.push({
+                        name: 'Privat',
+                        data: [450, 500, 520, 540, 600, 620],
+                        color: 'green',
+                    })
+
+                let chart = new Highcharts.Chart(options);
+                     
+
                 });
         }
         //         .then((data) => console.log(data.recordsets[0][0]["Sektor"]))
@@ -58,32 +103,7 @@
             // {
             //     chart.series[0].addPoint({ x: data.timestamp * 1000, y: Number(data.ticker.price) })
 
-            import Highcharts from 'https://code.highcharts.com/es-modules/masters/highcharts.src.js';
-
-                Highcharts.chart('container', {
-                    title: {
-                       text: 'Historisk lønnsutvikling etter sektor'
-                    },
-                    xAxis: {
-                        categories: [2012, 2013, 2014, 2015, 2016, 2017, 2018]
-                    },
-                    yAxis: {
-                        title: {
-                            text: 'Lønn'
-                        }
-                    },
-                    series: [{
-                        name: 'Kommune',
-                        data: [500, 520, 540, 550, 560]
-                    }, {
-                        name: 'Stat',
-                        data: [600, 610, 640, 650, 660]
-                    }, {
-                        name: 'Privat',
-                        data: [450, 500, 520, 540, 600, 620]
-                    }]
-                });
-
+              
 
     </script>
 
