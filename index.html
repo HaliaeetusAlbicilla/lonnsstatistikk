@@ -20,7 +20,8 @@
 
 
 
-    <script>
+    <script type="module">
+
         document.getElementById('getData').addEventListener
             ('click', getData);
 
@@ -56,6 +57,32 @@
 
             // {
             //     chart.series[0].addPoint({ x: data.timestamp * 1000, y: Number(data.ticker.price) })
+
+            import Highcharts from 'https://code.highcharts.com/es-modules/masters/highcharts.src.js';
+
+                Highcharts.chart('container', {
+                    title: {
+                       text: 'Historisk lønnsutvikling etter sektor'
+                    },
+                    xAxis: {
+                        categories: [2012, 2013, 2014, 2015, 2016, 2017, 2018]
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Lønn'
+                        }
+                    },
+                    series: [{
+                        name: 'Kommune',
+                        data: [500, 520, 540, 550, 560]
+                    }, {
+                        name: 'Stat',
+                        data: [600, 610, 640, 650, 660]
+                    }, {
+                        name: 'Privat',
+                        data: [450, 500, 520, 540, 600, 620]
+                    }]
+                });
 
 
     </script>
