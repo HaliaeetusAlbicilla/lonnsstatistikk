@@ -27,13 +27,6 @@
             ('click', getData);
 
         function getData() {
-            // fetch('/einar/data')
-            //     .then(function (res) {
-            //         return (res.json());
-            //     })
-            //     .then(function (data) {
-            //         console.log(data)
-            //     })
 
             fetch('/einar/data')
                 .then((res) => res.json())
@@ -45,16 +38,9 @@
                     const stat = data.find(element => element["Sektor"] === 'Stat');
                     const kommune = data.find(element => element["Sektor"] === 'Kommune');
 
-                    data.forEach(data => {
-                        console.log("Sektor: ", data["Sektor"]);
-                        console.log("Gjennomsnittslønn: ", data["Gjennomsnittslønn"]);
-
-                        output += `Sektor: ${data["Sektor"]} OG gjennomsnittslønn: ${data["Gjennomsnittslønn"]}`;
-                        
-                        output+= "</br></br>"
-
-                     });
-                    document.getElementById('output').innerHTML = output;
+                    console.log("PRIVAT: ", privat['Gjennomsnittslønn']);
+                    console.log("STAT: ", stat['Gjennomsnittslønn']);
+                    console.log("KOMMUNE: ", kommune['Gjennomsnittslønn']);
 
                     let options = {
                         chart: {
@@ -76,19 +62,19 @@
 
                     options.series.push({
                         name: 'Kommune',
-                        data: [500, 520, 540, 520, 560],
+                        data: [kommune['Gjennomsnittslønn'], 520000, 540000, 520000, 560000],
                         color: 'blue',
                     })
 
                      options.series.push({
                         name: 'Stat',
-                        data: [600, 610, 640, 650, 660],
+                        data: [stat['Gjennomsnittslønn'], 610000, 640000, 650000, 660000],
                         color: 'red',
                     })
 
                      options.series.push({
                         name: 'Privat',
-                        data: [450, 500, 520, 540, 600, 620],
+                        data: [privat['Gjennomsnittslønn'], 500000, 520000, 540000, 600000, 620000],
                         color: 'green',
                     })
 
@@ -97,13 +83,6 @@
 
                 });
         }
-        //         .then((data) => console.log(data.recordsets[0][0]["Sektor"]))
-        // }
-
-            // {
-            //     chart.series[0].addPoint({ x: data.timestamp * 1000, y: Number(data.ticker.price) })
-
-              
 
     </script>
 
