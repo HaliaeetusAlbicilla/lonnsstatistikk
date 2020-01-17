@@ -1,5 +1,10 @@
 //https://www.highcharts.com/blog/post/visualize-wikipedia-data-with-nodejs-and-highcharts/
 //azure vm https://www.youtube.com/watch?v=mvW0tIsdnHI
+//Husk at det er litt hazzle med linjeendinger i https-greiene. 
+//LINUX: git config --global core.autocrlf input
+// Da vil den endre fra CRLF (Windows) til LF (Linux)
+// Nå endrer den i git repo, men ikke lokalt (på jobbmaskinen)
+
 
 var express = require('express'); //Import Express
 var app = express(); // Init app
