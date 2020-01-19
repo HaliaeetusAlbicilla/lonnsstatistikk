@@ -13,8 +13,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var Highcharts = require('highcharts');
 var rp = require('request-promise');
-//HTTPS
-// var https = require("https")
+var https = require("https")
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -60,19 +59,19 @@ module.exports = app;
 
 //start server
 
-//HTTPS
-// var options = {
-//     key: fs.readFileSync('ssh/key.pem'),
-//     cert: fs.readFileSync('ssh/cert.pem')
-//   };
+HTTPS
+var options = {
+    key: fs.readFileSync('ssh/key.pem'),
+    cert: fs.readFileSync('ssh/cert.pem')
+};
 
 
 const webserver = app.listen(3000, function () {
     console.log('ServsUp (3000)')
 });
 
-//HTTPS
-// // Create an HTTP service.
-// http.createServer(app).listen(80);
-// // Create an HTTPS service identical to the HTTP service.
-// https.createServer(options, app).listen(443);
+
+// Create an HTTP service.
+http.createServer(app).listen(80);
+// Create an HTTPS service identical to the HTTP service.
+https.createServer(options, app).listen(443);
