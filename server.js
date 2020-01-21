@@ -13,7 +13,9 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var Highcharts = require('highcharts');
 var rp = require('request-promise');
-// var https = require("https")
+var https = require("https")
+const http = require("http")
+const fs = require("fs")
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -59,19 +61,30 @@ module.exports = app;
 
 //start server
 
-// HTTPS
-// var options = {
-//     key: fs.readFileSync('ssh/key.pem'),
-//     cert: fs.readFileSync('ssh/cert.pem')
-// };
+//HTTPS
+const options = {
+    // use server key
+    key: fs.readFileSync('ssh/nvlonnpriv.key'),
+    // use server cert
+    cert: fs.readFileSync('ssh/nvlonncert.crt'),
+};
 
 
-const webserver = app.listen(3000, function () {
-    console.log('ServsUp (3000)')
+// const webserver = app.listen(3000, function () {
+//     console.log('ServsUp (3000)')
+// });
+
+
+// Create an HTTP service.
+// http.createServer(app).listen(3000);
+// Create an HTTPS service identical to the HTTP service.
+https.createServer(options, app).listen(443);
+
+// create an HTTP server on port 80 and redirect to HTTPS
+var http_server = http.createServer(function(req,res){    
+    // 301 redirect (reclassifies google listings)
+    res.writeHead(301, { "Location": "https://52.178.186.248/" + req.headers['host'] + req.url });
+    res.end();
+}).listen(80, function(err){
+    console.log("Node.js Express HTTPS Server Listening on Port 80");    
 });
-
-
-// // Create an HTTP service.
-// http.createServer(app).listen(80);
-// // Create an HTTPS service identical to the HTTP service.
-// https.createServer(options, app).listen(443);
