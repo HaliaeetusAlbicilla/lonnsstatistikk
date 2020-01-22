@@ -111,7 +111,7 @@ const httpsServer = https.createServer(credentials, app);
 
 http.get('*', function(req, res) {  
     res.redirect('https://' + req.headers.host + req.url);
-    
+});
 
 httpsServer.listen(443, () => {
 	console.log('HTTPS Server running on port 443');
