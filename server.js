@@ -6,22 +6,24 @@
 // Nå endrer den i git repo, men ikke lokalt (på jobbmaskinen)
 
 
-var express = require('express'); //Import Express
-var app = express(); // Init app
-var router = express.Router();
-var path = require('path');
-var bodyParser = require('body-parser');
-var Highcharts = require('highcharts');
-var rp = require('request-promise');
-var https = require("https")
+const express = require('express'); //Import Express
+const app = express(); // Init app
+const router = express.Router();
+const path = require('path');
+const bodyParser = require('body-parser');
+const Highcharts = require('highcharts');
+const rp = require('request-promise');
+const https = require("https")
 const http = require("http")
 const fs = require("fs")
 
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static(__dirname, { dotfiles: 'allow' } ));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
+
 
 //home
 app.get('/', function (req, res) {
