@@ -71,17 +71,19 @@ module.exports = app;
 //     cert: fs.readFileSync('ssh/nvlonncert.crt'),
 // };
 
-///NY VARIANT****
-// const privateKey = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/privkey.pem', 'utf8');
-// const certificate = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/cert.pem', 'utf8');
-// const ca = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/chain.pem', 'utf8');
+//Husk å rydd opp i dette etter hvert. Hele dritten, egentlig.
 
-// const credentials = {
-// 	key: privateKey,
-// 	cert: certificate,
-// 	ca: ca
-// };
-//*******
+//NY VARIANT LETSENCRYPT
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/cert.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/chain.pem', 'utf8');
+
+const credentials = {
+	key: privateKey,
+	cert: certificate,
+	ca: ca
+};
+
 
 // const webserver = app.listen(3000, function () {
 //     console.log('ServsUp (3000)')
@@ -103,19 +105,20 @@ module.exports = app;
 // });
 
 
-// //NY VERSJON MED LETSENCRYPT
-// const httpServer = http.createServer(app);
-// const httpsServer = https.createServer(credentials, app);
+//NY VERSJON MED LETSENCRYPT
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(credentials, app);
 
-// httpServer.listen(80, () => {
-// 	console.log('HTTP Server running on port 80');
-// });
+httpServer.listen(80, () => {
+	console.log('HTTP Server running on port 80');
+});
 
-// httpsServer.listen(443, () => {
-// 	console.log('HTTPS Server running on port 443');
-// });
-//***** */
+httpsServer.listen(443, () => {
+	console.log('HTTPS Server running on port 443');
+});
 
-app.listen(80, () => {
-    console.log('HTTP server running on port 80');
-  });
+
+//HTTP
+// app.listen(80, () => {
+//     console.log('HTTP server running on port 80');
+//   });
