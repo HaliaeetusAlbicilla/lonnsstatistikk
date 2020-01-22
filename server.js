@@ -62,29 +62,47 @@ module.exports = app;
 //start server
 
 //HTTPS
-const options = {
-    // use server key
-    key: fs.readFileSync('ssh/nvlonnpriv.key'),
-    // use server cert
-    cert: fs.readFileSync('ssh/nvlonncert.crt'),
-};
+// const options = {
+//     // use server key
+//     key: fs.readFileSync('ssh/nvlonnpriv.key'),
+//     // use server cert
+//     cert: fs.readFileSync('ssh/nvlonncert.crt'),
+// };
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/cert.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/chain.pem', 'utf8');
 
+const credentials = {
+	key: privateKey,
+	cert: certificate,
+	ca: ca
+};
 
 // const webserver = app.listen(3000, function () {
 //     console.log('ServsUp (3000)')
 // });
 
 
-// Create an HTTP service.
-// http.createServer(app).listen(3000);
-// Create an HTTPS service identical to the HTTP service.
-https.createServer(options, app).listen(443);
+// // Create an HTTP service.
+// // http.createServer(app).listen(3000);
+// // Create an HTTPS service identical to the HTTP service.
+// https.createServer(options, app).listen(443);
 
-// create an HTTP server on port 80 and redirect to HTTPS
-var http_server = http.createServer(function(req,res){    
-    // 301 redirect (reclassifies google listings)
-    res.writeHead(301, { "Location": "https://52.178.186.248/" + req.headers['host'] + req.url });
-    res.end();
-}).listen(80, function(err){
-    console.log("Node.js Express HTTPS Server Listening on Port 80");    
+// // create an HTTP server on port 80 and redirect to HTTPS
+// var http_server = http.createServer(function(req,res){    
+//     // 301 redirect (reclassifies google listings)
+//     res.writeHead(301, { "Location": "https://52.178.186.248/" + req.headers['host'] + req.url });
+//     res.end();
+// }).listen(80, function(err){
+//     console.log("Node.js Express HTTPS Server Listening on Port 80");    
+// });
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(credentials, app);
+
+httpServer.listen(80, () => {
+	console.log('HTTP Server running on port 80');
+});
+
+httpsServer.listen(443, () => {
+	console.log('HTTPS Server running on port 443');
 });
