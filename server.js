@@ -74,6 +74,7 @@ module.exports = app;
 //Husk å rydd opp i dette etter hvert. Hele dritten, egentlig.
 
 //NY VARIANT LETSENCRYPT
+//Certificate
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/privkey.pem', 'utf8');
 const certificate = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/cert.pem', 'utf8');
 const ca = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/chain.pem', 'utf8');
@@ -83,6 +84,10 @@ const credentials = {
 	cert: certificate,
 	ca: ca
 };
+
+app.use((req, res) => {
+	res.send('Hello there !');
+});
 
 
 // const webserver = app.listen(3000, function () {
