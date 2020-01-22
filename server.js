@@ -70,15 +70,18 @@ module.exports = app;
 //     // use server cert
 //     cert: fs.readFileSync('ssh/nvlonncert.crt'),
 // };
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/cert.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/chain.pem', 'utf8');
 
-const credentials = {
-	key: privateKey,
-	cert: certificate,
-	ca: ca
-};
+///NY VARIANT****
+// const privateKey = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/privkey.pem', 'utf8');
+// const certificate = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/cert.pem', 'utf8');
+// const ca = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/chain.pem', 'utf8');
+
+// const credentials = {
+// 	key: privateKey,
+// 	cert: certificate,
+// 	ca: ca
+// };
+//*******
 
 // const webserver = app.listen(3000, function () {
 //     console.log('ServsUp (3000)')
@@ -111,6 +114,7 @@ const credentials = {
 // httpsServer.listen(443, () => {
 // 	console.log('HTTPS Server running on port 443');
 // });
+//***** */
 
 app.listen(80, () => {
     console.log('HTTP server running on port 80');
