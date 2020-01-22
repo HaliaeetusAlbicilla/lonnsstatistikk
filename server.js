@@ -100,34 +100,27 @@ app.use((req, res) => {
 // // Create an HTTPS service identical to the HTTP service.
 // https.createServer(options, app).listen(443);
 
-// // create an HTTP server on port 80 and redirect to HTTPS
-// var http_server = http.createServer(function(req,res){    
-//     // 301 redirect (reclassifies google listings)
-//     res.writeHead(301, { "Location": "https://52.178.186.248/" + req.headers['host'] + req.url });
-//     res.end();
-// }).listen(80, function(err){
-//     console.log("Node.js Express HTTPS Server Listening on Port 80");    
-// });
+// create an HTTP server on port 80 and redirect to HTTPS
+
 
 
 //NY VERSJON MED LETSENCRYPT
-const httpServer = http.createServer(app);
+// const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
-httpServer.listen(80, () => {
-	console.log('HTTP Server running on port 80');
+
+const http_server = http.createServer(function(req,res){    
+    // 301 redirect (reclassifies google listings)
+    res.writeHead(301, { "Location": "https://naturviterne.northeurope.cloudapp.azure.com" + req.headers['host'] + req.url });
+    res.end();
+}).listen(80, function(err){
+    console.log("Node.js Express HTTPS Server Listening on Port 80");    
 });
 
 httpsServer.listen(443, () => {
 	console.log('HTTPS Server running on port 443');
 });
 
-app.use(function(req, res, next) {
-    if(!req.secure) {
-    return res.redirect([‘https://http://naturviterne.northeurope.cloudapp.azure.com, req.get(‘Host’), req.baseUrl].join(‘’));
-    }
-    next();
-    });
 
 //HTTP
 // app.listen(80, () => {
