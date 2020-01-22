@@ -98,13 +98,20 @@ const credentials = {
 // }).listen(80, function(err){
 //     console.log("Node.js Express HTTPS Server Listening on Port 80");    
 // });
-const httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials, app);
 
-httpServer.listen(80, () => {
-	console.log('HTTP Server running on port 80');
-});
 
-httpsServer.listen(443, () => {
-	console.log('HTTPS Server running on port 443');
-});
+// //NY VERSJON MED LETSENCRYPT
+// const httpServer = http.createServer(app);
+// const httpsServer = https.createServer(credentials, app);
+
+// httpServer.listen(80, () => {
+// 	console.log('HTTP Server running on port 80');
+// });
+
+// httpsServer.listen(443, () => {
+// 	console.log('HTTPS Server running on port 443');
+// });
+
+app.listen(80, () => {
+    console.log('HTTP server running on port 80');
+  });
