@@ -109,13 +109,9 @@ app.use((req, res) => {
 const httpsServer = https.createServer(credentials, app);
 
 
-const http_server = http.createServer(function(req,res){    
-    // 301 redirect (reclassifies google listings)
-    res.writeHead(301, { "Location": "https://naturviterne.northeurope.cloudapp.azure.com" + req.headers['host'] + req.url });
-    res.end();
-}).listen(80, function(err){
-    console.log("Node.js Express HTTPS Server Listening on Port 80");    
-});
+http.get('*', function(req, res) {  
+    res.redirect('https://' + req.headers.host + req.url);
+    
 
 httpsServer.listen(443, () => {
 	console.log('HTTPS Server running on port 443');
