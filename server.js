@@ -122,6 +122,12 @@ httpsServer.listen(443, () => {
 	console.log('HTTPS Server running on port 443');
 });
 
+app.use(function(req, res, next) {
+    if(!req.secure) {
+    return res.redirect([‘https://http://naturviterne.northeurope.cloudapp.azure.com, req.get(‘Host’), req.baseUrl].join(‘’));
+    }
+    next();
+    });
 
 //HTTP
 // app.listen(80, () => {
