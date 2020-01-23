@@ -109,9 +109,6 @@ app.use((req, res) => {
 const httpsServer = https.createServer(credentials, app);
 
 
-http.get('/', function(req, res) {  
-    res.redirect('https://' + req.headers.host + req.url);
-});
 
 http.createServer(function (req, res) {
     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
