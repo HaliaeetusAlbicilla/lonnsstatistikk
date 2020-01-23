@@ -1,11 +1,3 @@
-//https://www.highcharts.com/blog/post/visualize-wikipedia-data-with-nodejs-and-highcharts/
-//azure vm https://www.youtube.com/watch?v=mvW0tIsdnHI
-//Husk at det er litt hazzle med linjeendinger i https-greiene. 
-//LINUX: git config --global core.autocrlf input
-// Da vil den endre fra CRLF (Windows) til LF (Linux)
-// Nå endrer den i git repo, men ikke lokalt (på jobbmaskinen)
-
-
 const express = require('express'); //Import Express
 const app = express(); // Init app
 const router = express.Router();
@@ -61,20 +53,7 @@ app.get('/einar/data', function (req, res) {
 module.exports = app;
 
 
-//start server
-
-//HTTPS
-// const options = {
-//     // use server key
-//     key: fs.readFileSync('ssh/nvlonnpriv.key'),
-//     // use server cert
-//     cert: fs.readFileSync('ssh/nvlonncert.crt'),
-// };
-
-//Husk å rydd opp i dette etter hvert. Hele dritten, egentlig.
-
-//NY VARIANT LETSENCRYPT
-//Certificate
+//Letsencrypt Certificate
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/privkey.pem', 'utf8');
 const certificate = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/cert.pem', 'utf8');
 const ca = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/chain.pem', 'utf8');
@@ -85,39 +64,15 @@ const credentials = {
 	ca: ca
 };
 
-app.use((req, res) => {
-	res.send('Hello there !');
-});
-
-
-// const webserver = app.listen(3000, function () {
-//     console.log('ServsUp (3000)')
-// });
-
-
-// // Create an HTTP service.
-// // http.createServer(app).listen(3000);
-// // Create an HTTPS service identical to the HTTP service.
-// https.createServer(options, app).listen(443);
-
-// create an HTTP server on port 80 and redirect to HTTPS
-
-
-
-//NY VERSJON MED LETSENCRYPT
-// const httpServer = http.createServer(app);
+// // Create an HTTPS service
 const httpsServer = https.createServer(credentials, app);
 
 httpsServer.listen(443, () => {
 	console.log('HTTPS Server running on port 443');
 });
 
+// create an HTTP server on port 80 and redirect to HTTPS
 http.createServer(function (req, res) {
     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
     res.end();
 }).listen(80);
-
-//HTTP
-// app.listen(80, () => {
-//     console.log('HTTP server running on port 80');
-//   });
