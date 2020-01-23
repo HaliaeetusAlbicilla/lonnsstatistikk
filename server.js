@@ -108,7 +108,9 @@ app.use((req, res) => {
 // const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
-
+httpsServer.listen(443, () => {
+	console.log('HTTPS Server running on port 443');
+});
 
 http.createServer(function (req, res) {
     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
