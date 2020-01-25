@@ -9,164 +9,145 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
- 
-<!-- Ikke indekser  -->
+
+    <!-- Ikke indekser  -->
     <meta name="googlebot" content="noindex">
     <meta name="robots" content="noindex, nofollow">
 </head>
 
 <body>
 
-    <h1>Naturviternes lønnsstatistikk</h1>
+    <h1>Naturviternes lønnsstatistikk 2019</h1>
 
     <div id="container" style="width:100%; height:400px;"></div>
     <div id="container2" style="width:100%; height:400px;"></div>
     <script>
 
-      document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function () {
 
-            fetch('/einar/gjdata')
-                .then((res) => res.json())
+            let medianData = fetch('/set1');
+            let gjData = fetch('/set2')
+            Promise.all([medianData, gjData])
+                .then((res) => Promise.all(res.map(res => res.json())))
                 .then((data) => {
+                    let mean = data[0];
+                    let median = data[1];
+                    console.log("MEDIAN: ", median)
+                    console.log("GJENNOMSNITT:", mean)
+                    // let output = '<h2>Median</h2>'
 
-                    let output = '<h2>Gjennomsnitt</h2>'
-                    
-                    const privat = data.find(element => element["Sektor"] === 'Privat');
-                    const stat = data.find(element => element["Sektor"] === 'Stat');
-                    const kommune = data.find(element => element["Sektor"] === 'Kommune');
+                    // let output = '<h2>Gjennomsnitt</h2>'
 
-                    console.log("PRIVAT: ", privat['Gjennomsnittslønn']);
-                    console.log("STAT: ", stat['Gjennomsnittslønn']);
-                    console.log("KOMMUNE: ", kommune['Gjennomsnittslønn']);
+                    const privatMD = median.find(element => element["Sektor"] === 'Privat');
+                    const statMD = median.find(element => element["Sektor"] === 'Stat');
+                    const kommuneMD = median.find(element => element["Sektor"] === 'Kommune');
+                    const alleMD = median.find(element => element["Sektor"] === 'Alle');
+                    const privatGJ = mean.find(element => element["Sektor"] === 'Privat');
+                    const statGJ = mean.find(element => element["Sektor"] === 'Stat');
+                    const kommuneGJ = mean.find(element => element["Sektor"] === 'Kommune');
+                    const alleGJ = mean.find(element => element["Sektor"] === 'Alle');
 
                     let optionsGJ = {
                         chart: {
                             renderTo: 'container',
                         },
                         title: {
-                        text: 'Historisk lønnsutvikling etter sektor'
+                            text: 'Historisk lønnsutvikling etter sektor'
                         },
                         xAxis: {
                             categories: [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-                            title: {text: 'År'
-                        }
+                            title: {
+                                text: 'År'
+                            }
                         },
                         tooltip: {
-                            formatter: function (){
+                            formatter: function () {
                                 return 'Gjennomsnitt for ' + this.x + ' i sektor ' + this.point.series.name.toLowerCase() + ': ' + Math.round(this.y) + ' kroner';
                             }
                         },
                         yAxis: {
-                            title:  {
+                            title: {
                                 text: 'Gjennomsnittlig årslønn'
                             }
                         },
                         series: []
                     };
 
-                    
+
                     optionsGJ.series.push({
                         name: 'Kommune',
-                        data: [506000, 522000, 544000, 553000, 576000, 596000, 613846, kommune['Gjennomsnittslønn']],
+                        data: [506000, 522000, 544000, 553000, 576000, 596000, 613846, kommuneGJ['Gjennomsnittslønn']],
                         color: '#92bfd5',
                     })
 
-                     optionsGJ.series.push({
+                    optionsGJ.series.push({
                         name: 'Stat',
-                        data: [522000, 530000, 551000, 556000, 576000, 585000, 605455, stat['Gjennomsnittslønn']],
+                        data: [522000, 530000, 551000, 556000, 576000, 585000, 605455, statGJ['Gjennomsnittslønn']],
                         color: '#94c43a',
                     })
 
-                     optionsGJ.series.push({
+                    optionsGJ.series.push({
                         name: 'Privat',
-                        data: [544000, 556000, 576000, 587000, 605000, 621000, 655355, privat['Gjennomsnittslønn']],
+                        data: [544000, 556000, 576000, 587000, 605000, 621000, 655355, privatGJ['Gjennomsnittslønn']],
                         color: '#F59E00',
                     })
 
-                    let chart = new Highcharts.Chart(optionsGJ); 
+                    let chart = new Highcharts.Chart(optionsGJ);
 
+
+
+
+                    let optionsMD = {
+                        chart: {
+                            type: 'column',
+                            renderTo: 'container2',
+                        },
+                        title: {
+                            text: 'Gjennomsnitt og median etter sektor'
+                        },
+                        xAxis: {
+                            type: 'category',
+                            categories: [
+                                'Kommune',
+                                'Stat',
+                                'Privat',
+                                'Alle'
+                            ]
+
+                        },
+                        tooltip: {
+                            formatter: function () {
+                                return this.series.name + ': ' + Math.round(this.y) + ' kroner</b>';
+                            }
+                        },
+                        yAxis: {
+                            allowDecimals: false,
+                            title: {
+                                text: 'Årslønn'
+                            }
+                        },
+                        series: []
+                    };
+
+                    optionsMD.series.push({
+                        name: 'Gjennomsnittslønn',
+                        data: [kommuneGJ['Gjennomsnittslønn'], statGJ['Gjennomsnittslønn'], privatGJ['Gjennomsnittslønn'], alleMD['Medianlønn']],
+                        color: '#6E6B05',
+                    })
+
+                    optionsMD.series.push({
+                        name: 'Medianlønn',
+                        data: [kommuneMD['Medianlønn'], statMD['Medianlønn'], privatMD['Medianlønn'], alleMD['Medianlønn']],
+                        color: '#92bfd5',
+                    })
+
+
+                    let chart2 = new Highcharts.Chart(optionsMD);
                 });
-            });
-
-   
+        });
 
 
-
-    document.addEventListener('DOMContentLoaded', function () {
-        
-         let MedianData = fetch('/einar/mddata');
-         let GjData = fetch('/einar/gjdata')
-         Promise.all([MedianData, GjData])
-              .then((res) => Promise.all(res.map(res => res.json())))
-              .then((data) => {
-                let MedianData = data[0];
-                let GjData = data[1];
-                let output = '<h2>Median</h2>'
-                  
-                  const privatMD = data[0].find(element => element["Sektor"] === 'Privat');
-                  const statMD = data[0].find(element => element["Sektor"] === 'Stat');
-                  const kommuneMD = data[0].find(element => element["Sektor"] === 'Kommune');
-                  const alleMD = data[0].find(element => element["Sektor"] === 'Alle');
-                  const privatGJ = data[1].find(element => element["Sektor"] === 'Privat');
-                  const statGJ = data[1].find(element => element["Sektor"] === 'Stat');
-                  const kommuneGJ = data[1].find(element => element["Sektor"] === 'Kommune');
-                  const alleGJ = data[1].find(element => element["Sektor"] === 'Alle');
-
-                  console.log("MEDIAN PRIVAT: ", privatMD['Medianlønn']);
-                  console.log("STAT: ", statMD['Medianlønn']);
-                  console.log("KOMMUNE: ", kommuneMD['Medianlønn']);
-
-                  let optionsMD = {
-                      chart: {
-                          type: 'column',
-                          renderTo: 'container2',
-                      },
-                      title: {
-                      text: 'Gjennomsnitt og median etter sektor'
-                      },
-                      xAxis: {
-                          type: 'category',
-                          categories: [
-                              'Kommune', 
-                              'Stat',
-                              'Privat',
-                              'Alle'
-                          ]
-                  
-                      },
-                      tooltip: {
-                          formatter: function (){
-                              return this.series.name + ': ' + Math.round(this.y) + ' kroner</b>';
-                          }
-                      },
-                      yAxis: {
-                        allowDecimals: false,
-                          title: {
-                              text: 'Årslønn'
-                          }
-                      },
-                      series: []
-                  };
-    
-                  optionsMD.series.push({
-                      name: 'Gjennomsnittslønn',
-                      data: [kommuneGJ['Gjennomsnittslønn'], statGJ['Gjennomsnittslønn'], privatGJ['Gjennomsnittslønn'], alleMD['Medianlønn']],
-                      color: '#6E6B05',
-                  })
-
-                  optionsMD.series.push({
-                      name: 'Medianlønn',
-                      data: [kommuneMD['Medianlønn'], statMD['Medianlønn'], privatMD['Medianlønn'], alleMD['Medianlønn']],
-                      color: '#92bfd5',
-                  })
-
-
-                  let chart = new Highcharts.Chart(optionsMD); 
-
-              });
-          });
-
-        </script>
+    </script>
 
 
 </body>
