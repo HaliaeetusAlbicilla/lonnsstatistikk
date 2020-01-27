@@ -3,7 +3,6 @@ const router = express.Router()
 const { poolPromise } = require('../db')
 
 router.get("/", async (req, res) => {
-    console.log("ENDEPUNKT DATA2")
     try {
         const pool = await poolPromise
         const result = await pool.request()

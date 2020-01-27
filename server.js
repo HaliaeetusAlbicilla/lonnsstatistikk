@@ -24,11 +24,12 @@ app.use(bodyParser.raw());
 
 const set1Router = require("./routes/set1")
 const set2Router = require("./routes/set2")
-
+const set3Router = require("./routes/set3")
 
 // ...
 app.use("/set1", set1Router)
 app.use("/set2", set2Router)
+app.use("/set3", set3Router)
 
 // No need to connect the pool
 // Just start the web server
