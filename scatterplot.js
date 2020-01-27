@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', function () {
             let scatter = data[2]
             
             const mann = scatter.filter(function (item) {
-                return item.Kjønn === "Mann";
+                return item['Kjønn'] === "Mann";
             });
 
             const kvinne = scatter.filter(function (item) {
-                return item.Kjønn === "Kvinne";
+                return item['Kjønn'] === "Kvinne";
             });
-            console.log(mann)
-            
+            console.log("KVINNER: ", kvinne);
+            console.log("MENN: ", mann);
 
             let optionsSC = {
                 chart: {
@@ -44,15 +44,23 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 },
 
-                series: [{
-                    name: 'Kvinne',
-                    data: kvinne
-                }, {
-                    name: 'Mann',
-                    data: mann
-                }]
+                series: []
             };
-  
+
+
+            optionsGJ.series.push({
+                name: 'Kvinner',
+                data: [kvinne['Eksamensår']],
+                color: '#92bfd5',
+            })
+
+            optionsGJ.series.push({
+                name: 'Menn',
+                data: [mann['Eksamensår', 'Årslønn']],
+                color: '#94c43a',
+            })
+
+         
 
             //     series: {
             //         name: 'Kvinne',
