@@ -6,9 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then((data) => {
             let mean = data[0];
             let median = data[1];
-            console.log("MEDIAN: ", median)
-            console.log("GJENNOMSNITT:", mean)
-
+            
             const privatMD = median.find(element => element["Sektor"] === 'Privat');
             const statMD = median.find(element => element["Sektor"] === 'Stat');
             const kommuneMD = median.find(element => element["Sektor"] === 'Kommune');
@@ -18,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const kommuneGJ = mean.find(element => element["Sektor"] === 'Kommune');
             const alleGJ = mean.find(element => element["Sektor"] === 'Alle');
 
-            
     let optionsMD = {
     chart: {
         type: 'column',
