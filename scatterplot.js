@@ -9,18 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
             let median = data[1];
             let scatter = data[2]
             
-            const mann = data.filter(function (item) {
+            const mann = scatter.filter(function (item) {
                 return item.Kjønn === "Mann";
             }).map(res => [res.Eksamensår, res.Årslønn]);
 
-            const kvinne = data.filter(function (item) {
+            const kvinne = scatter.filter(function (item) {
                 return item.Kjønn === "Kvinne";
             }).map(res => [res.Eksamensår, res.Årslønn]);
 
-            console.log("KVINNER: ", kvinne);
-            console.log("MENN: ", mann);
-            console.log("DATA: ", data)
-            console.log("SCATTER", scatter)
             let optionsSC = {
                 chart: {
                     type: 'scatter', 
@@ -30,30 +26,44 @@ document.addEventListener('DOMContentLoaded', function () {
                     text: 'Lønn etter eksamensår'
                 },
                 xAxis: {
-                    
+
                     title: {
                         text: 'Eksamensår'
                     }
                 },
+                lang: {
+                    numericSymbols: null 
+                },
+                
                 tooltip: {
                     formatter: function () {
-                        return 'Gjennomsnitt for ' + this.x + ' i sektor ' + this.point.series.name.toLowerCase() + ': ' + Math.round(this.y) + ' kroner';
+                        return 'Eksamensår:' + this.x + ', Årslønn: ' + Math.round(this.y) + ' kroner';
                     }
                 },
                 yAxis: {
+                    min: 400000,
+                    max: 1200000,
                     title: {
                         text: 'Årslønn'
                     }
                 },
 
-                series: [{
-                    name: 'Kvinne',
-                    data: kvinne
-                }, {
-                    name: 'Mann',
-                    data: mann
-                }]
+                series: []
             };
+
+
+            optionsSC.series.push({
+                name: 'Kvinner',
+                data: kvinne,
+                color: '#92bfd5',
+            })
+
+            optionsSC.series.push({
+                name: 'Menn',
+                data: mann,
+                color: '#94c43a',
+            })
+
 
          
 
