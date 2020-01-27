@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
         const pool = await poolPromise
         const result = await pool.request()
             // .input('input_parameter', sql.Int, req.query.input_parameter)
-            .query("select Eksamensår, Årslønn, Kjønn from dbo.lonn2019")
+            .query("select convert(int, Eksamensår) as Eksamensår, Årslønn, Kjønn from dbo.lonn2019")
 
         res.json(result.recordset)
     } catch (err) {
