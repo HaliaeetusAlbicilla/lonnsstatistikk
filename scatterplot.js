@@ -9,16 +9,18 @@ document.addEventListener('DOMContentLoaded', function () {
             let median = data[1];
             let scatter = data[2]
             
-            const mann = scatter.filter(function (item) {
-                return item['Kjønn'] === "Mann";
-            });
+            const mann = data.filter(function (item) {
+                return item.Kjønn === "Mann";
+            }).map(res => [res.Eksamensår, res.Årslønn]);
 
-            const kvinne = scatter.filter(function (item) {
-                return item['Kjønn'] === "Kvinne";
-            });
+            const kvinne = data.filter(function (item) {
+                return item.Kjønn === "Kvinne";
+            }).map(res => [res.Eksamensår, res.Årslønn]);
+
             console.log("KVINNER: ", kvinne);
             console.log("MENN: ", mann);
-
+            console.log("DATA: ", data)
+            console.log("SCATTER", scatter)
             let optionsSC = {
                 chart: {
                     type: 'scatter', 
@@ -44,21 +46,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 },
 
-                series: []
+                series: [{
+                    name: 'Kvinne',
+                    data: kvinne
+                }, {
+                    name: 'Mann',
+                    data: mann
+                }]
             };
-
-
-            optionsGJ.series.push({
-                name: 'Kvinner',
-                data: [kvinne['Eksamensår']],
-                color: '#92bfd5',
-            })
-
-            optionsGJ.series.push({
-                name: 'Menn',
-                data: [mann['Eksamensår', 'Årslønn']],
-                color: '#94c43a',
-            })
 
          
 
