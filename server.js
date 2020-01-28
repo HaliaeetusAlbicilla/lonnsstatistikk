@@ -25,19 +25,16 @@ app.use(bodyParser.raw());
 const set1Router = require("./routes/set1")
 const set2Router = require("./routes/set2")
 const set3Router = require("./routes/set3")
+const set4Router = require("./routes/set4")
 
 // ...
 app.use("/set1", set1Router)
 app.use("/set2", set2Router)
 app.use("/set3", set3Router)
-
-// No need to connect the pool
-// Just start the web server
+app.use("/set4", set4Router)
 
 
-
-
-//Letsencrypt Certificate
+//Letsencrypt-sertifikat
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/privkey.pem', 'utf8');
 const certificate = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/cert.pem', 'utf8');
 const ca = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/chain.pem', 'utf8');
@@ -48,21 +45,21 @@ const credentials = {
     ca: ca
 };
 
-// // Create an HTTPS service
+// // Få opp HTTPS på VM
 const httpsServer = https.createServer(credentials, app);
 
 httpsServer.listen(443, () => {
     console.log('HTTPS Server running on port 443');
 });
 
-// create an HTTP server on port 80 and redirect to HTTPS
+// Lag HTTP-server på port 80, send til HTTPS
 http.createServer(function (req, res) {
     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
     res.end();
 }).listen(80);
 
 
-// // Bruk lokalt
+// // Bruk denne lokalt
 // const webserver = app.listen(3000, function () {
 //     console.log('ServsUp (3000)')
 // });
