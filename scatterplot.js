@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const gjEksMap = gjEks.map(res => [res.Eksamensår, res.Gjennomsnitt, res.Kjønn]);
             console.log("GJEKSMAP", gjEksMap)
 
+            const alle = scatter.map(res => [res.Eksamensår, res.Årslønn])
+            console.log("ALLE: ", alle)
+
             //Tallformatering
             function formatNO(num) {
                 return (
@@ -87,29 +90,46 @@ document.addEventListener('DOMContentLoaded', function () {
             };
 
 
-            optionsSC.series.push({
-                name: 'Kvinner',
-                data: kvinne,
-                color: '#92bfd5',
-                opacity: '0.9',
-                states: {
-                    inactive: {
-                        opacity: 0.1
-                    }
-                }
-            })
+            // optionsSC.series.push({
+            //     name: 'Lønn',
+            //     data: alle,
+            //     color: '#92bfd5',
+            //     opacity: '0.9',
+            //     id: 'primary',
+            //     enableMouseTracking: false,
+            //     states: {
+            //         inactive: {
+            //             opacity: 0.5
+            //         }
+            //     }
+            // });
 
-            optionsSC.series.push({
-                name: 'Menn',
-                data: mann,
-                color: '#94c43a',
-                opacity: '0.9',
-                states: {
-                    inactive: {
-                        opacity: 0.1
-                    }
-                }
-            })
+            // optionsSC.series.push({
+            //     name: 'Kvinner',
+            //     data: kvinne,
+            //     color: '#92bfd5',
+            //     opacity: '0.9',
+            //     id: 'primary',
+            //     enableMouseTracking: false,
+            //     states: {
+            //         inactive: {
+            //             opacity: 0.5
+            //         }
+            //     }
+            // });
+
+            // optionsSC.series.push({
+            //     name: 'Menn',
+            //     data: mann,
+            //     color: '#94c43a',
+            //     opacity: '0.9',
+            //     enableMouseTracking: false,
+            //     states: {
+            //         inactive: {
+            //             opacity: 0.5
+            //         }
+            //     }
+            // })
 
             // optionsSC.series.push({
             //     type: 'line',
@@ -130,13 +150,26 @@ document.addEventListener('DOMContentLoaded', function () {
             //     lineWidth: 3,
             // });
 
+            // optionsSC.series.push({
+            //     type: 'line',
+            //     name: 'Gjennomsnitt',
+            //     data: gjEksMap,
+            //     color: 'grey',
+            //     lineWidth: 5,
+            // });
+
             optionsSC.series.push({
-                type: 'line',
-                name: 'Gjennomsnitt',
-                data: gjEksMap,
-                color: 'grey',
-                lineWidth: 5,
+                regression: true,
+                regressionSettings: {
+                    type: 'polynomial',
+                    color: 'black',
+                },
+                name: 'Medlem',
+                color: '#94c43a',
+                data: alle,
             });
+
+
 
             let chart = new Highcharts.Chart(optionsSC);
         });
