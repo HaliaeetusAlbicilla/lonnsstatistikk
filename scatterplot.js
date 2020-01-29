@@ -163,6 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 regressionSettings: {
                     type: 'polynomial',
                     color: 'black',
+                    lineWidth: 3,
                 },
                 name: 'Medlem',
                 color: '#94c43a',
