@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let optionsMD = {
                 chart: {
                     type: 'column',
-                    renderTo: 'container',
+                    renderTo: 'container4',
                 },
                 title: {
                     text: 'Lønnsvekst etter sektor, 2013 - 2019'
