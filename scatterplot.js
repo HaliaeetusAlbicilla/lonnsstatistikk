@@ -31,6 +31,16 @@ document.addEventListener('DOMContentLoaded', function () {
             const gjEksMap = gjEks.map(res => [res.Eksamensår, res.Gjennomsnitt, res.Kjønn]);
             console.log("GJEKSMAP", gjEksMap)
 
+            //Tallformatering
+            function formatNO(num) {
+                return (
+                    num
+                        .toFixed(0) // ingen desimaltall
+                        .replace('.', ',') // bytt ut . med komma i desimaltall ,
+                        .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+                ) // bruk . som separator
+            }
+
             let optionsSC = {
 
                 chart: {
@@ -57,18 +67,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 tooltip: {
                     formatter: function () {
-                        return 'Eksamensår:' + this.x + ', Årslønn: ' + Math.round(this.y) + ' kroner';
+                        return 'Eksamensår:' + this.x + ', Årslønn: ' + formatNO(this.y) + ' kroner';
                     }
                 },
                 yAxis: {
                     min: 400000,
                     max: 1200000,
                     title: {
-                        text: 'Årslønn'
+                        text: 'Årslønn (NOK)'
                     },
                     labels: {
                         formatter: function () {
-                            return this.value;
+                            return formatNO(this.value);
                         }
                     }
                 },

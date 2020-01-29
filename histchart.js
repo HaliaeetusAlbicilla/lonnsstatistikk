@@ -21,6 +21,17 @@ document.addEventListener('DOMContentLoaded', function () {
             const kommuneGJ = mean.find(element => element["Sektor"] === 'Kommune');
             const alleGJ = mean.find(element => element["Sektor"] === 'Alle');
 
+            //Tallformatering
+            function formatNO(num) {
+                return (
+                    num
+                        .toFixed(0) // ingen desimaltall
+                        .replace('.', ',') // bytt ut . med komma i desimaltall ,
+                        .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+                ) // bruk . som separator
+            }
+
+
             let optionsGJ = {
                 chart: {
                     renderTo: 'container',
@@ -36,13 +47,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 tooltip: {
                     formatter: function () {
-                        return 'Gjennomsnitt for ' + this.x + ' i sektor ' + this.point.series.name.toLowerCase() + ': ' + Math.round(this.y) + ' kroner';
+                        return 'Gjennomsnitt for ' + this.x + ' i sektor ' + this.point.series.name.toLowerCase() + ': ' + formatNO(this.y) + ' kroner';
                     }
                 },
                 yAxis: {
                     title: {
-                        text: 'Gjennomsnittlig årslønn'
+                        text: 'Gjennomsnittlig årslønn (NOK)'
+                    },
+                    labels: {
+                        formatter: function () {
+                            return formatNO(this.value);
+                        }
                     }
+
                 },
                 series: []
             };
@@ -67,5 +84,5 @@ document.addEventListener('DOMContentLoaded', function () {
             })
 
             let chart = new Highcharts.Chart(optionsGJ);
-    });
+        });
 });

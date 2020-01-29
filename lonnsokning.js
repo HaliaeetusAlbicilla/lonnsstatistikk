@@ -26,6 +26,18 @@ document.addEventListener('DOMContentLoaded', function () {
             let privforhold = privdiff / 655355
             const privvekst = privforhold * 100
 
+            //Fra . til , og fra 100000 til 100.000
+            function formatNO(num) {
+                return (
+                    num
+                        .toFixed(1) // ett desimaltall duger
+                        .replace('.', ',') // replace decimal point character with ,
+                        .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+                ) // use . as a separator
+            }
+
+
+
 
             let optionsMD = {
                 chart: {
@@ -50,17 +62,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 tooltip: {
                     formatter: function () {
-                        return this.series.name + ': ' + this.y.toFixed(1) + ' %</b>';
+                        return this.series.name + ': ' + formatNO(this.y) + ' %</b>';
 
                     },
                     valueDecimals: 2,
                 },
+                lang: {
+                    decimalPoint: ','
+                },
+
+
+
+
                 yAxis: {
-                    allowDecimals: false,
                     title: {
                         text: 'Lønnsvekst (%)'
                     }
+
                 },
+
                 series: []
             };
 
@@ -80,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 name: 'Privat',
                 data: [2.1, 3.7, 1.9, 3.2, 2.8, 5.4, privvekst],
                 color: '#F59E00',
+                decimalPoint: ',',
             })
 
 
