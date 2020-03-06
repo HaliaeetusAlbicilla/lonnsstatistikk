@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             optionsMD.series.push({
                 name: 'Gjennomsnittslønn',
-                data: [kommuneGJ['Gjennomsnittslønn'], statGJ['Gjennomsnittslønn'], privatGJ['Gjennomsnittslønn'], alleMD['Medianlønn']],
+                data: [kommuneGJ['Gjennomsnittslønn'], statGJ['Gjennomsnittslønn'], privatGJ['Gjennomsnittslønn'], alleMD['Gjennomsnittslønn']],
                 color: '#6E6B05',
             })
 
