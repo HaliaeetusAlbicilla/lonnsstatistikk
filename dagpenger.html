@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dagpenger</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="dagpenger.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+
+            <div class="col-md-auto text-center">
+
+
+                <label for="minLonn">Din årslønn:</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    </div>
+                    <input type="number" id="minLonn" class="form-control" aria-label="TEST">
+                    <div class="input-group-append">
+                        <span class="input-group-text">kr</span>
+                    </div>
+                </div>
+
+                <label for="permProsent">Prosent permittert:</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    </div>
+                    <input type="number" min="0" max="100" id="permProsent" class="form-control" aria-label="TEST">
+                    <div class="input-group-append">
+                        <span class="input-group-text">%</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-dark" onclick="getRes();">Regn ut</button>
+            </div>
+
+
+        </div>
+
+
+        <div style="text-align: center;">
+            <br /><br />
+            <p id="aar"></p>
+            <p id="toUke"></p>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
