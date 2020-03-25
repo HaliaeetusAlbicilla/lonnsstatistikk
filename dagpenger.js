@@ -22,8 +22,8 @@ function getRes() {
     var toUkers = Math.round(aarsUtbet / 26);
     // alert(aarsUtbet);
     // alert(toUkers);
-    document.getElementById("aar").innerHTML = "<strong>Din årlige utbetaling:</strong> <br />" + aarsUtbet + " kr";
-    document.getElementById("toUke").innerHTML = "<strong>Din utbetaling hver 14. dag:</strong> <br />" + toUkers + " kr";
+    document.getElementById("aar").innerHTML = "<strong>Din årlige utbetaling før skatt:</strong> <br />" + aarsUtbet + " kr";
+    document.getElementById("toUke").innerHTML = "<strong>Din utbetaling hver 14. dag før skatt:</strong> <br />" + toUkers + " kr";
     // return [aarsUtbet(), toUkers()];
 }
 
