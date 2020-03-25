@@ -15,7 +15,7 @@ function getRes() {
         } else if (brukerLonn >= 3 * G && brukerLonn < 6 * G) {
             var aarsUtbet = Math.round(((brukerLonn - 3 * G) * 0.624 + 3 * G * 0.8) * brukerPerm / 100)
         } else if (brukerLonn >= 6 * G) {
-            var aarsUtbet = Math.round(426596 * brukerPerm / 100)
+            var aarsUtbet = Math.round(426593 * brukerPerm / 100)
         }
 
     }
