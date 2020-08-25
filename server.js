@@ -26,13 +26,30 @@ const set1Router = require("./routes/set1")
 const set2Router = require("./routes/set2")
 const set3Router = require("./routes/set3")
 const set4Router = require("./routes/set4")
+const arbBiologi = require("./routes/arbBiologi")
+const arbForvaltning = require("./routes/arbForvaltning")
+const arbGeofag = require("./routes/arbGeofag")
+const arbHusdyrfag = require("./routes/arbHusdyrfag")
+const arbMatErn = require("./routes/arbMatErn")
+const arbPlantefag = require("./routes/arbPlantefag")
+const arbSkogfag = require("./routes/arbSkogfag")
+const arbTekniskeBio = require("./routes/arbTekniskeBio")
+const arbAvg = require("./routes/arbAvg")
 
 // ...
 app.use("/set1", set1Router)
 app.use("/set2", set2Router)
 app.use("/set3", set3Router)
 app.use("/set4", set4Router)
-
+app.use("/arbBiologi", arbBiologi)
+app.use("/arbForvaltning", arbForvaltning)
+app.use("/arbGeofag", arbGeofag)
+app.use("/arbHusdyrfag", arbHusdyrfag)
+app.use("/arbMatErn", arbMatErn)
+app.use("/arbPlantefag", arbPlantefag)
+app.use("/arbSkogfag", arbSkogfag)
+app.use("/arbTekniskeBio", arbTekniskeBio)
+app.use("/arbAvg", arbAvg)
 
 //Letsencrypt-sertifikat
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/privkey.pem', 'utf8');

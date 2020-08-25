@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
             .query("select CAST(Eksamensår AS INT) as Eksamensår, Årslønn from dbo.lonn2019 \
             where [Utdanningsretning] like 'Skogfag/Utmarksfag'")
         res.json(result.recordset)
-        console.log(recordset)
+
     } catch (err) {
         res.status(500)
         res.send(err.message)
