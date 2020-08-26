@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             if (document.getElementById('geoAvgLonn') !== null) {
-                document.getElementById("geoAvgLonn").innerHTML = "Gjennomsnittlig årslønn for våre medlemmer med utdanning i denne geologi var " + geoAvgL + " kroner. Utvalget gjennomførte utdanningen sin i " + geoAvgE + " i gjennomsnitt. Tilsvarende tall for geografi var " + geogAvgL + " kroner for gjennomsnittlig gjennomført utdanning i " + geogAvgE + "."
+                document.getElementById("geoAvgLonn").innerHTML = "Gjennomsnittlig årslønn for våre medlemmer med utdanning innen geologifagene var " + geoAvgL + " kroner. Utvalget gjennomførte utdanningen sin i " + geoAvgE + " i gjennomsnitt. Tilsvarende tall for geografi var " + geogAvgL + " kroner for gjennomsnittlig gjennomført utdanning i " + geogAvgE + "."
             }
 
 
