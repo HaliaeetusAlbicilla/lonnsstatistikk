@@ -7,14 +7,15 @@ router.get("/", async (req, res) => {
         const pool = await poolPromise
         const result = await pool.request()
             // .input('input_parameter', sql.Int, req.query.input_parameter)
-            .query("SELECT t1.utdanningssted, COUNT( * ) AS 'ant' \
+            .query("SELECT t1.utdanningsretning, COUNT( * ) AS 'ant' \
             FROM  Stage.Medlemmer t1 \
             WHERE t1.SysStartTime = (SELECT MAX(t2.SysStartTime) \
                              FROM Stage.Medlemmer t2 \
                              WHERE t2.medlemsnr = t1.medlemsnr) \
             AND status = 'Student' \
             AND isUtmeldt = 0 \
-            GROUP BY  t1.utdanningssted;")
+			AND utdanningssted = 'Universitetet I Bergen' \
+            GROUP BY  t1.utdanningsretning;")
 
         res.json(result.recordset)
     } catch (err) {

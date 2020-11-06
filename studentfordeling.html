@@ -17,17 +17,227 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="studentfordeling.js"></script>
+    <script src="nmbu.js"></script>
+    <script src="ntnu.js"></script>
+    <script src="uib.js"></script>
+    <script src="uio.js"></script>
+    <script src="uit.js"></script>
+    <script src="usn.js"></script>
+
     <!-- Ikke indekser  -->
     <meta name="googlebot" content="noindex">
     <meta name="robots" content="noindex, nofollow">
+
+    <style>
+        /* * {
+            box-sizing: border-box;
+        } */
+
+        body {
+            background-color: #eef2ef;
+        }
+
+        header {
+            background-color: #94c43a;
+            padding: 20px;
+            text-align: left;
+            font-size: 2rem;
+            color: white;
+            padding-left: 15%;
+        }
+
+        /* I tilfelle man vil ha navigasjon
+        nav {
+            float: left;
+            width: 5%;
+            background: #ccc;
+            padding: 20%;
+            height: 100%;
+        } 
+           nav ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: green;
+        }
+
+           @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        Eller footer
+        
+             footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        */
+
+        article {
+            float: left;
+            padding: 20px;
+            margin-left: 10%;
+            width: 95%;
+            max-width: 950px;
+            background-color: #ffffff;
+        }
+
+
+
+
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .nvcontainer {
+            width: 100%;
+            height: 500px;
+        }
+
+        .pcontainer {
+            width: 100%;
+            min-height: 3rem;
+        }
+
+        .highcharts-container {
+            width: 100%;
+            height: 500px;
+        }
+
+        .background-color {
+            color: #eef2ef;
+        }
+
+        p {
+            font-size: 1rem;
+            font-family: "Open Sans", Arial, Sans-serif;
+            color: #2c2c2d;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        body {
+            color: #2c2c2d;
+            line-height: 1.5;
+        }
+
+
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: .5rem;
+            font-family: "Open Sans";
+            font-weight: 600;
+            line-height: 1.1;
+            color: maroon;
+        }
+
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: .5rem;
+            font-family: "Open Sans";
+            font-weight: 600;
+            line-height: 1.1;
+            color: inherit;
+        }
+
+        a {
+            color: #0096b6;
+        }
+
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+
+        ul {
+            list-style: none;
+            /* Remove default bullets */
+        }
+
+        ul li::before {
+            content: "\2022";
+            /* background-size: contain; */
+            display: inline-block;
+            width: 1em;
+            height: 0em;
+            /* position: relative; */
+            /* padding-top: 1em; */
+            line-height: 2rem;
+            margin-right: 0.2rem;
+            line-height: 0;
+            font-size: 2rem;
+            background-position: 0 0px;
+            margin-left: 0.1em;
+            color: #8dc63f;
+            vertical-align: baseline;
+        }
+
+        ul li {
+            font-family: "Open Sans";
+            line-height: 2rem;
+            vertical-align: baseline;
+        }
+    </style>
+
 </head>
 
 <body>
+
+    <header>
+ <h2>Oversikt over studentmedlemmer</h2>
+    </header>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+<article>
+<div class="container" width="950px">
     <div id="studentcontainer" style="width:100%; height:400px;"></div>
+    <br /><br /><br /><br /><br />
+
+    <div id="cNMBU" style="width:100%; height:400px;"></div>
+    <br />
+    <div id="cNTNU" style="width:100%; height:400px;"></div>
+    <br />
+    <div id="cUIB" style="width:100%; height:400px;"></div>
+    <br />
+    <div id="cUIO" style="width:100%; height:400px;"></div>
+    <br />
+    <div id="cUIT" style="width:100%; height:400px;"></div>
+    <br />
+    <div id="cUSN" style="width:100%; height:400px;"></div>
+    
+</div></article>
 </body>
 
 </html>
