@@ -30,6 +30,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     numericSymbols: null
                 },
 
+                credits: {
+                    enabled: false
+                },
+
                 title: {
                     text: 'Fordelingen av studentmedlemmer i Naturviterne'
                 },

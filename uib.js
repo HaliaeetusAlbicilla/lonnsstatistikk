@@ -35,6 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 title: {
                     text: 'Universitetet i Bergen'
                 },
+
+                credits: {
+                    enabled: false
+                },
+                
                 xAxis: {
 
                     title: {

@@ -35,6 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 title: {
                     text: 'Universitetet i Sørøst-Norge'
                 },
+
+                credits: {
+                    enabled: false
+                },
+
                 xAxis: {
 
                     title: {

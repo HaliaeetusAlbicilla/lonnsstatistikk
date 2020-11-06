@@ -32,6 +32,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     numericSymbols: null
                 },
 
+                credits: {
+                    enabled: false
+                },
+
                 title: {
                     text: 'Norges miljø- og biovitenskapelige universitet'
                 },
