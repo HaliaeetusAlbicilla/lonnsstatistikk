@@ -35,6 +35,7 @@ const arbPlantefag = require("./routes/arbPlantefag")
 const arbSkogfag = require("./routes/arbSkogfag")
 const arbTekniskeBio = require("./routes/arbTekniskeBio")
 const arbAvg = require("./routes/arbAvg")
+const studentfordeling = require("./routes/studentfordeling")
 
 // ...
 app.use("/set1", set1Router)
@@ -50,6 +51,7 @@ app.use("/arbPlantefag", arbPlantefag)
 app.use("/arbSkogfag", arbSkogfag)
 app.use("/arbTekniskeBio", arbTekniskeBio)
 app.use("/arbAvg", arbAvg)
+app.use("/studentfordeling", studentfordeling)
 
 //Letsencrypt-sertifikat
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/privkey.pem', 'utf8');
@@ -62,7 +64,7 @@ const credentials = {
     ca: ca
 };
 
-// // Få opp HTTPS på VM
+// Få opp HTTPS på VM
 const httpsServer = https.createServer(credentials, app);
 
 httpsServer.listen(443, () => {
