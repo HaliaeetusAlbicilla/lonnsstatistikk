@@ -36,6 +36,12 @@ const arbSkogfag = require("./routes/arbSkogfag")
 const arbTekniskeBio = require("./routes/arbTekniskeBio")
 const arbAvg = require("./routes/arbAvg")
 const studentfordeling = require("./routes/studentfordeling")
+const studentNMBU = require("./routes/nmbu")
+const studentNTNU = require("./routes/ntnu")
+const studentUIB = require("./routes/uib")
+const studentUIO = require("./routes/uio")
+const studentUIT = require("./routes/uit")
+const studentUSN = require("./routes/usn")
 
 // ...
 app.use("/set1", set1Router)
@@ -52,6 +58,13 @@ app.use("/arbSkogfag", arbSkogfag)
 app.use("/arbTekniskeBio", arbTekniskeBio)
 app.use("/arbAvg", arbAvg)
 app.use("/studentfordeling", studentfordeling)
+app.use("/nmbu", studentNMBU)
+app.use("/ntnu", studentNTNU)
+app.use("/uib", studentUIB)
+app.use("/uio", studentUIO)
+app.use("/uit", studentUIT)
+app.use("/usn", studentUSN)
+
 
 //Letsencrypt-sertifikat
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/naturviterne.northeurope.cloudapp.azure.com/privkey.pem', 'utf8');
