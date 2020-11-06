@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 chart: {
                     type: 'pie',
                     renderTo: 'cNTNU',
+                    credits: {
+                        enabled: false
+                      },
                 },
 
                 lang: {
