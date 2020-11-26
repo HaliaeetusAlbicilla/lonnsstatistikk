@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then((res) => Promise.all(res.map(res => res.json())))
         .then((data) => {
             let scatter = data[0]
-            let gjEks = data[1]
-            console.log("DATA1: ", data[1]);
+            let gjEks = data[1];
 
             const mann = scatter.filter(function (item) {
                 return item.Kjønn === "Mann";
@@ -21,18 +20,18 @@ document.addEventListener('DOMContentLoaded', function () {
             const kvinne = scatter.filter(function (item) {
                 return item.Kjønn === "Kvinne";
             }).map(res => [res.Eksamensår, res.Årslønn]);
-            console.log(mann);
+            
 
             const gjkvinne = gjEks.filter(function (item) {
                 return item.Kjønn === "Kvinne";
             }).map(res => [res.Eksamensår, res.Gjennomsnitt, res.Kjønn]);
-            console.log("GJKVINNE: ", gjkvinne)
+            
 
             const gjEksMap = gjEks.map(res => [res.Eksamensår, res.Gjennomsnitt, res.Kjønn]);
-            console.log("GJEKSMAP", gjEksMap)
+            
 
             const alle = scatter.map(res => [res.Eksamensår, res.Årslønn])
-            console.log("ALLE: ", alle)
+            
 
             //Tallformatering
             function formatNO(num) {
