@@ -1,0 +1,71 @@
+body:after {
+    content: url(../../../images/nv.png);
+    position: fixed;
+    bottom: 3.5em;
+    right: 8em;
+    /* box-shadow: 5px 5px 10px #000;  */
+}
+
+.reveal #tinytext {
+    font-size: .5em !important;
+}
+
+#first {
+      color:white !important;
+    }
+
+.reveal #firstheader {
+    color:white !important;
+} 
+
+.reveal div.container {
+    max-width: 900px;
+    margin: auto;
+    border: none;
+  }
+
+ .reveal .div.container {
+    position: relative;
+    padding-bottom: 0%;
+    height: 0;
+    overflow: hidden;
+}
+
+.reveal .plot {
+    /* position: absolute; */
+    top:0;
+    left: 0;
+    width: 850px !important;
+    height: 400px;
+}
+
+body {
+    font-family: Open Sans,Arial,Sans-serif;
+    line-height: 0.8;
+  }
+
+.reveal
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.reveal table th, td {
+    font-size: .4em;
+}
+
+.reveal table th {
+    background-color: #94c43a;
+    color: #ffffff;
+    padding: 0.6em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+.reveal table td {
+    border-bottom: 1px solid #94c43a;
+    text-align: right;
+  }
+
+
