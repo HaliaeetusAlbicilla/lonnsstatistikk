@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Lønnsstatistikk for utvalg</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/nv.css" id="theme">
+        <link rel="stylesheet" href="css/theme/source/ekstra.css"/>
+        
+        
+        
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+
+	<body>
+        
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+                <section id="first" data-background-color="#94c43a" style=color:whitesmoke;>
+                    <p><small>Trykk F11 for fullskjermvisning</small></p>
+					    <img src="images/nCircle.png" alt="Naturviterne" style="height: 350px; margin: 0 auto 1rem auto; background: transparent;" class="logo">
+					<h2 id="firstheader">Lønnsstatistikk for utvalg</h2>
+                </section>
+
+                <section data-background="#e0e7e1", data-background-transition="zoom">
+                    <section>
+                        <h2>Nøkkeltall</h2>
+                        <p>Bruk musepekeren for å se informasjon fra grafen.</p>
+                        <div class="container">
+                            <iframe class="plot" frameborder="0"
+                                    src="https://naturviterne.northeurope.cloudapp.azure.com/histchart.html"></iframe>
+                        </div>
+                        <h2>↓</h2>  
+                    </section>
+                    <section>
+                        <div class="container">
+                        <iframe class="plot" frameborder="0"
+                        src="https://naturviterne.northeurope.cloudapp.azure.com/columnchart.html"></iframe>
+                        </div> 
+                    </section>
+                    <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/scatterplot.html" data-background-interactive>
+                    </section>
+                    <section>
+                        <h2 class="r-fit-text">→</h2>
+                    </section>
+                </section>
+                
+                <section>
+                    <h2>Om statistikken<br>for utvalg</h2>
+                    <ul id="tinytext">
+                        <li>Tine</li>
+                        <li>NLR</li>
+                        <li>Nortura</li>
+                        <li>Felleskjøpet Agri</li>
+                        <li>Strand Unikorn</li>
+                        <li>Norgesfôr</li>
+                        <li>Innovasjon Norge</li>
+                        <li>Fylkesmannsembetene</li>
+                        <li>Rådgivere i kommunesektoren</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Om statistikken<br>for utvalg</h2>
+                    <ul id="tinytext">
+                        <li class="fragment"><strong>Antall i utvalget:</strong> 1009 personer</li>
+                        <li class="fragment"><strong>Gjennomsnittslønn:</strong> 623 740 kr</li>
+                        <li class="fragment"><strong>Medianlønn:</strong> 609 300 kr</li>
+                        <li class="fragment"><strong>Gjennomsnittlig utdanningsår:</strong> 1998</li>
+                    </ul>
+                    
+                </section>
+                
+                
+
+                <section>
+                    <h2>Om statistikken<br>for utvalg</h2>
+                    <p><small>Andelen med «leder» eller «sjef» i stillingstittelen</small></p>
+                    <div style="width:60%;height:60%;padding-top:50px;margin:0 auto">
+                        <table border="1" class="dataframe">
+                        <thead>
+                          <tr style="text-align: right;">
+                            <th>Arbeidsgiver</th>
+                            <th>Sjefer/ledere</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Animalia</td>
+                            <td>25 %</td>
+                          </tr>
+                          <tr>
+                            <td>Felleskjøpet Agri</td>
+                            <td>53 %</td>
+                          </tr>
+                          <tr>
+                            <td>Fylkesmannen</td>
+                            <td>5 %</td>
+                          </tr>
+                          <tr>
+                            <td>Innovasjon Norge</td>
+                            <td>0 %</td>
+                          </tr>
+                          <tr>
+                            <td>NLR</td>
+                            <td>14 %</td>
+                          </tr>
+                          <tr>
+                            <td>Nortura</td>
+                            <td>50 %</td>
+                          </tr>
+                          <tr>
+                            <td>Rådgiver i kommune</td>
+                            <td>0 %</td>
+                          </tr>
+                          <tr>
+                            <td>Strand unikorn</td>
+                            <td>67 %</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Tine</strong></td>
+                            <td><strong>18 %</strong></span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </section>
+
+
+				
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+                        <h2>Sammenlignbare bedrifter</h2>
+                        <p><small>NB: Utvalget «kommune» omfatter kun rådgivere i kommunesektoren</small></p>
+                        <h2>↓</h2>
+                    </section>
+                    
+                    <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tine19/tine_p1_ms.html" data-background-interactive></section>
+                    
+					<section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tine19/tine_p2.html" data-background-interactive>
+                    </section>
+                    <section><h2 class="r-fit-text">→</h2></section>
+				</section>
+
+				<section>
+                    <h2>Detaljer</h2>
+                    <p><small>Median årslønn, gjennomsnittlig årslønn og gjennomsnittlig eksamensår</small></p>
+                    <div class="container">
+                    <iframe class="plot" frameborder="0"
+                        src="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tine19/tine_t1.html"></iframe>
+                    </div>
+				</section>
+
+				<section>
+                    <section>
+                    <h2>Lønnsutviklingen over tid</h2>
+                    <h2>↓</h2>
+                    </section>
+                    <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tine19/tine_utv_median_ms.html" data-background-interactive>
+                    </section>
+                    <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tine19/tine_utv_ms.html" data-background-interactive>
+                    </section>
+                    <section>
+                        <h2 class="r-fit-text">→</h2>
+                    </section>
+                    </section>
+
+				<section>
+                    <h2>Detaljer</h2>
+                        <p><small>Rull opp og ned i tabellen for å se flere</small></p>
+                        <iframe frameborder="0" height="450px" width="100%"
+                        src="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tine19/tine_utvtabell_ms.html"></iframe>  
+                        </iframe>
+                </section>
+    
+                <section>
+                <section>
+                    <h2>En nærmere titt på lønn og utdanningsår i utvalget</h2>
+                    <h2>↓</h2>
+                </section>
+                <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tine19/tine_scatter.html" data-background-interactive>
+                </section>
+                <section>
+                    <h2 class="r-fit-text">→</h2>
+                </section>
+                </section>
+                <section>
+                    <p align="right"><small>Trykk F11 for å avslutte fullskjermvisning</small></p>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>
