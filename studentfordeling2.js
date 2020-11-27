@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let studentData = fetch('/studentfordeling')
+    let studentData = fetch('/studentfordeling2')
 
     Promise.all([studentData])
         .then((res) => Promise.all(res.map(res => res.json())))
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 chart: {
                     type: 'pie',
-                    renderTo: 'studentcontainer',
+                    renderTo: 'studentcontainer2',
                 },
 
                 lang: {
