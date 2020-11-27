@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let studentData = fetch('/studentfordeling2')
+    let studentData2 = fetch('/studentfordeling2')
 
-    Promise.all([studentData])
+    Promise.all([studentData2])
         .then((res) => Promise.all(res.map(res => res.json())))
         .then((data) => {
       
             let stud = data[0]
-            const studentdata = stud.map(res => [res.utdanningsretning, res.ant])
+            const studentdata2 = stud.map(res => [res.utdanningsretning, res.ant])
 
             //Tallformatering
             function formatNO(num) {
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 name: 'Medlem',
                 color: '#94c43a',
-                data: studentdata,
+                data: studentdata2,
             });
 
 let chart = new Highcharts.Chart(optionsST);
