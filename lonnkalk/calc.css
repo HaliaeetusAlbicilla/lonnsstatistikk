@@ -1,0 +1,214 @@
+@font-face {
+    font-family: 'foundry_monolinebold';
+    src: url('fomonbld-webfont.woff2') format('woff2'),
+         url('fomonbld-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+
+body {
+    background-color: #eef2ef;
+}
+
+header {
+    background-color: #94c43a;
+    padding: 20px;
+    text-align: left;
+    font-size: 2rem;
+    color: white;
+    padding-left: 10%;
+}
+
+
+
+article {
+    float: left;
+    padding: 20px;
+    margin-left: 10%;
+    width: 95%;
+    max-width: 950px;
+    background-color: #ffffff;
+}
+
+
+
+
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.nvcontainer {
+    width: 100%;
+    height: 500px;
+}
+
+.pcontainer {
+    width: 100%;
+    min-height: 3rem;
+}
+
+.highcharts-container {
+    width: 100%;
+    height: 500px;
+}
+
+.background-color {
+    color: #eef2ef;
+}
+
+p {
+    font-size: 1rem;
+    font-family: "Open Sans", Arial, Sans-serif;
+    color: #2c2c2d;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+/* Salary text */
+#slr {
+    font-family: foundry_monolinebold;
+    font-size: 4rem;
+    color: #94c43a;
+}
+
+
+body {
+    color: #2c2c2d;
+    line-height: 1.5;
+    font-family: "Open Sans";
+    min-height: 630px;
+}
+
+label {
+    font-family: "Open Sans";
+}
+
+
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-family: "Open Sans";
+    font-weight: 600;
+    line-height: 1.1;
+    color: maroon;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: .5rem;
+    font-family: "Open Sans";
+    font-weight: 600;
+    line-height: 1.1;
+    color: inherit;
+}
+
+a {
+    color: #0096b6;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+ul {
+    list-style: none;
+    /* Remove default bullets */
+}
+
+ul li::before {
+    content: "\2022";
+    /* background-size: contain; */
+    display: inline-block;
+    width: 1em;
+    height: 0em;
+    /* position: relative; */
+    /* padding-top: 1em; */
+    line-height: 2rem;
+    margin-right: 0.2rem;
+    line-height: 0;
+    font-size: 2rem;
+    background-position: 0 0px;
+    margin-left: 0.1em;
+    color: #8dc63f;
+    vertical-align: baseline;
+}
+
+ul li {
+    font-family: "Open Sans";
+    line-height: 2rem;
+    vertical-align: baseline;
+}
+
+.my-3 {
+    min-height: 630px;
+}
+
+.radio-label {
+    display: inline-block;
+     vertical-align: top;
+     margin-right: 3%;
+ }
+ .radio-input {
+    display: inline-block;
+     vertical-align: top;
+ }

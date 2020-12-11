@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lønnskalkulator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="calc.css">
+    </head>
+
+<body>
+
+
+
+    <div class="container p-3 my-3 border">
+        <div class="row justify-content-md-center">
+
+            <div class="col-md-auto text-center">
+             
+       
+                <form name="calcSector">
+                <div class="custom-control custom-radio">
+                    <label class="form-check-label" for="radio">Sektor</label><br />
+                    <input class="form-control-input" type="radio" name="sector" id="stat" value="stat">
+                    <label class="form-check-label" for="stat">
+                      Stat
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="form-control-input" type="radio" name="sector" id="kommune" value="kommune">
+                    <label class="form-check-label" for="kommune">
+                    Kommune
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="form-control-input" type="radio" name="sector" id="privat" value="privat">
+                    <label class="form-check-label" for="privat">
+                    Privat
+                    </label>
+                </div>
+                </form>
+                
+
+                <br><br>
+                <form name="calcEdu">
+                    <div class="custom-control custom-radio">
+                    <label class="form-check-label" for="radio">Utdanningsgrad</label><br />
+                    <input class="form-control-input" type="radio" id="bachelor" name="eduMax" value="bachelor">
+                    <label class="form-check-label" for="bachelor">Bachelorgrad</label><br>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="form-control-input" type="radio" id="master" name="eduMax" value="master">
+                    <label class="form-check-label" for="master">Mastergrad</label><br>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="form-control-input" type="radio" id="doc" name="eduMax" value="doc">
+                    <label class="form-check-label" for="doc">Doktograd</label>
+                </div>
+                    </form>
+                    <br><br>
+                <label class="form-control-input" for="eduYear">Årstallet du fullførte din utdanning</label>
+                <br>
+                <div class="slidecontainer">
+                    <input type="range" class="form-control-range" min="1950" max="2020" value="2000" class="slider" id="eduYear" step="1">
+                    <p>Årstall valgt: <span id="demo"></span></p>
+                </div>
+            
+                <div class="pcontainer">
+                    <p id="slr"></p>
+                </div>
+ 
+        
+
+            
+         
+          
+            </div>
+
+
+        </div>
+
+    </div>
+    <script src="calc.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
