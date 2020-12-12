@@ -54,13 +54,12 @@ function r1(){
     return;
 }
 
-
 function r2(){
     var rad = document.calcEdu.eduMax;
     var prev = null;
     for (var i = 0; i < rad.length; i++) {
         rad[i].addEventListener('change', function() {
-            (prev) ? console.log("forrige verdi: " + prev.value): null;
+            (prev) ? console.log(prev.value): null;
             if (this !== prev){
                 prev = this;
             }
@@ -107,6 +106,8 @@ if (isNaN(salary)){
     return salary;
 }
 }
+
+
 
 r1();
 r2();

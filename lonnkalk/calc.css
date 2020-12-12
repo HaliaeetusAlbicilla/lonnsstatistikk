@@ -66,9 +66,6 @@ article {
     background-color: #ffffff;
 }
 
-
-
-
 section:after {
     content: "";
     display: table;
@@ -111,7 +108,7 @@ p {
 #slr {
     font-family: foundry_monolinebold;
     font-size: 4rem;
-    color: #94c43a;
+    color: 	#707070;
 }
 
 
@@ -203,12 +200,10 @@ ul li {
     min-height: 630px;
 }
 
-.radio-label {
-    display: inline-block;
-     vertical-align: top;
-     margin-right: 3%;
- }
- .radio-input {
-    display: inline-block;
-     vertical-align: top;
- }
+#radiotitle {
+    font-family: "foundry_monolinebold";
+}
+
+#demo {
+    font-family: "foundry_monolinebold";
+}
