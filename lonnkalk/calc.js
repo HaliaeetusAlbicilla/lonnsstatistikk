@@ -2,18 +2,19 @@
 // 	document.querySelector('#eduYearOut').value = vol;
 // }
 
-let B0;
-let B1;
-let B2;
+let B0 = -589639990.5165;
+let B1 = 594523.5227;
+let B2 = -74.5054
 let Bbachelor; 
-let Bmaster;
+let Bmaster = 153596.9459;
 let Bdoc;   
-let xBachelor;
-let xMaster;
-let xDoc;
+let xBachelor = 0;
+let xMaster = 1;
+let xDoc = 0;
 let edY = 2000;
 let edu;
 let salary;
+let exp = new Date().getFullYear() - edY;
 
 function r1(){
     var rad2 = document.calcSector.sector;
@@ -86,11 +87,14 @@ function r2(){
 function slide(){
     var slider = document.getElementById("eduYear");
     var output = document.getElementById("demo");
+    var output2 = document.getElementById("exp");
     output.innerHTML = slider.value;
     slider.oninput = function() {
         output.innerHTML = this.value;
         edY = slider.value
         calculate();
+        experience = new Date().getFullYear() - edY;
+        output2.innerHTML = "(Typisk rundt " + experience + " års arbeidserfaring)";
     }
     return;
 }
@@ -106,6 +110,7 @@ if (isNaN(salary)){
     return salary;
 }
 }
+
 
 
 
