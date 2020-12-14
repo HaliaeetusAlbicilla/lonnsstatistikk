@@ -116,7 +116,6 @@ body {
     color: #2c2c2d;
     line-height: 1.5;
     font-family: "Open Sans";
-    min-height: 937px;
     font-size: 1.2rem;
 }
 
@@ -198,7 +197,7 @@ ul li {
 }
 
 .my-3 {
-    min-height: 937px;
+    min-height: 776px;
 }
 
 #radiotitle {
