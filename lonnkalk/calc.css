@@ -107,7 +107,7 @@ p {
 /* Salary text */
 #slr {
     font-family: foundry_monolinebold;
-    font-size: 5rem;
+    font-size: 4.4rem;
     color: 	#224973;
 }
 
@@ -117,7 +117,7 @@ body {
     line-height: 1.5;
     font-family: "Open Sans";
     min-height: 937px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 label {
@@ -203,7 +203,7 @@ ul li {
 
 #radiotitle {
     font-family: "foundry_monolinebold";
-    font-size: 1.8rem;
+    font-size: 1.3rem;
 }
 
 #demo {
@@ -220,11 +220,11 @@ input[type="radio"] {
 
 #salaryTitle {
     font-family: "foundry_monolinebold";
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-top: 2rem;
 }
 
 .arbeidserfaring {
     width: 100%;
-    min-height: 2rem;
+    min-height: 1.5rem;
 }
