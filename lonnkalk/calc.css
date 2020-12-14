@@ -98,7 +98,7 @@ p {
     margin-top: 0;
     margin-bottom: 1rem;
     display: block;
-    margin-block-start: 1em;
+    margin-block-start: 0em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
@@ -116,7 +116,8 @@ body {
     color: #2c2c2d;
     line-height: 1.5;
     font-family: "Open Sans";
-    min-height: 630px;
+    min-height: 780px;
+    font-size: 1.3rem;
 }
 
 label {
@@ -202,8 +203,27 @@ ul li {
 
 #radiotitle {
     font-family: "foundry_monolinebold";
+    font-size: 1.8rem;
 }
 
 #demo {
     font-family: "foundry_monolinebold";
+    font-size: 2rem;
+}
+
+input[type="radio"] {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    transform: scale(1.5);
+}
+
+#salaryTitle {
+    font-family: "foundry_monolinebold";
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.arbeidserfaring {
+    width: 100%;
+    min-height: 2rem;
 }
