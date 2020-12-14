@@ -2,19 +2,21 @@
 // 	document.querySelector('#eduYearOut').value = vol;
 // }
 
-let B0 = -589639990.5165;
-let B1 = 594523.5227;
-let B2 = -74.5054
+let B0;
+let B1;
+let B2;
 let Bbachelor; 
-let Bmaster = 153596.9459;
+let Bmaster;
 let Bdoc;   
-let xBachelor = 0;
-let xMaster = 1;
-let xDoc = 0;
+let xBachelor;
+let xMaster;
+let xDoc;
 let edY = 2000;
 let edu;
 let salary;
-let exp = new Date().getFullYear() - edY;
+let experience = new Date().getFullYear() - edY;
+var output2 = document.getElementById("exp");
+output2.innerHTML = "(Typisk rundt " + experience + " års arbeidserfaring)";
 
 function r1(){
     var rad2 = document.calcSector.sector;
@@ -88,6 +90,7 @@ function slide(){
     var slider = document.getElementById("eduYear");
     var output = document.getElementById("demo");
     var output2 = document.getElementById("exp");
+    
     output.innerHTML = slider.value;
     slider.oninput = function() {
         output.innerHTML = this.value;
@@ -99,6 +102,7 @@ function slide(){
     return;
 }
 
+var output3 = document.getElementById("salaryTitle");
 function calculate(){
     salary = Math.round(B0 + B1 * edY + B2 * edY **2 + Bbachelor * xBachelor + Bmaster * xMaster + Bdoc * xDoc);
 if (isNaN(salary)){
@@ -106,6 +110,7 @@ if (isNaN(salary)){
 } else {
     if (document.getElementById('slr') !== 0) {
         document.getElementById('slr').innerHTML = "kr " + Intl.NumberFormat('no-NB', { style: 'decimal' }).format(salary)
+        output3.innerHTML = "Årslønn";
     }
     return salary;
 }

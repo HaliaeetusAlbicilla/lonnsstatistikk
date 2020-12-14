@@ -107,8 +107,8 @@ p {
 /* Salary text */
 #slr {
     font-family: foundry_monolinebold;
-    font-size: 4rem;
-    color: 	#707070;
+    font-size: 5rem;
+    color: 	#224973;
 }
 
 
@@ -208,7 +208,8 @@ ul li {
 
 #demo {
     font-family: "foundry_monolinebold";
-    font-size: 2rem;
+    font-size: 3rem;
+
 }
 
 input[type="radio"] {
