@@ -105,7 +105,7 @@ if (isNaN(salary)){
     document.getElementById('slr').innerHTML = ""
 } else {
     if (document.getElementById('slr') !== 0) {
-        document.getElementById('slr').innerHTML = salary + " kr/år"
+        document.getElementById('slr').innerHTML = "kr " + Intl.NumberFormat('no-NB', { style: 'decimal' }).format(salary)
     }
     return salary;
 }
