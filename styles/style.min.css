@@ -1,0 +1,41 @@
+.nvcontainer
+{
+    width:100%;
+    height:500px;
+}
+
+.pcontainer
+{
+    width:100%;
+    min-height: 3rem;
+}
+
+.highcharts-container
+{
+    width:100%;
+    height:500px;
+}
+
+.background-color{
+    color: #eef2ef;
+} 
+
+p {
+    font-size: 1rem;
+    font-family: Open Sans,Arial,Sans-serif;
+    color: #2c2c2d;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+
+  body {
+    color: #2c2c2d;
+    line-height: 1.5;
+  }
+
+
