@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Budsjett, kommuner</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link media="all" rel="stylesheet" type="text/css" href="https://naturviterne.northeurope.cloudapp.azure.com/styles/style.min.css" data-ctbrowsertype="chrome" />
+    <link media="all" rel="stylesheet" type="text/css" href="https://naturviterne.northeurope.cloudapp.azure.com/styles/tablestyle.css" data-ctbrowsertype="chrome" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Ikke indekser  -->
+    <meta name="googlebot" content="noindex">
+    <meta name="robots" content="noindex, nofollow">
+
+    <style>
+        /* * {
+            box-sizing: border-box;
+        } */
+
+        body {
+            background-color: #eef2ef;
+        }
+
+        header {
+            background-color: #94c43a;
+            padding: 20px;
+            text-align: left;
+            font-size: 2rem;
+            font-family: 'Signika', sans-serif;
+            color: white;
+            padding-left: 10%;
+        }
+
+        /* I tilfelle man vil ha navigasjon
+        nav {
+            float: left;
+            width: 5%;
+            background: #ccc;
+            padding: 20%;
+            height: 100%;
+        } 
+           nav ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: green;
+        }
+
+           @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        Eller footer
+        
+             footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        */
+
+        article {
+            float: left;
+            padding: 20px;
+            margin-left: 10%;
+            width: 95%;
+            max-width: 950px;
+            background-color: #ffffff;
+        }
+
+
+
+
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .nvcontainer {
+            width: 100%;
+            height: 500px;
+        }
+
+        .pcontainer {
+            width: 100%;
+            min-height: 3rem;
+        }
+
+        .highcharts-container {
+            width: 100%;
+            height: 500px;
+        }
+
+        .background-color {
+            color: #eef2ef;
+        }
+
+        p {
+            font-size: 1rem;
+            font-family: "Open Sans", Arial, Sans-serif;
+            color: #2c2c2d;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        body {
+            color: #2c2c2d;
+            line-height: 1.5;
+        }
+
+
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: .5rem;
+            font-family: "Open Sans";
+            font-weight: 600;
+            line-height: 1.1;
+            color: maroon;
+        }
+
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: .5rem;
+            font-family: 'Inconsolata', monospace;
+            font-weight: 600;
+            line-height: 1.1;
+            color: inherit;
+        }
+
+        a {
+            color: #0096b6;
+        }
+
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+
+        ul {
+            list-style: none;
+            /* Remove default bullets */
+        }
+
+        ul li::before {
+            content: "\2022";
+            /* background-size: contain; */
+            display: inline-block;
+            width: 1em;
+            height: 0em;
+            /* position: relative; */
+            /* padding-top: 1em; */
+            line-height: 2rem;
+            margin-right: 0.2rem;
+            line-height: 0;
+            font-size: 2rem;
+            background-position: 0 0px;
+            margin-left: 0.1em;
+            color: #8dc63f;
+            vertical-align: baseline;
+        }
+
+        ul li {
+            font-family: "Open Sans";
+            line-height: 2rem;
+            vertical-align: baseline;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h2>Kommuner, lønnskostnader innen FGK3</h2>
+        Fysisk planlegging, kulturminner, natur, nærmiljø
+    </header>
+    <article>
+        <p>Tallene dette er basert på, kan lastes ned fra <a href="https://www.ssb.no/statbank/table/12362/">SSB.no</a>. 
+            Siden det ferskeste kommunebudsjettet tilgjengelig på SSB er fra 2019, bruker jeg kommune- og fylkesinndeling fra samme periode her. </p>
+        <p>Tallmaterialet er begrenset til lønnskostnader fratrukket sykelønnsrefusjon innenfor budsjettet FGK 3 Plan, byggesak og miljø i 2019. Dette budsjettet omfatter følgende kategorier:</p>
+        <ul>
+            <li>301 Plansaksbehandling</li>
+            <li>302 Byggesaksbehandling og eierseksjonering</li>
+            <li>303 Kart og oppmåling</li>
+            <li>304 Bygge- og delesaksbehandling, ansvarsrett og utslippstillatelser</li>
+            <li>335 Rekreasjon i tettsted</li>
+            <li>360 Naturforvaltning og friluftsliv</li>
+            <li>365 Kulturminneforvaltning</li>
+        </ul>
+        <p>Både de frie og de bundne inntektene er i all hovedsak knyttet opp mot antall innbyggere, det finnes inntektsforskjeller basert på kommunenes geografi og demografi. 
+            Regionalpolitiske tilskudd, utgiftsutjevning og øremerkede tilskudd gjør at kommunene kan behandles noe ulikt etter hvilket behov de har for denne typen kompetanse. 
+            Dersom en kommune med liten befolkning får øremerket tilskudd for klimatilpasning, kan for eksempel det gi stort positivt utslag i beløp per innbygger 
+            og andel av budsjettet som brukes innenfor FKG 3. </p>
+        <p>De ti mest folkerike kommunene bruker mellom 1,3 og 2,3 prosent av det totale budsjettet på lønnskostnader innenfor FGK 3. Ser man på alle kommunene i landet,
+            ligger andelen mellom 0 og 7,5 prosent.
+        </p>
+        <h2>De mest folkerike kommunene</h2>
+        <p>Mens Fredrikstad bruker 662 kroner per innbygger på lønnskostnader innen FGK 3, bruker Sandnes 1043 kroner. Det er altså ganske stor variasjon blant de mest folkerike kommunene. </p>
+
+        <iframe frameborder="0" height="520px" width="100%"
+        src="plots/largest.html"></iframe>
+        <iframe frameborder="0" height="520px" width="100%"
+        src="tables/largest.html"></iframe>
+        <p>Bare for å nevne det: Hvis man utvider til de 30 mest folkerike kommunene kommer Bodø på førsteplass, Karmøy tar plass før Oslo og Skedsmo og Asker ligger også høyt. 
+            Det kan hende det er en god idé å ta de ti beste av de 30 største kommunene eller noe sånt, for å «belønne» de folkerike kommunene som skårer bra til tross for at de ikke er
+            blant de absolutt største. Her er for eksempel de 30 største kommunene sortert etter beløp per innbygger.
+        </p>
+        <iframe frameborder="0" height="520px" width="100%"
+        src="tables/thirtyLargest.html"></iframe>
+        
+
+        <h2>De beste kommunene</h2>
+       <p>De beste kommunene og de verste kommunene er kommuner med lavere folketall. Den aller beste ligger på over 8500 kroner per innbygger, men har bare litt over 900 innbyggere. 
+           Hold musa over de grønne søylene for å se innbyggertallet, eller se tabellen under.</p>
+    <iframe frameborder="0" height="450px" width="100%"
+    src="plots/best.html"></iframe>
+    <iframe frameborder="0" height="500px" width="100%"
+    src="tables/best.html"></iframe>
+
+    <h2>Verstingene</h2>
+    <p>De kommunene som ligger lavest, bruker praktisk talt ingen penger på lønn innenfor FGK 3. I likhet med de beste, er det kommuner med lave innbyggertall.</p>
+    <iframe frameborder="0" height="450px" width="100%"
+    src="plots/worst.html"></iframe>
+    <iframe frameborder="0" height="500px" width="100%"
+    src="tables/worst.html"></iframe>
+
+    <p>For å visualisere forskjellen mellom de beste og de verste:</p>
+    <iframe frameborder="0" height="450px" width="100%"
+    src="plots/bestWorst.html"></iframe>
+
+    <h2>Fylkesvis fordeling</h2>
+    <p>SSB tilbyr å laste ned tilsvarende datasett sortert på fylker, der det er budsjettene og innbyggertallene til kommunene i det respektive fylket som summeres opp.</p>
+        <iframe frameborder="0" height="900px" width="100%"
+    src="tables/fylker.html"></iframe>
+
+    <h2>Kart med data for alle kommuner</h2>
+    <iframe frameborder="0" height="800px" width="100%"
+    src="https://naturviterne.northeurope.cloudapp.azure.com/other/kommune/gis/kkart/index.html"></iframe>
+</article>
+</body>
