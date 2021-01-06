@@ -10,6 +10,7 @@ var jsonSource_BelpperinnbyggerNOK_0 = new ol.source.Vector({
 });
 jsonSource_BelpperinnbyggerNOK_0.addFeatures(features_BelpperinnbyggerNOK_0);
 var lyr_BelpperinnbyggerNOK_0 = new ol.layer.Vector({
+                type: 'base',
                 declutter: true,
                 source:jsonSource_BelpperinnbyggerNOK_0, 
                 style: style_BelpperinnbyggerNOK_0,
@@ -31,6 +32,7 @@ var jsonSource_Andelavbudsjett_1 = new ol.source.Vector({
 });
 jsonSource_Andelavbudsjett_1.addFeatures(features_Andelavbudsjett_1);
 var lyr_Andelavbudsjett_1 = new ol.layer.Vector({
+                type: 'base',
                 declutter: true,
                 source:jsonSource_Andelavbudsjett_1, 
                 style: style_Andelavbudsjett_1,
