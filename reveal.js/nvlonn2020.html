@@ -41,34 +41,52 @@
 					    <img src="images/frontSalary2020.jpg" alt="Naturviterne" style="height: 350px; margin: 0 auto 1rem auto; background: transparent;" class="logo">
 					<h2 id="firstheader">Lønnsstatistikken 2020</h2>
                 </section>
-
-                            
-                <section data-background-color="#00BBE5" data-background-image="images/svarprosent.png">
-                    <div style="position: absolute; width: 60%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 50px; font-size: 35px; text-align: left;">
-                        <p><strong>Svarprosent:</strong> 61,2 %</p>
-                        <ul>
-                            <li class="fragment">Innlogging kreves</li>
-                            <li class="fragment">Utsatte lønnsforhandlinger</li>
-                            <li class="fragment">Manglende lønnsjustering</li>
-                        </ul> 
+                
+                <section>
+                    <section data-background-color="#00BBE5" data-background-image="images/svarprosent.png">
+                        <div style="position: absolute; width: 60%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 50px; font-size: 35px; text-align: left;">
+                            <p><strong>Svarprosent:</strong> 61,2 %</p>
+                            <ul>
+                                <li class="fragment">Utsatte lønnsforhandlinger</li>
+                                <li class="fragment">Manglende lønnsjustering</li>
+                                <li class="fragment">Innlogging kreves</li>
+                            </ul> 
+                        </div>
+                        <aside class="notes">
+                            61,2 % lavere enn tidligere år, men likevel en høyere svarprosent sammenlignet med alle de fagforeningene jeg var i stand til å undersøke. <br><br>
+                            Lavere svarprosent enn vanlig går igjen, med korona som forklaring.<br><br>
+                            For vår del trolig viktig forklaring på dette at vi for første gang krevde innlogging. 
+                        </aside>
                         
-                    </div>
-                    
-
+                    </section>
+                    <section>
+                        <ul>
+                            <li class="fragment">Sikkerhet</li>
+                            <li class="fragment">Datakvalitet</li>
+                            <li class="fragment">Funksjonalitet</li>
+                        </ul>
+                        <aside class="notes">Fagforeningsmedlemskap i seg selv er sensitiv personopplysning etter personvernforordningen. I tillegg vill de færreste at fødselsnummer og andre opplysninger skal kunne lekke ut<br><br>
+                        Svarene på lønnsundersøkelsen sendes kryptert, lagres og behandles nå kryptert.<br><br>
+                        Et alternativ vi vurderte var Google/Microsoft forms, men da kan vi ikke sikre at hvert svar er det eneste svaret fra et medlem.<br><br>
+                        Ved å kunne koble medlemsnummeret mot medlemssystemet kan vi hente mer data for å luke ut feil eller utvide funksjonaliteten.
+                        </aside>
+                        
+                    </section>
                 </section>
 
                 <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 					<h2>Median og gjennomsnitt</h2>
 					<p></p>
 					<div class="r-hstack justify-center">
-						<div data-id="box1" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-                        <div data-id="box2" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-                        <div data-id="box3" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-                        <div data-id="box4" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+						<div data-id="box2" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
                         <div data-id="box5" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
                         <div data-id="box6" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+                        <div data-id="box1" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+                        <div data-id="box3" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
                         <div data-id="box7" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+                        <div data-id="box4" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
 					</div>
+                    <aside class="notes">Én ting jeg vil at alle skal ha i bakhodet i gjennomgangen er hva som egentlig ligger bak gjennomsnittlig og median årslønn. La oss si vi har en virksomhet der syv ansatte er medlem av Naturviterne.</aside>
 				</section>
 				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 					<div class="r-hstack justify-center">
@@ -81,8 +99,11 @@
                         <div data-id="box7" data-auto-animate-delay="0.6" style="background: #00BBE5; width: 150px; height: 100px; margin: 10px;"><p class="r-fit-text" style="color:white; padding:10px;">1 900 000 kr</p></div>
 					</div>
 					
-                    <p class="fragment">Median: <span class="fragment highlight-blue"><b>620 000 kr</b></span></p>
+                    <p>Median:<b>620 000 kr</b></p>
                     <p class="fragment">Gjennomsnitt: <span class="fragment highlight-red"><b>791 429 kr</b></span></p>
+                    <aside class="notes">Vi sorterer medlemmene fra lavest til høyeste lønn. Rådgivere her, seniorrådgivere og en direktør. Kanskje et ekstremt eksempel, men dette er også en realistisk lønn for en bærekraftdirektør i privat sektor.<br><br>
+                        Hvis du ikke vet lønnsnivåene, men du vet medianlønna, så virker det fornuftig å gjette at et tilfeldig medlem i bedriften tjener 620 000 kroner.<br><br>
+                        Gjennomsnittslønnen er den pluss den pluss den … delt på syv. Hvis du bare vet gjennomsnittslønna, og ikke medianlønna, har du truffet altfor høyt på seks av syv forsøk</aside>
 				</section>
 
                 <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
@@ -101,10 +122,12 @@
                     <section>
                         <h2>Normalfordelt</h2>
                         <img src="images/normal.png">
+                        <aside class="notes">Hvis vi i stedet har en virksomhet der flest tjener 600 000, årslønnen er fordelt jevnt rundt dette tallet, ingen tjener under 400 000, ingen over 800 000 – da har vi en normalfordeling. Dette er det nok et par i salen som har god kjennskap til. Da er gjennomsnittet i midten, medianen i midten og alt er fint og flott.</aside>
                     </section>
                     <section>
-                        <h2>Virkeligheten</h2>
+                        <h2>Virkeligheten (illustrert)</h2>
                         <img src="images/mnmd.png">
+                        <aside class="notes">Men i virkeligheten er dette mer realistisk. Svært få tjener 200 000 kroner mindre enn toppen på 600 000, mens det er ganske mange som tjener 200 000 kr mer. Og 300 000 kroner mer. Og 400 000 kroner mer. Osv. Fordeling forskjøvet mot høyre. </aside>
                     </section>
                 </section>
                 <section>
@@ -112,28 +135,45 @@
                         <div style="position: absolute; width: 60%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 50px; font-size: 35px; text-align: left;">
                             <h2 style="color: white;">Fordelingen i lønnsstatistikken</h2>
                         </div>
+                        <aside class="notes">La oss gå fra statistikkforelesningen og over til tallene, og den faktiske fordelingen</aside>
                     </section>
                     <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/years.html" data-background-interactive>
-                        
+                        <aside class="notes">2020: Vi ser at vi har en topp på rett over 600 000 et sted. Svært få tjener to hakk under dette. Ganske mange tjener to hakk mer. Og tre. Og fire. Vi har en fordeling forskjøvet mot høyre.</aside>
                     </section>
                 </section>
                 
+                <section>
+                    <img src="images/lonn2019eks.png">
+                    <aside class="notes">Utdanningsår er et mål på arbeidserfaring, eller ansiennitet. Hvis du meldte deg inn i Naturviterne i fjor, og har jobbet to år i Nortura, så vet ikke vi om du har jobbet 20 år i Animalia før det. Hvis du var ferdig utdannet i 2000, er det derimot rimelig å anta at du har 20/21 års arbeidserfaring.<br><br> 
+                        Et av de problemene jeg har med lønnsstatistikk til eget bruk – hvis jeg bruker meg selv som eksempel: Jeg ble utdannet innen naturforvaltning i 2016, men har fem år arbeidserfaring som jeg kaller relevant i min jobb som teknologijournalist. Så jeg har lyst til å "oversette" utdanningsåret til 2011. Hva bør jeg da tjene hvis gjennomsnittlig årslønn er 707 000 for utdanningsår 1996? 600 000? 650 000? Jeg aner ikke, ut ifra dette!<br><br>
+                    Mange har god greie på det, men tenk på nyutdannede, eller de som bytter sektor, eller bytter jobb til noe helt annet.
+                </aside>
+                </section>
+
                 <section>
                     <section data-background-video="vids/calc.mp4" data-background-video-loop>
                         <div style="position: absolute; width: 60%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 50px; font-size: 35px; text-align: left;">
                             <h2 style="color: white;">Lønnskalkulator</h2>
                         </div>
+                        <aside class="notes">For å forsøke å si litt mer om nyansene bak eksamensår, utdanningsgrad og sektor, har jeg laget en lønnskalkulator. Den fungerer slik …</aside>
                     </section>
                     <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonnkalk/calc.html" data-background-interactive>                    
+                        <aside class="notes">… finn på noen eksempler<br><br>
+                        Dette tallet er hverken gjennomsnitt eller median, men en regresjonsmodell …</aside>
                     </section>
                     <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/scatterSector.html">
+                        <aside class="notes">3000 respondenter. Bare snakk i vei om å tegne en linje.</aside>
                     </section>
                     <section>
                         <img src="images/regression.png">
+                        <aside class="notes">Resultatet blir noe sånt som dette. Stat starter lavt, tar litt innpå Kommune. Kommune starter høyt, men du får minst igjen for ansienniteten. Privat sektor starter rundt kommune, men belønner arbeidserfaring mest.</aside>
                     </section>
                 </section>
 				
-       
+                <section>
+				    <img src="images/intro.png" width="50%">
+                    <aside class="notes">Les opp tall, forklar at økningen er påvirket av nye medlemmer, medlemmer som blir pensjonister, de som melder seg ut og ikke minst de som ikke svarte et av årene.</aside>
+				</section>
 
                 
                 <section>
@@ -141,24 +181,32 @@
                         <div style="position: absolute; width: 60%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 50px; font-size: 35px; text-align: left;">
                             <h2 style="color: white;">Utdanning og arbeidserfaring</h2>
                         </div>
+                        <aside class="notes">Vi vil veilede de som tar utdanning eller vurderer å ta utdanning best mulig. Derfor har vi denne arbeidsmarkedsinformasjonen på nettsiden.<br><br>
+                            I år har vi kommet opp med nye kategorier for utdanning som er tilpasset denne arbeidsmarkedsinformasjonen, slik at vi kan gi enda bedre informasjon med bakgrunn i lønnsstatistikken. </aside>
                     </section>
+                    
                     <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/eduField.html" data-background-interactive>
+                        <aside class="notes">Kategoriene er slik … blabla.<br>
+                        Litt om de ganske små lønnsforskjellene.</aside>
+                    </section>
+                    <section>
+                        <img src="images/edu.png" width="50%">
                     </section>
                     <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/utd_sector_md.html" data-background-interactive>
+                        <aside class="notes">Høyere utdanningsnivå er minst verdtsatt i statlig sektor. I privat sektor ser vi at de med doktorgrad tjener mye. </aside>
                     </section>
                     <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/utd_sector_mn.html" data-background-interactive>
+                        <aside class="notes">I statlig sektor er gjennomsnittet for doktorgrad bortimot kommunenivå. Privat sektor får en omkring 30 000 høyere gjennomsnittlig årslønn fordi de har en del svært høytlønte med doktorgrad.</aside>
                     </section>
                     <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/eduMax_eduYears_sector_md.html" data-background-interactive>
+                        <aside class="notes">Master kommune, øker mye fram til 20 års arbeidserfaring.<br><br>Master stat starter lavere og øker mer.<br><br>Privat starter under kommune og øker mest.</aside>
                     </section>
                     <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/eduMax_eduYears_sector_mn.html" data-background-interactive>
+                        <aside class="notes">Samme mønsteret på gjennomsnitt</aside>
                     </section>
-
-                    
                 </section>
 
-                <section>
-				    <img src="images/intro.png" width="50%">
-				</section>
+                
 
                 <section>
                     <section data-background-color="#00BBE5">
@@ -166,22 +214,58 @@
                             <h2 style="color: white;">Lønn etter sektor</h2>
                         </div>
                     </section>
+                    <section>
+                        <img src="images/prsektor.png" width="50%">
+                        <aside class="notes">Privat sektor har både de virksomhetene som betaler høyest og lavest lønn. Det gir en stor forskjell på gjennomsnitt og median.</aside>
+                    </section>
                     <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/avg_md_sector.html" data-background-interactive>
                     </section>
-                    <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/utv_md.html.html" data-background-interactive>
+                    <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/utv_md.html" data-background-interactive>
                     </section>
-                    <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/utv_mn.html.html" data-background-interactive>
+                    <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/utv_mn.html" data-background-interactive>
                     </section>
                 </section>
 
-                <section data-background-video="vids/office.mp4" data-background-video-loop>
-                    <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 50px; font-size: 35px; text-align: left;">
-                        <h2 style="color: white;">Kjønn</h2>
-                    </div>
-                </section>
-    
                 <section>
-                    <p align="right"><small>Trykk F11 for å avslutte fullskjermvisning</small></p>
+                    <section data-background-video="vids/office.mp4" data-background-video-loop>
+                        <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 50px; font-size: 35px; text-align: left;">
+                            <h2 style="color: white;">Kjønn</h2>
+                        </div>
+                    </section>
+                    <section>
+                        <img src="images/gender.png" width="50%">
+                    </section>
+                    <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/genderHist.html" data-background-interactive>
+                    </section>
+                    <section>
+                        <img src="images/genderIllust.png" width="50%">
+                    </section>
+                    <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/gender_eduY.html" data-background-interactive>
+                    </section>
+                    <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/genderLevel.html" data-background-interactive>
+                    </section>
+                    <section>
+                        <img src="images/regressionG.png">
+                    </section>
+                    <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/tk2021/eduFieldFM.html" data-background-interactive>
+                    </section>
+                    
+                </section>
+
+                <section>
+                    <section data-background-video="vids/lofoten.mp4" data-background-video-loop>
+                        <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 50px; font-size: 35px; text-align: left;">
+                            <h2 style="color: white;">Regionale forskjeller</h2>
+                        </div>
+                    </section>
+                    <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/main/salaryMapF.html" data-background-interactive>
+                    </section>
+                    <section data-background-iframe="https://naturviterne.northeurope.cloudapp.azure.com/lonn/main/salaryMapK.html" data-background-interactive>
+                    </section>
+                </section>
+
+                <section>
+                    <p align="right"><small>Takk!</small></p>
                 </section>
 
 			</div>
