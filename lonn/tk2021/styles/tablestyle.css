@@ -29,7 +29,7 @@ table th, table td {
 }
 
 table th {
-  background-color: #94c43a;
+  background-color: #00BBE5;
   font-size: 1em;
   color: #ffffff;
   padding: 0.8em;
@@ -90,4 +90,4 @@ table th, table td:first-child {
   }
 }
 
-tr:hover {background-color:#94c43a;}
+tr:hover {background-color:#00BBE5;}
