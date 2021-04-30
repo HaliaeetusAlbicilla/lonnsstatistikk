@@ -1,0 +1,3226 @@
+
+<html>
+  <head><title>Pandas dataframe</title></head>
+  <link rel="stylesheet" type="text/css" href="https://naturviterne.northeurope.cloudapp.azure.com/styles/tablestyle.css"/>
+  <body>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Kommune</th>
+      <th>Andel av totalbudsjett</th>
+      <th>Beløp per innbygger</th>
+      <th>Beløp</th>
+      <th>Folketall</th>
+      <th>Areal</th>
+      <th>Fylke</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Eidfjord</td>
+      <td>6.9 %</td>
+      <td>kr 7,796</td>
+      <td>kr 7,040,000</td>
+      <td>906</td>
+      <td>1,492 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Flå</td>
+      <td>5.3 %</td>
+      <td>kr 4,092</td>
+      <td>kr 4,292,000</td>
+      <td>1,050</td>
+      <td>704 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Solund</td>
+      <td>4.8 %</td>
+      <td>kr 4,374</td>
+      <td>kr 3,438,000</td>
+      <td>802</td>
+      <td>228 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Øyer</td>
+      <td>4.5 %</td>
+      <td>kr 2,762</td>
+      <td>kr 14,067,000</td>
+      <td>5,100</td>
+      <td>640 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Bykle</td>
+      <td>4.3 %</td>
+      <td>kr 6,631</td>
+      <td>kr 6,167,000</td>
+      <td>965</td>
+      <td>1,467 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Hvaler</td>
+      <td>4.1 %</td>
+      <td>kr 2,346</td>
+      <td>kr 11,012,000</td>
+      <td>4,668</td>
+      <td>90 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Tydal</td>
+      <td>3.9 %</td>
+      <td>kr 3,796</td>
+      <td>kr 2,881,000</td>
+      <td>769</td>
+      <td>1,329 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Bygland</td>
+      <td>3.9 %</td>
+      <td>kr 3,419</td>
+      <td>kr 3,905,000</td>
+      <td>1,162</td>
+      <td>1,312 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Hol</td>
+      <td>3.7 %</td>
+      <td>kr 2,903</td>
+      <td>kr 12,871,000</td>
+      <td>4,441</td>
+      <td>1,855 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Hemsedal</td>
+      <td>3.7 %</td>
+      <td>kr 2,459</td>
+      <td>kr 6,261,000</td>
+      <td>2,486</td>
+      <td>754 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Åseral</td>
+      <td>3.6 %</td>
+      <td>kr 3,786</td>
+      <td>kr 3,510,000</td>
+      <td>932</td>
+      <td>888 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Marker</td>
+      <td>3.6 %</td>
+      <td>kr 1,790</td>
+      <td>kr 6,444,000</td>
+      <td>3,595</td>
+      <td>413 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Sirdal</td>
+      <td>3.5 %</td>
+      <td>kr 4,260</td>
+      <td>kr 7,548,000</td>
+      <td>1,822</td>
+      <td>1,554 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Frogn</td>
+      <td>3.5 %</td>
+      <td>kr 1,711</td>
+      <td>kr 27,291,000</td>
+      <td>15,877</td>
+      <td>86 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Ringebu</td>
+      <td>3.4 %</td>
+      <td>kr 2,217</td>
+      <td>kr 9,773,000</td>
+      <td>4,392</td>
+      <td>1,248 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Etnedal</td>
+      <td>3.3 %</td>
+      <td>kr 2,428</td>
+      <td>kr 3,052,000</td>
+      <td>1,279</td>
+      <td>459 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Nissedal</td>
+      <td>3.2 %</td>
+      <td>kr 3,112</td>
+      <td>kr 4,450,000</td>
+      <td>1,448</td>
+      <td>905 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Nore og Uvdal</td>
+      <td>3.2 %</td>
+      <td>kr 2,867</td>
+      <td>kr 6,914,000</td>
+      <td>2,439</td>
+      <td>2,502 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Kvitsøy</td>
+      <td>3.2 %</td>
+      <td>kr 2,535</td>
+      <td>kr 1,285,000</td>
+      <td>517</td>
+      <td>6 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Vestby</td>
+      <td>3.2 %</td>
+      <td>kr 1,393</td>
+      <td>kr 25,478,000</td>
+      <td>18,042</td>
+      <td>134 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Ulvik</td>
+      <td>3.1 %</td>
+      <td>kr 2,605</td>
+      <td>kr 2,764,000</td>
+      <td>1,080</td>
+      <td>722 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Sigdal</td>
+      <td>3.1 %</td>
+      <td>kr 1,669</td>
+      <td>kr 5,784,000</td>
+      <td>3,467</td>
+      <td>842 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Valle</td>
+      <td>3.0 %</td>
+      <td>kr 2,711</td>
+      <td>kr 3,169,000</td>
+      <td>1,164</td>
+      <td>1,265 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Vinje</td>
+      <td>3.0 %</td>
+      <td>kr 2,694</td>
+      <td>kr 10,117,000</td>
+      <td>3,676</td>
+      <td>3,106 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Austevoll</td>
+      <td>3.0 %</td>
+      <td>kr 1,257</td>
+      <td>kr 6,633,000</td>
+      <td>5,236</td>
+      <td>117 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Enebakk</td>
+      <td>2.8 %</td>
+      <td>kr 1,157</td>
+      <td>kr 12,804,000</td>
+      <td>11,110</td>
+      <td>233 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Nesbyen</td>
+      <td>2.7 %</td>
+      <td>kr 2,040</td>
+      <td>kr 6,656,000</td>
+      <td>3,273</td>
+      <td>810 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Øystre Slidre</td>
+      <td>2.7 %</td>
+      <td>kr 1,654</td>
+      <td>kr 5,334,000</td>
+      <td>3,229</td>
+      <td>963 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Gjøvik</td>
+      <td>2.7 %</td>
+      <td>kr 1,453</td>
+      <td>kr 44,154,000</td>
+      <td>30,560</td>
+      <td>672 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Vang</td>
+      <td>2.6 %</td>
+      <td>kr 2,334</td>
+      <td>kr 3,671,000</td>
+      <td>1,578</td>
+      <td>1,505 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Suldal</td>
+      <td>2.6 %</td>
+      <td>kr 2,284</td>
+      <td>kr 8,698,000</td>
+      <td>3,804</td>
+      <td>1,737 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Krødsherad</td>
+      <td>2.6 %</td>
+      <td>kr 1,587</td>
+      <td>kr 3,521,000</td>
+      <td>2,212</td>
+      <td>374 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Flesberg</td>
+      <td>2.6 %</td>
+      <td>kr 1,564</td>
+      <td>kr 4,242,000</td>
+      <td>2,688</td>
+      <td>562 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Samnanger</td>
+      <td>2.6 %</td>
+      <td>kr 1,555</td>
+      <td>kr 3,893,000</td>
+      <td>2,485</td>
+      <td>269 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Bodø</td>
+      <td>2.6 %</td>
+      <td>kr 1,294</td>
+      <td>kr 67,997,000</td>
+      <td>52,357</td>
+      <td>1,395 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Modalen</td>
+      <td>2.5 %</td>
+      <td>kr 3,553</td>
+      <td>kr 1,336,000</td>
+      <td>388</td>
+      <td>412 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Lesja</td>
+      <td>2.5 %</td>
+      <td>kr 1,801</td>
+      <td>kr 3,566,000</td>
+      <td>1,975</td>
+      <td>2,260 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Nesodden</td>
+      <td>2.5 %</td>
+      <td>kr 1,111</td>
+      <td>kr 22,011,000</td>
+      <td>19,616</td>
+      <td>61 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Kvænangen</td>
+      <td>2.4 %</td>
+      <td>kr 2,313</td>
+      <td>kr 2,697,000</td>
+      <td>1,191</td>
+      <td>2,109 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Sør-Fron</td>
+      <td>2.4 %</td>
+      <td>kr 1,632</td>
+      <td>kr 4,999,000</td>
+      <td>3,119</td>
+      <td>742 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Drangedal</td>
+      <td>2.4 %</td>
+      <td>kr 1,563</td>
+      <td>kr 6,364,000</td>
+      <td>4,060</td>
+      <td>1,063 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Tysnes</td>
+      <td>2.4 %</td>
+      <td>kr 1,466</td>
+      <td>kr 4,288,000</td>
+      <td>2,869</td>
+      <td>255 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Vegårshei</td>
+      <td>2.4 %</td>
+      <td>kr 1,357</td>
+      <td>kr 2,888,000</td>
+      <td>2,097</td>
+      <td>356 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Hole</td>
+      <td>2.4 %</td>
+      <td>kr 1,287</td>
+      <td>kr 8,769,000</td>
+      <td>6,799</td>
+      <td>193 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Ringerike</td>
+      <td>2.4 %</td>
+      <td>kr 1,134</td>
+      <td>kr 34,952,000</td>
+      <td>30,641</td>
+      <td>1,555 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Lier</td>
+      <td>2.4 %</td>
+      <td>kr 1,012</td>
+      <td>kr 27,454,000</td>
+      <td>26,811</td>
+      <td>302 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Beiarn</td>
+      <td>2.3 %</td>
+      <td>kr 2,290</td>
+      <td>kr 2,288,000</td>
+      <td>1,017</td>
+      <td>1,222 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Fyresdal</td>
+      <td>2.3 %</td>
+      <td>kr 1,961</td>
+      <td>kr 2,408,000</td>
+      <td>1,287</td>
+      <td>1,280 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Gildeskål</td>
+      <td>2.3 %</td>
+      <td>kr 1,904</td>
+      <td>kr 3,656,000</td>
+      <td>1,950</td>
+      <td>665 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Vik</td>
+      <td>2.3 %</td>
+      <td>kr 1,800</td>
+      <td>kr 4,701,000</td>
+      <td>2,635</td>
+      <td>833 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Tinn</td>
+      <td>2.3 %</td>
+      <td>kr 1,739</td>
+      <td>kr 9,746,000</td>
+      <td>5,691</td>
+      <td>2,045 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Flakstad</td>
+      <td>2.3 %</td>
+      <td>kr 1,446</td>
+      <td>kr 1,790,000</td>
+      <td>1,272</td>
+      <td>178 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Frøya</td>
+      <td>2.3 %</td>
+      <td>kr 1,311</td>
+      <td>kr 6,824,000</td>
+      <td>5,151</td>
+      <td>241 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Frosta</td>
+      <td>2.3 %</td>
+      <td>kr 1,251</td>
+      <td>kr 3,265,000</td>
+      <td>2,627</td>
+      <td>76 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Sveio</td>
+      <td>2.3 %</td>
+      <td>kr 1,238</td>
+      <td>kr 7,180,000</td>
+      <td>5,766</td>
+      <td>246 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Holmestrand</td>
+      <td>2.3 %</td>
+      <td>kr 1,064</td>
+      <td>kr 26,623,000</td>
+      <td>24,699</td>
+      <td>432 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Asker</td>
+      <td>2.3 %</td>
+      <td>kr 1,041</td>
+      <td>kr 98,815,000</td>
+      <td>94,441</td>
+      <td>377 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Øvre Eiker</td>
+      <td>2.3 %</td>
+      <td>kr 972</td>
+      <td>kr 19,148,000</td>
+      <td>19,423</td>
+      <td>457 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Engerdal</td>
+      <td>2.2 %</td>
+      <td>kr 2,138</td>
+      <td>kr 2,672,000</td>
+      <td>1,268</td>
+      <td>2,197 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Nesna</td>
+      <td>2.2 %</td>
+      <td>kr 1,842</td>
+      <td>kr 3,134,000</td>
+      <td>1,761</td>
+      <td>183 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Ål</td>
+      <td>2.2 %</td>
+      <td>kr 1,824</td>
+      <td>kr 8,480,000</td>
+      <td>4,674</td>
+      <td>1,175 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Storfjord - Omasvuotna - Omasvuono</td>
+      <td>2.2 %</td>
+      <td>kr 1,665</td>
+      <td>kr 3,048,000</td>
+      <td>1,829</td>
+      <td>1,543 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Kvam</td>
+      <td>2.2 %</td>
+      <td>kr 1,423</td>
+      <td>kr 12,039,000</td>
+      <td>8,457</td>
+      <td>617 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Vestre Slidre</td>
+      <td>2.2 %</td>
+      <td>kr 1,336</td>
+      <td>kr 2,846,000</td>
+      <td>2,125</td>
+      <td>463 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Røros</td>
+      <td>2.2 %</td>
+      <td>kr 1,308</td>
+      <td>kr 7,259,000</td>
+      <td>5,581</td>
+      <td>1,956 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Lillesand</td>
+      <td>2.2 %</td>
+      <td>kr 1,190</td>
+      <td>kr 13,299,000</td>
+      <td>11,074</td>
+      <td>190 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Karmøy</td>
+      <td>2.2 %</td>
+      <td>kr 1,024</td>
+      <td>kr 43,369,000</td>
+      <td>42,186</td>
+      <td>230 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Oslo</td>
+      <td>2.2 %</td>
+      <td>kr 1,007</td>
+      <td>kr 701,878,000</td>
+      <td>693,494</td>
+      <td>454 km²</td>
+      <td>Oslo</td>
+    </tr>
+    <tr>
+      <td>Gjerdrum</td>
+      <td>2.2 %</td>
+      <td>kr 954</td>
+      <td>kr 6,718,000</td>
+      <td>6,890</td>
+      <td>83 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Bergen</td>
+      <td>2.2 %</td>
+      <td>kr 909</td>
+      <td>kr 259,477,000</td>
+      <td>283,929</td>
+      <td>465 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Rennebu</td>
+      <td>2.1 %</td>
+      <td>kr 1,466</td>
+      <td>kr 3,598,000</td>
+      <td>2,486</td>
+      <td>948 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Hægebostad</td>
+      <td>2.1 %</td>
+      <td>kr 1,375</td>
+      <td>kr 2,324,000</td>
+      <td>1,680</td>
+      <td>461 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Siljan</td>
+      <td>2.1 %</td>
+      <td>kr 1,167</td>
+      <td>kr 2,739,000</td>
+      <td>2,340</td>
+      <td>214 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Birkenes</td>
+      <td>2.1 %</td>
+      <td>kr 1,097</td>
+      <td>kr 5,786,000</td>
+      <td>5,226</td>
+      <td>637 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Færder</td>
+      <td>2.1 %</td>
+      <td>kr 1,073</td>
+      <td>kr 28,931,000</td>
+      <td>26,730</td>
+      <td>100 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Kongsberg</td>
+      <td>2.1 %</td>
+      <td>kr 1,013</td>
+      <td>kr 28,063,000</td>
+      <td>27,723</td>
+      <td>793 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Stavanger</td>
+      <td>2.1 %</td>
+      <td>kr 1,009</td>
+      <td>kr 145,463,000</td>
+      <td>143,574</td>
+      <td>263 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Råde</td>
+      <td>2.1 %</td>
+      <td>kr 1,000</td>
+      <td>kr 7,566,000</td>
+      <td>7,508</td>
+      <td>119 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Askøy</td>
+      <td>2.1 %</td>
+      <td>kr 921</td>
+      <td>kr 27,260,000</td>
+      <td>29,553</td>
+      <td>101 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Sola</td>
+      <td>2.1 %</td>
+      <td>kr 915</td>
+      <td>kr 25,126,000</td>
+      <td>27,153</td>
+      <td>69 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Lillestrøm</td>
+      <td>2.1 %</td>
+      <td>kr 913</td>
+      <td>kr 79,402,000</td>
+      <td>85,983</td>
+      <td>457 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Ullensaker</td>
+      <td>2.1 %</td>
+      <td>kr 812</td>
+      <td>kr 32,861,000</td>
+      <td>39,625</td>
+      <td>252 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Aurland</td>
+      <td>2.0 %</td>
+      <td>kr 1,706</td>
+      <td>kr 3,032,000</td>
+      <td>1,781</td>
+      <td>1,468 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Rollag</td>
+      <td>2.0 %</td>
+      <td>kr 1,704</td>
+      <td>kr 2,362,000</td>
+      <td>1,390</td>
+      <td>449 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Osen</td>
+      <td>2.0 %</td>
+      <td>kr 1,477</td>
+      <td>kr 1,366,000</td>
+      <td>948</td>
+      <td>387 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Aure</td>
+      <td>2.0 %</td>
+      <td>kr 1,422</td>
+      <td>kr 4,933,000</td>
+      <td>3,507</td>
+      <td>641 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Trysil</td>
+      <td>2.0 %</td>
+      <td>kr 1,414</td>
+      <td>kr 9,302,000</td>
+      <td>6,627</td>
+      <td>3,014 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Sør-Aurdal</td>
+      <td>2.0 %</td>
+      <td>kr 1,395</td>
+      <td>kr 4,052,000</td>
+      <td>2,954</td>
+      <td>1,109 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Herøy (Nordland)</td>
+      <td>2.0 %</td>
+      <td>kr 1,261</td>
+      <td>kr 2,261,000</td>
+      <td>1,777</td>
+      <td>64 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Lindesnes</td>
+      <td>2.0 %</td>
+      <td>kr 1,147</td>
+      <td>kr 26,446,000</td>
+      <td>23,046</td>
+      <td>934 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Oppdal</td>
+      <td>2.0 %</td>
+      <td>kr 1,144</td>
+      <td>kr 7,987,000</td>
+      <td>7,001</td>
+      <td>2,274 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Gausdal</td>
+      <td>2.0 %</td>
+      <td>kr 1,116</td>
+      <td>kr 6,719,000</td>
+      <td>6,106</td>
+      <td>1,191 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Hurdal</td>
+      <td>2.0 %</td>
+      <td>kr 1,026</td>
+      <td>kr 2,912,000</td>
+      <td>2,854</td>
+      <td>285 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Time</td>
+      <td>2.0 %</td>
+      <td>kr 969</td>
+      <td>kr 18,508,000</td>
+      <td>18,916</td>
+      <td>183 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Sandnes</td>
+      <td>2.0 %</td>
+      <td>kr 955</td>
+      <td>kr 76,824,000</td>
+      <td>79,537</td>
+      <td>1,041 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Trondheim</td>
+      <td>2.0 %</td>
+      <td>kr 876</td>
+      <td>kr 181,863,000</td>
+      <td>205,163</td>
+      <td>529 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Eidsvoll</td>
+      <td>2.0 %</td>
+      <td>kr 848</td>
+      <td>kr 22,073,000</td>
+      <td>25,436</td>
+      <td>457 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Lørenskog</td>
+      <td>2.0 %</td>
+      <td>kr 830</td>
+      <td>kr 35,460,000</td>
+      <td>41,460</td>
+      <td>71 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Fedje</td>
+      <td>1.9 %</td>
+      <td>kr 1,867</td>
+      <td>kr 980,000</td>
+      <td>548</td>
+      <td>9 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Måsøy</td>
+      <td>1.9 %</td>
+      <td>kr 1,699</td>
+      <td>kr 2,034,000</td>
+      <td>1,225</td>
+      <td>1,136 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Gulen</td>
+      <td>1.9 %</td>
+      <td>kr 1,535</td>
+      <td>kr 3,487,000</td>
+      <td>2,297</td>
+      <td>597 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Lærdal</td>
+      <td>1.9 %</td>
+      <td>kr 1,494</td>
+      <td>kr 3,181,000</td>
+      <td>2,126</td>
+      <td>1,343 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Iveland</td>
+      <td>1.9 %</td>
+      <td>kr 1,381</td>
+      <td>kr 1,843,000</td>
+      <td>1,331</td>
+      <td>262 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Sømna</td>
+      <td>1.9 %</td>
+      <td>kr 1,373</td>
+      <td>kr 2,732,000</td>
+      <td>1,975</td>
+      <td>195 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Dønna</td>
+      <td>1.9 %</td>
+      <td>kr 1,352</td>
+      <td>kr 1,854,000</td>
+      <td>1,371</td>
+      <td>193 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Åfjord</td>
+      <td>1.9 %</td>
+      <td>kr 1,345</td>
+      <td>kr 5,744,000</td>
+      <td>4,288</td>
+      <td>1,329 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Grane</td>
+      <td>1.9 %</td>
+      <td>kr 1,337</td>
+      <td>kr 1,942,000</td>
+      <td>1,482</td>
+      <td>2,004 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Tysvær</td>
+      <td>1.9 %</td>
+      <td>kr 1,223</td>
+      <td>kr 13,667,000</td>
+      <td>11,065</td>
+      <td>425 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Flekkefjord</td>
+      <td>1.9 %</td>
+      <td>kr 1,209</td>
+      <td>kr 10,910,000</td>
+      <td>9,028</td>
+      <td>544 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Hitra</td>
+      <td>1.9 %</td>
+      <td>kr 1,207</td>
+      <td>kr 6,205,000</td>
+      <td>5,050</td>
+      <td>756 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Tingvoll</td>
+      <td>1.9 %</td>
+      <td>kr 1,190</td>
+      <td>kr 3,552,000</td>
+      <td>3,025</td>
+      <td>337 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Midtre Gauldal</td>
+      <td>1.9 %</td>
+      <td>kr 1,165</td>
+      <td>kr 7,272,000</td>
+      <td>6,238</td>
+      <td>1,861 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Selbu</td>
+      <td>1.9 %</td>
+      <td>kr 1,161</td>
+      <td>kr 4,723,000</td>
+      <td>4,062</td>
+      <td>1,235 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Kragerø</td>
+      <td>1.9 %</td>
+      <td>kr 1,159</td>
+      <td>kr 12,077,000</td>
+      <td>10,380</td>
+      <td>305 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Alver</td>
+      <td>1.9 %</td>
+      <td>kr 1,087</td>
+      <td>kr 31,878,000</td>
+      <td>29,224</td>
+      <td>679 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Eigersund</td>
+      <td>1.9 %</td>
+      <td>kr 1,083</td>
+      <td>kr 16,018,000</td>
+      <td>14,811</td>
+      <td>432 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Vennesla</td>
+      <td>1.9 %</td>
+      <td>kr 1,033</td>
+      <td>kr 15,435,000</td>
+      <td>14,774</td>
+      <td>384 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Skaun</td>
+      <td>1.9 %</td>
+      <td>kr 1,029</td>
+      <td>kr 8,612,000</td>
+      <td>8,325</td>
+      <td>224 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Ørland</td>
+      <td>1.9 %</td>
+      <td>kr 1,020</td>
+      <td>kr 10,509,000</td>
+      <td>10,323</td>
+      <td>457 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Nordre Follo</td>
+      <td>1.9 %</td>
+      <td>kr 1,014</td>
+      <td>kr 60,883,000</td>
+      <td>59,288</td>
+      <td>203 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Gran</td>
+      <td>1.9 %</td>
+      <td>kr 962</td>
+      <td>kr 13,087,000</td>
+      <td>13,630</td>
+      <td>757 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Gjesdal</td>
+      <td>1.9 %</td>
+      <td>kr 960</td>
+      <td>kr 11,586,000</td>
+      <td>12,002</td>
+      <td>618 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Larvik</td>
+      <td>1.9 %</td>
+      <td>kr 938</td>
+      <td>kr 44,544,000</td>
+      <td>47,204</td>
+      <td>813 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Bærum</td>
+      <td>1.9 %</td>
+      <td>kr 880</td>
+      <td>kr 112,812,000</td>
+      <td>127,731</td>
+      <td>192 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Malvik</td>
+      <td>1.9 %</td>
+      <td>kr 877</td>
+      <td>kr 12,568,000</td>
+      <td>14,148</td>
+      <td>168 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Hjelmeland</td>
+      <td>1.8 %</td>
+      <td>kr 1,410</td>
+      <td>kr 3,638,000</td>
+      <td>2,574</td>
+      <td>1,068 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Rendalen</td>
+      <td>1.8 %</td>
+      <td>kr 1,390</td>
+      <td>kr 2,420,000</td>
+      <td>1,780</td>
+      <td>3,180 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Karlsøy</td>
+      <td>1.8 %</td>
+      <td>kr 1,361</td>
+      <td>kr 2,956,000</td>
+      <td>2,200</td>
+      <td>1,092 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Gjerstad</td>
+      <td>1.8 %</td>
+      <td>kr 1,356</td>
+      <td>kr 3,296,000</td>
+      <td>2,428</td>
+      <td>322 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Guovdageaidnu-Kautokeino</td>
+      <td>1.8 %</td>
+      <td>kr 1,251</td>
+      <td>kr 3,652,000</td>
+      <td>2,910</td>
+      <td>9,707 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Kvinnherad</td>
+      <td>1.8 %</td>
+      <td>kr 1,197</td>
+      <td>kr 15,608,000</td>
+      <td>13,071</td>
+      <td>1,091 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Åmot</td>
+      <td>1.8 %</td>
+      <td>kr 1,089</td>
+      <td>kr 4,725,000</td>
+      <td>4,356</td>
+      <td>1,340 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Risør</td>
+      <td>1.8 %</td>
+      <td>kr 1,019</td>
+      <td>kr 6,888,000</td>
+      <td>6,809</td>
+      <td>193 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Alta</td>
+      <td>1.8 %</td>
+      <td>kr 1,015</td>
+      <td>kr 21,167,000</td>
+      <td>20,789</td>
+      <td>3,850 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Bamble</td>
+      <td>1.8 %</td>
+      <td>kr 959</td>
+      <td>kr 13,437,000</td>
+      <td>14,061</td>
+      <td>304 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Porsgrunn</td>
+      <td>1.8 %</td>
+      <td>kr 903</td>
+      <td>kr 32,982,000</td>
+      <td>36,397</td>
+      <td>164 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Averøy</td>
+      <td>1.8 %</td>
+      <td>kr 895</td>
+      <td>kr 5,199,000</td>
+      <td>5,788</td>
+      <td>176 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Moss</td>
+      <td>1.8 %</td>
+      <td>kr 888</td>
+      <td>kr 44,092,000</td>
+      <td>49,273</td>
+      <td>138 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Stjørdal</td>
+      <td>1.8 %</td>
+      <td>kr 878</td>
+      <td>kr 21,320,000</td>
+      <td>24,145</td>
+      <td>938 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Grimstad</td>
+      <td>1.8 %</td>
+      <td>kr 841</td>
+      <td>kr 20,098,000</td>
+      <td>23,544</td>
+      <td>304 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Tromsø</td>
+      <td>1.8 %</td>
+      <td>kr 804</td>
+      <td>kr 62,005,000</td>
+      <td>76,974</td>
+      <td>2,521 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Nittedal</td>
+      <td>1.8 %</td>
+      <td>kr 725</td>
+      <td>kr 17,719,000</td>
+      <td>24,249</td>
+      <td>186 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Nannestad</td>
+      <td>1.8 %</td>
+      <td>kr 724</td>
+      <td>kr 10,597,000</td>
+      <td>14,139</td>
+      <td>341 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Ullensvang</td>
+      <td>1.7 %</td>
+      <td>kr 1,363</td>
+      <td>kr 15,000,000</td>
+      <td>11,048</td>
+      <td>3,237 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Kvinesdal</td>
+      <td>1.7 %</td>
+      <td>kr 1,307</td>
+      <td>kr 7,739,000</td>
+      <td>5,987</td>
+      <td>963 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Steigen</td>
+      <td>1.7 %</td>
+      <td>kr 1,215</td>
+      <td>kr 3,143,000</td>
+      <td>2,608</td>
+      <td>1,009 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Luster</td>
+      <td>1.7 %</td>
+      <td>kr 1,214</td>
+      <td>kr 6,297,000</td>
+      <td>5,174</td>
+      <td>2,706 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Heim</td>
+      <td>1.7 %</td>
+      <td>kr 1,126</td>
+      <td>kr 6,689,000</td>
+      <td>5,963</td>
+      <td>1,025 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Stor-Elvdal</td>
+      <td>1.7 %</td>
+      <td>kr 1,115</td>
+      <td>kr 2,652,000</td>
+      <td>2,419</td>
+      <td>2,166 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Nordre Land</td>
+      <td>1.7 %</td>
+      <td>kr 1,042</td>
+      <td>kr 6,857,000</td>
+      <td>6,633</td>
+      <td>955 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Vågå</td>
+      <td>1.7 %</td>
+      <td>kr 1,029</td>
+      <td>kr 3,667,000</td>
+      <td>3,570</td>
+      <td>1,330 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Farsund</td>
+      <td>1.7 %</td>
+      <td>kr 999</td>
+      <td>kr 9,635,000</td>
+      <td>9,691</td>
+      <td>263 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Voss</td>
+      <td>1.7 %</td>
+      <td>kr 989</td>
+      <td>kr 15,607,000</td>
+      <td>15,740</td>
+      <td>2,042 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Osterøy</td>
+      <td>1.7 %</td>
+      <td>kr 959</td>
+      <td>kr 7,748,000</td>
+      <td>8,098</td>
+      <td>255 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Kristiansund</td>
+      <td>1.7 %</td>
+      <td>kr 949</td>
+      <td>kr 22,862,000</td>
+      <td>24,179</td>
+      <td>87 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Bømlo</td>
+      <td>1.7 %</td>
+      <td>kr 891</td>
+      <td>kr 10,655,000</td>
+      <td>11,957</td>
+      <td>247 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Bjørnafjorden</td>
+      <td>1.7 %</td>
+      <td>kr 890</td>
+      <td>kr 22,306,000</td>
+      <td>24,908</td>
+      <td>517 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Hareid</td>
+      <td>1.7 %</td>
+      <td>kr 878</td>
+      <td>kr 4,512,000</td>
+      <td>5,175</td>
+      <td>82 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Randaberg</td>
+      <td>1.7 %</td>
+      <td>kr 857</td>
+      <td>kr 9,699,000</td>
+      <td>11,221</td>
+      <td>25 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Sarpsborg</td>
+      <td>1.7 %</td>
+      <td>kr 849</td>
+      <td>kr 48,723,000</td>
+      <td>56,732</td>
+      <td>406 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Øygarden</td>
+      <td>1.7 %</td>
+      <td>kr 839</td>
+      <td>kr 32,454,000</td>
+      <td>38,316</td>
+      <td>315 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Horten</td>
+      <td>1.7 %</td>
+      <td>kr 839</td>
+      <td>kr 23,068,000</td>
+      <td>27,351</td>
+      <td>71 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Kristiansand</td>
+      <td>1.7 %</td>
+      <td>kr 837</td>
+      <td>kr 94,239,000</td>
+      <td>111,633</td>
+      <td>644 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Haugesund</td>
+      <td>1.7 %</td>
+      <td>kr 824</td>
+      <td>kr 30,765,000</td>
+      <td>37,357</td>
+      <td>73 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Strand</td>
+      <td>1.7 %</td>
+      <td>kr 807</td>
+      <td>kr 10,553,000</td>
+      <td>12,968</td>
+      <td>262 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Indre Østfold</td>
+      <td>1.7 %</td>
+      <td>kr 788</td>
+      <td>kr 35,637,000</td>
+      <td>44,792</td>
+      <td>792 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Nes</td>
+      <td>1.7 %</td>
+      <td>kr 647</td>
+      <td>kr 15,147,000</td>
+      <td>23,092</td>
+      <td>641 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Leka</td>
+      <td>1.6 %</td>
+      <td>kr 1,497</td>
+      <td>kr 843,000</td>
+      <td>557</td>
+      <td>110 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Lierne</td>
+      <td>1.6 %</td>
+      <td>kr 1,441</td>
+      <td>kr 1,914,000</td>
+      <td>1,355</td>
+      <td>2,962 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Fjord</td>
+      <td>1.6 %</td>
+      <td>kr 1,380</td>
+      <td>kr 3,453,000</td>
+      <td>2,549</td>
+      <td>1,191 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Lom</td>
+      <td>1.6 %</td>
+      <td>kr 1,106</td>
+      <td>kr 2,437,000</td>
+      <td>2,228</td>
+      <td>1,969 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Flatanger</td>
+      <td>1.6 %</td>
+      <td>kr 1,100</td>
+      <td>kr 1,210,000</td>
+      <td>1,103</td>
+      <td>459 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Søndre Land</td>
+      <td>1.6 %</td>
+      <td>kr 1,069</td>
+      <td>kr 5,966,000</td>
+      <td>5,617</td>
+      <td>728 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Tolga</td>
+      <td>1.6 %</td>
+      <td>kr 1,041</td>
+      <td>kr 1,627,000</td>
+      <td>1,562</td>
+      <td>1,123 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Austrheim</td>
+      <td>1.6 %</td>
+      <td>kr 1,014</td>
+      <td>kr 2,899,000</td>
+      <td>2,870</td>
+      <td>58 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Sortland</td>
+      <td>1.6 %</td>
+      <td>kr 973</td>
+      <td>kr 10,225,000</td>
+      <td>10,566</td>
+      <td>722 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Andøy</td>
+      <td>1.6 %</td>
+      <td>kr 953</td>
+      <td>kr 4,371,000</td>
+      <td>4,663</td>
+      <td>656 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Vindafjord</td>
+      <td>1.6 %</td>
+      <td>kr 944</td>
+      <td>kr 8,216,000</td>
+      <td>8,714</td>
+      <td>621 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Ringsaker</td>
+      <td>1.6 %</td>
+      <td>kr 909</td>
+      <td>kr 31,727,000</td>
+      <td>34,768</td>
+      <td>1,280 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Hå</td>
+      <td>1.6 %</td>
+      <td>kr 863</td>
+      <td>kr 16,492,000</td>
+      <td>18,991</td>
+      <td>258 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Tønsberg</td>
+      <td>1.6 %</td>
+      <td>kr 810</td>
+      <td>kr 46,202,000</td>
+      <td>56,293</td>
+      <td>329 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Vestvågøy</td>
+      <td>1.6 %</td>
+      <td>kr 802</td>
+      <td>kr 9,243,000</td>
+      <td>11,433</td>
+      <td>425 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Arendal</td>
+      <td>1.6 %</td>
+      <td>kr 772</td>
+      <td>kr 34,775,000</td>
+      <td>44,999</td>
+      <td>270 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Rana</td>
+      <td>1.6 %</td>
+      <td>kr 770</td>
+      <td>kr 20,083,000</td>
+      <td>26,184</td>
+      <td>4,460 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Ås</td>
+      <td>1.6 %</td>
+      <td>kr 753</td>
+      <td>kr 15,383,000</td>
+      <td>20,439</td>
+      <td>103 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Lunner</td>
+      <td>1.6 %</td>
+      <td>kr 746</td>
+      <td>kr 6,759,000</td>
+      <td>9,048</td>
+      <td>292 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Klepp</td>
+      <td>1.6 %</td>
+      <td>kr 739</td>
+      <td>kr 14,658,000</td>
+      <td>19,588</td>
+      <td>113 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Rælingen</td>
+      <td>1.6 %</td>
+      <td>kr 702</td>
+      <td>kr 13,147,000</td>
+      <td>18,530</td>
+      <td>72 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Salangen</td>
+      <td>1.5 %</td>
+      <td>kr 1,302</td>
+      <td>kr 2,719,000</td>
+      <td>2,146</td>
+      <td>458 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Sunndal</td>
+      <td>1.5 %</td>
+      <td>kr 1,125</td>
+      <td>kr 7,823,000</td>
+      <td>7,036</td>
+      <td>1,713 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Saltdal</td>
+      <td>1.5 %</td>
+      <td>kr 1,115</td>
+      <td>kr 5,166,000</td>
+      <td>4,671</td>
+      <td>2,216 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Leirfjord</td>
+      <td>1.5 %</td>
+      <td>kr 1,095</td>
+      <td>kr 2,494,000</td>
+      <td>2,294</td>
+      <td>465 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Gáivuotna - Kåfjord - Kaivuono</td>
+      <td>1.5 %</td>
+      <td>kr 1,083</td>
+      <td>kr 2,245,000</td>
+      <td>2,071</td>
+      <td>991 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Nord-Aurdal</td>
+      <td>1.5 %</td>
+      <td>kr 1,072</td>
+      <td>kr 6,819,000</td>
+      <td>6,413</td>
+      <td>906 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Kinn</td>
+      <td>1.5 %</td>
+      <td>kr 994</td>
+      <td>kr 17,054,000</td>
+      <td>17,207</td>
+      <td>812 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Stryn</td>
+      <td>1.5 %</td>
+      <td>kr 936</td>
+      <td>kr 6,659,000</td>
+      <td>7,130</td>
+      <td>1,382 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Gjemnes</td>
+      <td>1.5 %</td>
+      <td>kr 935</td>
+      <td>kr 2,484,000</td>
+      <td>2,629</td>
+      <td>382 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Sunnfjord</td>
+      <td>1.5 %</td>
+      <td>kr 906</td>
+      <td>kr 19,941,000</td>
+      <td>22,030</td>
+      <td>2,208 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Stad</td>
+      <td>1.5 %</td>
+      <td>kr 890</td>
+      <td>kr 8,468,000</td>
+      <td>9,457</td>
+      <td>753 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Orkland</td>
+      <td>1.5 %</td>
+      <td>kr 875</td>
+      <td>kr 16,006,000</td>
+      <td>18,217</td>
+      <td>1,906 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Skiptvet</td>
+      <td>1.5 %</td>
+      <td>kr 826</td>
+      <td>kr 3,161,000</td>
+      <td>3,805</td>
+      <td>101 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Sokndal</td>
+      <td>1.5 %</td>
+      <td>kr 804</td>
+      <td>kr 2,618,000</td>
+      <td>3,280</td>
+      <td>295 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Våler (Østfold)</td>
+      <td>1.5 %</td>
+      <td>kr 763</td>
+      <td>kr 4,430,000</td>
+      <td>5,736</td>
+      <td>257 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Løten</td>
+      <td>1.5 %</td>
+      <td>kr 729</td>
+      <td>kr 5,556,000</td>
+      <td>7,674</td>
+      <td>369 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Sula</td>
+      <td>1.5 %</td>
+      <td>kr 706</td>
+      <td>kr 6,643,000</td>
+      <td>9,310</td>
+      <td>59 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Sandefjord</td>
+      <td>1.5 %</td>
+      <td>kr 697</td>
+      <td>kr 44,842,000</td>
+      <td>63,764</td>
+      <td>422 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Drammen</td>
+      <td>1.5 %</td>
+      <td>kr 695</td>
+      <td>kr 70,786,000</td>
+      <td>101,386</td>
+      <td>318 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Giske</td>
+      <td>1.5 %</td>
+      <td>kr 664</td>
+      <td>kr 5,645,000</td>
+      <td>8,462</td>
+      <td>41 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Masfjorden</td>
+      <td>1.4 %</td>
+      <td>kr 1,319</td>
+      <td>kr 2,190,000</td>
+      <td>1,691</td>
+      <td>556 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Hyllestad</td>
+      <td>1.4 %</td>
+      <td>kr 1,172</td>
+      <td>kr 1,516,000</td>
+      <td>1,328</td>
+      <td>259 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Aukra</td>
+      <td>1.4 %</td>
+      <td>kr 1,158</td>
+      <td>kr 4,080,000</td>
+      <td>3,509</td>
+      <td>61 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Smøla</td>
+      <td>1.4 %</td>
+      <td>kr 1,068</td>
+      <td>kr 2,273,000</td>
+      <td>2,150</td>
+      <td>272 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Sauda</td>
+      <td>1.4 %</td>
+      <td>kr 1,053</td>
+      <td>kr 4,801,000</td>
+      <td>4,595</td>
+      <td>547 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Seljord</td>
+      <td>1.4 %</td>
+      <td>kr 987</td>
+      <td>kr 2,862,000</td>
+      <td>2,888</td>
+      <td>715 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Folldal</td>
+      <td>1.4 %</td>
+      <td>kr 986</td>
+      <td>kr 1,497,000</td>
+      <td>1,545</td>
+      <td>1,277 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Surnadal</td>
+      <td>1.4 %</td>
+      <td>kr 955</td>
+      <td>kr 5,606,000</td>
+      <td>5,920</td>
+      <td>1,366 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Moskenes</td>
+      <td>1.4 %</td>
+      <td>kr 888</td>
+      <td>kr 878,000</td>
+      <td>1,015</td>
+      <td>119 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Sør-Varanger</td>
+      <td>1.4 %</td>
+      <td>kr 866</td>
+      <td>kr 8,749,000</td>
+      <td>10,158</td>
+      <td>3,971 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Narvik</td>
+      <td>1.4 %</td>
+      <td>kr 859</td>
+      <td>kr 18,599,000</td>
+      <td>21,845</td>
+      <td>3,432 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Vefsn</td>
+      <td>1.4 %</td>
+      <td>kr 845</td>
+      <td>kr 11,214,000</td>
+      <td>13,278</td>
+      <td>1,929 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Evje og Hornnes</td>
+      <td>1.4 %</td>
+      <td>kr 842</td>
+      <td>kr 3,048,000</td>
+      <td>3,634</td>
+      <td>587 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Indre Fosen</td>
+      <td>1.4 %</td>
+      <td>kr 840</td>
+      <td>kr 8,355,000</td>
+      <td>10,084</td>
+      <td>1,096 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Nord-Odal</td>
+      <td>1.4 %</td>
+      <td>kr 819</td>
+      <td>kr 4,128,000</td>
+      <td>5,016</td>
+      <td>508 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Notodden</td>
+      <td>1.4 %</td>
+      <td>kr 811</td>
+      <td>kr 10,535,000</td>
+      <td>13,049</td>
+      <td>984 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Midt-Telemark</td>
+      <td>1.4 %</td>
+      <td>kr 808</td>
+      <td>kr 8,454,000</td>
+      <td>10,444</td>
+      <td>519 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Nord-Fron</td>
+      <td>1.4 %</td>
+      <td>kr 802</td>
+      <td>kr 4,577,000</td>
+      <td>5,723</td>
+      <td>1,141 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Rakkestad</td>
+      <td>1.4 %</td>
+      <td>kr 785</td>
+      <td>kr 6,454,000</td>
+      <td>8,255</td>
+      <td>435 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Lillehammer</td>
+      <td>1.4 %</td>
+      <td>kr 782</td>
+      <td>kr 22,292,000</td>
+      <td>28,345</td>
+      <td>478 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Stord</td>
+      <td>1.4 %</td>
+      <td>kr 739</td>
+      <td>kr 13,944,000</td>
+      <td>18,759</td>
+      <td>144 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Ørsta</td>
+      <td>1.4 %</td>
+      <td>kr 736</td>
+      <td>kr 7,969,000</td>
+      <td>10,825</td>
+      <td>662 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Vestre Toten</td>
+      <td>1.4 %</td>
+      <td>kr 730</td>
+      <td>kr 9,824,000</td>
+      <td>13,427</td>
+      <td>250 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Overhalla</td>
+      <td>1.4 %</td>
+      <td>kr 713</td>
+      <td>kr 2,754,000</td>
+      <td>3,884</td>
+      <td>730 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Sykkylven</td>
+      <td>1.4 %</td>
+      <td>kr 701</td>
+      <td>kr 5,325,000</td>
+      <td>7,625</td>
+      <td>338 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Elverum</td>
+      <td>1.4 %</td>
+      <td>kr 700</td>
+      <td>kr 14,906,000</td>
+      <td>21,254</td>
+      <td>1,229 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Jevnaker</td>
+      <td>1.4 %</td>
+      <td>kr 688</td>
+      <td>kr 4,722,000</td>
+      <td>6,852</td>
+      <td>226 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Ulstein</td>
+      <td>1.4 %</td>
+      <td>kr 673</td>
+      <td>kr 5,767,000</td>
+      <td>8,571</td>
+      <td>97 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Fredrikstad</td>
+      <td>1.4 %</td>
+      <td>kr 671</td>
+      <td>kr 55,800,000</td>
+      <td>82,385</td>
+      <td>293 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Herøy (Møre og Romsdal)</td>
+      <td>1.4 %</td>
+      <td>kr 658</td>
+      <td>kr 5,832,000</td>
+      <td>8,900</td>
+      <td>120 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Halden</td>
+      <td>1.4 %</td>
+      <td>kr 651</td>
+      <td>kr 20,427,000</td>
+      <td>31,373</td>
+      <td>642 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Tokke</td>
+      <td>1.3 %</td>
+      <td>kr 1,106</td>
+      <td>kr 2,394,000</td>
+      <td>2,201</td>
+      <td>984 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Bardu</td>
+      <td>1.3 %</td>
+      <td>kr 987</td>
+      <td>kr 3,908,000</td>
+      <td>4,005</td>
+      <td>2,704 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Årdal</td>
+      <td>1.3 %</td>
+      <td>kr 935</td>
+      <td>kr 4,833,000</td>
+      <td>5,193</td>
+      <td>977 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Vaksdal</td>
+      <td>1.3 %</td>
+      <td>kr 886</td>
+      <td>kr 3,473,000</td>
+      <td>3,977</td>
+      <td>715 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Dovre</td>
+      <td>1.3 %</td>
+      <td>kr 877</td>
+      <td>kr 2,203,000</td>
+      <td>2,553</td>
+      <td>1,364 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Nordreisa</td>
+      <td>1.3 %</td>
+      <td>kr 839</td>
+      <td>kr 4,039,000</td>
+      <td>4,861</td>
+      <td>3,438 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Hamar</td>
+      <td>1.3 %</td>
+      <td>kr 810</td>
+      <td>kr 25,511,000</td>
+      <td>31,369</td>
+      <td>351 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Volda</td>
+      <td>1.3 %</td>
+      <td>kr 802</td>
+      <td>kr 8,649,000</td>
+      <td>10,473</td>
+      <td>877 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Fitjar</td>
+      <td>1.3 %</td>
+      <td>kr 796</td>
+      <td>kr 2,506,000</td>
+      <td>3,189</td>
+      <td>142 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Rauma</td>
+      <td>1.3 %</td>
+      <td>kr 771</td>
+      <td>kr 5,732,000</td>
+      <td>7,468</td>
+      <td>1,502 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Froland</td>
+      <td>1.3 %</td>
+      <td>kr 698</td>
+      <td>kr 4,191,000</td>
+      <td>5,951</td>
+      <td>645 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Sør-Odal</td>
+      <td>1.3 %</td>
+      <td>kr 696</td>
+      <td>kr 5,506,000</td>
+      <td>7,905</td>
+      <td>517 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Melhus</td>
+      <td>1.3 %</td>
+      <td>kr 685</td>
+      <td>kr 11,606,000</td>
+      <td>16,733</td>
+      <td>694 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Bjerkreim</td>
+      <td>1.3 %</td>
+      <td>kr 677</td>
+      <td>kr 1,890,000</td>
+      <td>2,787</td>
+      <td>651 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Kongsvinger</td>
+      <td>1.3 %</td>
+      <td>kr 668</td>
+      <td>kr 11,925,000</td>
+      <td>17,829</td>
+      <td>1,036 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Inderøy</td>
+      <td>1.3 %</td>
+      <td>kr 660</td>
+      <td>kr 4,463,000</td>
+      <td>6,816</td>
+      <td>366 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Verdal</td>
+      <td>1.3 %</td>
+      <td>kr 642</td>
+      <td>kr 9,624,000</td>
+      <td>14,948</td>
+      <td>1,548 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Skien</td>
+      <td>1.3 %</td>
+      <td>kr 606</td>
+      <td>kr 33,437,000</td>
+      <td>54,942</td>
+      <td>779 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Lebesby</td>
+      <td>1.2 %</td>
+      <td>kr 1,072</td>
+      <td>kr 1,363,000</td>
+      <td>1,290</td>
+      <td>3,459 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Lurøy</td>
+      <td>1.2 %</td>
+      <td>kr 948</td>
+      <td>kr 1,778,000</td>
+      <td>1,890</td>
+      <td>265 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Gol</td>
+      <td>1.2 %</td>
+      <td>kr 891</td>
+      <td>kr 4,130,000</td>
+      <td>4,608</td>
+      <td>533 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Tynset</td>
+      <td>1.2 %</td>
+      <td>kr 850</td>
+      <td>kr 4,708,000</td>
+      <td>5,578</td>
+      <td>1,881 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Fjaler</td>
+      <td>1.2 %</td>
+      <td>kr 823</td>
+      <td>kr 2,375,000</td>
+      <td>2,802</td>
+      <td>417 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Sel</td>
+      <td>1.2 %</td>
+      <td>kr 816</td>
+      <td>kr 4,562,000</td>
+      <td>5,739</td>
+      <td>905 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Åmli</td>
+      <td>1.2 %</td>
+      <td>kr 808</td>
+      <td>kr 1,473,000</td>
+      <td>1,836</td>
+      <td>1,131 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Gloppen</td>
+      <td>1.2 %</td>
+      <td>kr 787</td>
+      <td>kr 4,631,000</td>
+      <td>5,854</td>
+      <td>1,031 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Nome</td>
+      <td>1.2 %</td>
+      <td>kr 785</td>
+      <td>kr 5,092,000</td>
+      <td>6,515</td>
+      <td>430 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Nærøysund</td>
+      <td>1.2 %</td>
+      <td>kr 761</td>
+      <td>kr 7,293,000</td>
+      <td>9,623</td>
+      <td>1,346 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Molde</td>
+      <td>1.2 %</td>
+      <td>kr 744</td>
+      <td>kr 23,720,000</td>
+      <td>31,967</td>
+      <td>1,503 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Nordkapp</td>
+      <td>1.2 %</td>
+      <td>kr 744</td>
+      <td>kr 2,288,000</td>
+      <td>3,162</td>
+      <td>926 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Alstahaug</td>
+      <td>1.2 %</td>
+      <td>kr 739</td>
+      <td>kr 5,466,000</td>
+      <td>7,447</td>
+      <td>188 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Vågan</td>
+      <td>1.2 %</td>
+      <td>kr 728</td>
+      <td>kr 7,041,000</td>
+      <td>9,608</td>
+      <td>479 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Stranda</td>
+      <td>1.2 %</td>
+      <td>kr 719</td>
+      <td>kr 3,223,000</td>
+      <td>4,523</td>
+      <td>866 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Brønnøy</td>
+      <td>1.2 %</td>
+      <td>kr 711</td>
+      <td>kr 5,545,000</td>
+      <td>7,917</td>
+      <td>1,046 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Hustadvika</td>
+      <td>1.2 %</td>
+      <td>kr 676</td>
+      <td>kr 9,000,000</td>
+      <td>13,279</td>
+      <td>522 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Steinkjer</td>
+      <td>1.2 %</td>
+      <td>kr 670</td>
+      <td>kr 16,175,000</td>
+      <td>24,357</td>
+      <td>2,122 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Øksnes</td>
+      <td>1.2 %</td>
+      <td>kr 662</td>
+      <td>kr 2,922,000</td>
+      <td>4,410</td>
+      <td>320 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Harstad</td>
+      <td>1.2 %</td>
+      <td>kr 656</td>
+      <td>kr 16,229,000</td>
+      <td>24,703</td>
+      <td>445 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Stange</td>
+      <td>1.2 %</td>
+      <td>kr 655</td>
+      <td>kr 13,811,000</td>
+      <td>21,064</td>
+      <td>724 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Modum</td>
+      <td>1.2 %</td>
+      <td>kr 621</td>
+      <td>kr 8,801,000</td>
+      <td>14,115</td>
+      <td>517 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Ålesund</td>
+      <td>1.2 %</td>
+      <td>kr 616</td>
+      <td>kr 41,072,000</td>
+      <td>66,258</td>
+      <td>632 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Aurskog-Høland</td>
+      <td>1.2 %</td>
+      <td>kr 548</td>
+      <td>kr 9,646,000</td>
+      <td>17,390</td>
+      <td>1,145 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Unjárga-Nesseby</td>
+      <td>1.1 %</td>
+      <td>kr 1,130</td>
+      <td>kr 994,000</td>
+      <td>926</td>
+      <td>1,437 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Lyngen</td>
+      <td>1.1 %</td>
+      <td>kr 876</td>
+      <td>kr 2,429,000</td>
+      <td>2,794</td>
+      <td>813 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Hammerfest</td>
+      <td>1.1 %</td>
+      <td>kr 866</td>
+      <td>kr 9,808,000</td>
+      <td>11,448</td>
+      <td>2,693 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Hemnes</td>
+      <td>1.1 %</td>
+      <td>kr 804</td>
+      <td>kr 3,560,000</td>
+      <td>4,454</td>
+      <td>1,590 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Høyanger</td>
+      <td>1.1 %</td>
+      <td>kr 777</td>
+      <td>kr 3,147,000</td>
+      <td>4,101</td>
+      <td>1,003 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Askvoll</td>
+      <td>1.1 %</td>
+      <td>kr 777</td>
+      <td>kr 2,324,000</td>
+      <td>3,011</td>
+      <td>326 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Holtålen</td>
+      <td>1.1 %</td>
+      <td>kr 750</td>
+      <td>kr 1,476,000</td>
+      <td>1,981</td>
+      <td>1,209 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Lyngdal</td>
+      <td>1.1 %</td>
+      <td>kr 614</td>
+      <td>kr 6,426,000</td>
+      <td>10,365</td>
+      <td>643 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Hadsel</td>
+      <td>1.1 %</td>
+      <td>kr 602</td>
+      <td>kr 4,852,000</td>
+      <td>8,061</td>
+      <td>567 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Raarvihke - Røyrvik</td>
+      <td>1.0 %</td>
+      <td>kr 1,231</td>
+      <td>kr 565,000</td>
+      <td>461</td>
+      <td>1,585 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Bremanger</td>
+      <td>1.0 %</td>
+      <td>kr 836</td>
+      <td>kr 3,007,000</td>
+      <td>3,629</td>
+      <td>833 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Sande</td>
+      <td>1.0 %</td>
+      <td>kr 685</td>
+      <td>kr 1,676,000</td>
+      <td>2,461</td>
+      <td>93 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Sørreisa</td>
+      <td>1.0 %</td>
+      <td>kr 592</td>
+      <td>kr 2,050,000</td>
+      <td>3,464</td>
+      <td>363 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Fauske - Fuossko</td>
+      <td>1.0 %</td>
+      <td>kr 589</td>
+      <td>kr 5,682,000</td>
+      <td>9,739</td>
+      <td>1,197 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Lund</td>
+      <td>1.0 %</td>
+      <td>kr 547</td>
+      <td>kr 1,737,000</td>
+      <td>3,202</td>
+      <td>408 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Levanger</td>
+      <td>1.0 %</td>
+      <td>kr 513</td>
+      <td>kr 10,339,000</td>
+      <td>20,164</td>
+      <td>646 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Kvæfjord</td>
+      <td>0.9 %</td>
+      <td>kr 934</td>
+      <td>kr 2,637,000</td>
+      <td>2,839</td>
+      <td>513 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Namsskogan</td>
+      <td>0.9 %</td>
+      <td>kr 818</td>
+      <td>kr 692,000</td>
+      <td>843</td>
+      <td>1,417 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Røst</td>
+      <td>0.9 %</td>
+      <td>kr 762</td>
+      <td>kr 372,000</td>
+      <td>498</td>
+      <td>10 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Dyrøy</td>
+      <td>0.9 %</td>
+      <td>kr 708</td>
+      <td>kr 753,000</td>
+      <td>1,083</td>
+      <td>289 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Hamarøy</td>
+      <td>0.9 %</td>
+      <td>kr 703</td>
+      <td>kr 1,899,000</td>
+      <td>2,766</td>
+      <td>2,020 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Os</td>
+      <td>0.9 %</td>
+      <td>kr 661</td>
+      <td>kr 1,236,000</td>
+      <td>1,891</td>
+      <td>1,040 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Vadsø</td>
+      <td>0.9 %</td>
+      <td>kr 584</td>
+      <td>kr 3,297,000</td>
+      <td>5,788</td>
+      <td>1,258 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Alvdal</td>
+      <td>0.9 %</td>
+      <td>kr 583</td>
+      <td>kr 1,403,000</td>
+      <td>2,432</td>
+      <td>942 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Åsnes</td>
+      <td>0.9 %</td>
+      <td>kr 576</td>
+      <td>kr 4,161,000</td>
+      <td>7,203</td>
+      <td>1,041 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Grue</td>
+      <td>0.9 %</td>
+      <td>kr 526</td>
+      <td>kr 2,391,000</td>
+      <td>4,612</td>
+      <td>837 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Balsfjord</td>
+      <td>0.9 %</td>
+      <td>kr 522</td>
+      <td>kr 2,900,000</td>
+      <td>5,559</td>
+      <td>1,497 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Loppa</td>
+      <td>0.8 %</td>
+      <td>kr 827</td>
+      <td>kr 711,000</td>
+      <td>888</td>
+      <td>689 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Vevelstad</td>
+      <td>0.8 %</td>
+      <td>kr 740</td>
+      <td>kr 344,000</td>
+      <td>462</td>
+      <td>539 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Hattfjelldal</td>
+      <td>0.8 %</td>
+      <td>kr 725</td>
+      <td>kr 918,000</td>
+      <td>1,297</td>
+      <td>2,684 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Høylandet</td>
+      <td>0.8 %</td>
+      <td>kr 669</td>
+      <td>kr 813,000</td>
+      <td>1,231</td>
+      <td>755 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Vestnes</td>
+      <td>0.8 %</td>
+      <td>kr 605</td>
+      <td>kr 3,959,000</td>
+      <td>6,532</td>
+      <td>352 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Kárásjohka-Karasjok</td>
+      <td>0.8 %</td>
+      <td>kr 580</td>
+      <td>kr 1,531,000</td>
+      <td>2,628</td>
+      <td>5,453 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Vanylven</td>
+      <td>0.8 %</td>
+      <td>kr 573</td>
+      <td>kr 1,768,000</td>
+      <td>3,117</td>
+      <td>385 km²</td>
+      <td>Møre og Romsdal</td>
+    </tr>
+    <tr>
+      <td>Snåase - Snåsa</td>
+      <td>0.8 %</td>
+      <td>kr 561</td>
+      <td>kr 1,152,000</td>
+      <td>2,063</td>
+      <td>2,343 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Eidskog</td>
+      <td>0.8 %</td>
+      <td>kr 531</td>
+      <td>kr 3,236,000</td>
+      <td>6,106</td>
+      <td>640 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Skjåk</td>
+      <td>0.8 %</td>
+      <td>kr 529</td>
+      <td>kr 1,155,000</td>
+      <td>2,197</td>
+      <td>2,076 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Namsos</td>
+      <td>0.8 %</td>
+      <td>kr 486</td>
+      <td>kr 7,330,000</td>
+      <td>15,230</td>
+      <td>2,133 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Målselv</td>
+      <td>0.8 %</td>
+      <td>kr 447</td>
+      <td>kr 2,952,000</td>
+      <td>6,640</td>
+      <td>3,326 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Grong</td>
+      <td>0.7 %</td>
+      <td>kr 612</td>
+      <td>kr 1,436,000</td>
+      <td>2,359</td>
+      <td>1,136 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Bokn</td>
+      <td>0.7 %</td>
+      <td>kr 601</td>
+      <td>kr 516,000</td>
+      <td>852</td>
+      <td>47 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Båtsfjord</td>
+      <td>0.7 %</td>
+      <td>kr 514</td>
+      <td>kr 1,130,000</td>
+      <td>2,221</td>
+      <td>1,435 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Skjervøy</td>
+      <td>0.7 %</td>
+      <td>kr 489</td>
+      <td>kr 1,414,000</td>
+      <td>2,927</td>
+      <td>474 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Rindal</td>
+      <td>0.7 %</td>
+      <td>kr 480</td>
+      <td>kr 954,000</td>
+      <td>2,003</td>
+      <td>632 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Vardø</td>
+      <td>0.7 %</td>
+      <td>kr 460</td>
+      <td>kr 902,000</td>
+      <td>2,029</td>
+      <td>601 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Ibestad</td>
+      <td>0.6 %</td>
+      <td>kr 509</td>
+      <td>kr 672,000</td>
+      <td>1,361</td>
+      <td>241 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Våler (Hedmark)</td>
+      <td>0.6 %</td>
+      <td>kr 367</td>
+      <td>kr 1,316,000</td>
+      <td>3,662</td>
+      <td>705 km²</td>
+      <td>Innlandet</td>
+    </tr>
+    <tr>
+      <td>Aremark</td>
+      <td>0.4 %</td>
+      <td>kr 282</td>
+      <td>kr 373,000</td>
+      <td>1,325</td>
+      <td>319 km²</td>
+      <td>Viken</td>
+    </tr>
+    <tr>
+      <td>Utsira</td>
+      <td>0.3 %</td>
+      <td>kr 453</td>
+      <td>kr 87,000</td>
+      <td>198</td>
+      <td>6 km²</td>
+      <td>Rogaland</td>
+    </tr>
+    <tr>
+      <td>Evenes</td>
+      <td>0.2 %</td>
+      <td>kr 116</td>
+      <td>kr 154,000</td>
+      <td>1,348</td>
+      <td>253 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Gratangen</td>
+      <td>0.1 %</td>
+      <td>kr 77</td>
+      <td>kr 84,000</td>
+      <td>1,091</td>
+      <td>313 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Bindal</td>
+      <td>0.1 %</td>
+      <td>kr 51</td>
+      <td>kr 71,000</td>
+      <td>1,426</td>
+      <td>1,266 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Kviteseid</td>
+      <td>0.0 %</td>
+      <td>kr 17</td>
+      <td>kr 42,000</td>
+      <td>2,403</td>
+      <td>708 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Værøy</td>
+      <td>0.0 %</td>
+      <td>kr 10</td>
+      <td>kr 7,000</td>
+      <td>728</td>
+      <td>19 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Rødøy</td>
+      <td>0.0 %</td>
+      <td>kr 3</td>
+      <td>kr 4,000</td>
+      <td>1,213</td>
+      <td>711 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Hasvik</td>
+      <td>0.0 %</td>
+      <td>kr 1</td>
+      <td>kr 1,000</td>
+      <td>1,005</td>
+      <td>556 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Træna</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>435</td>
+      <td>17 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Berlevåg</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>957</td>
+      <td>1,122 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Loabák - Lavangen</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>1,034</td>
+      <td>302 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Gamvik</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>1,132</td>
+      <td>1,416 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Vega</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>1,200</td>
+      <td>165 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Hjartdal</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>1,573</td>
+      <td>792 km²</td>
+      <td>Vestfold og Telemark</td>
+    </tr>
+    <tr>
+      <td>Sørfold</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>1,926</td>
+      <td>1,637 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Lødingen</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>2,034</td>
+      <td>527 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Meråker</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>2,422</td>
+      <td>1,274 km²</td>
+      <td>Trøndelag</td>
+    </tr>
+    <tr>
+      <td>Bø</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>2,569</td>
+      <td>247 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Deatnu-Tana</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>2,918</td>
+      <td>4,051 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Porsanger - Porsá?gu - Porsanki</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>3,998</td>
+      <td>4,873 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Etne</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>4,062</td>
+      <td>735 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Tjeldsund</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>4,216</td>
+      <td>814 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Tvedestrand</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>6,053</td>
+      <td>215 km²</td>
+      <td>Agder</td>
+    </tr>
+    <tr>
+      <td>Meløy</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>6,288</td>
+      <td>874 km²</td>
+      <td>Nordland</td>
+    </tr>
+    <tr>
+      <td>Sogndal</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>11,847</td>
+      <td>1,258 km²</td>
+      <td>Vestland</td>
+    </tr>
+    <tr>
+      <td>Senja</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>14,851</td>
+      <td>1,954 km²</td>
+      <td>Troms og Finnmark</td>
+    </tr>
+    <tr>
+      <td>Østre Toten</td>
+      <td>0.0 %</td>
+      <td>kr 0</td>
+      <td>kr 0</td>
+      <td>14,973</td>
+      <td>563 km²</td>
+      <td>Innlandet</td>
+    </tr>
+  </tbody>
+</table>
+  </body>
+</html>.

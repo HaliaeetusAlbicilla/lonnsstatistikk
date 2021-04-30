@@ -1,10 +1,24 @@
 
 <html>
-  <head><title>Pandas dataframe</title></head>
+  <head><title>Pandas dataframe</title>
+  
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.24/datatables.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://naturviterne.northeurope.cloudapp.azure.com/styles/tablestyle.css"/>
+    <script>
+      $(document).ready(function() {
+        $('#kdata').DataTable();
+      } );
+      </script>
+
+  </head>
+
+
 
   <body>
-    <link rel="stylesheet" type="text/css" href="https://naturviterne.northeurope.cloudapp.azure.com/styles/tablestyle.css"/>
-    <table border="1" class="dataframe">
+    
+<table id="kdata" class="display" style="width: 100%;">
   <thead>
     <tr style="text-align: right;">
       <th>Kommuner i fylke</th>
@@ -124,5 +138,7 @@
     </tr>
   </tbody>
 </table>
-  </body>
+
+
+</body>
 </html>.
