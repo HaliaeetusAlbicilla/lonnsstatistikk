@@ -43,7 +43,8 @@ table th {
 
 .smallertable th {
   font-size: 0.8em;
-  margin: .2em 0 .4em;
+  margin: 0em 0 0em;
+  letter-spacing: 0em;
 }
 
 .smallertable td {
@@ -101,7 +102,7 @@ table th, table td:first-child {
     font-weight: bold;
     text-transform: uppercase;
   }
-  
+
   table td:last-child {
     border-bottom: 0;
   }
