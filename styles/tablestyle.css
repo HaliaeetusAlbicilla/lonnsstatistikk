@@ -42,8 +42,12 @@ table th {
 }
 
 .smallertable th {
-  font-size: 0.7em;
+  font-size: 0.8em;
   margin: .2em 0 .4em;
+}
+
+.smallertable td {
+  font-size: 0.7em;
 }
 
 table th, table td:first-child {
