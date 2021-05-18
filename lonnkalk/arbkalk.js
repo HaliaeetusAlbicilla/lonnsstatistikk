@@ -23,6 +23,7 @@ let xskog;
 let xhusd;
 let edY = 2000;
 let edu;
+let utd;
 let salary;
 let experience = new Date().getFullYear() - edY;
 var output2 = document.getElementById("exp");
@@ -91,8 +92,8 @@ function r2() {
             if (this !== prev) {
                 prev = this;
             }
-            edu = this.value;
-            if (edu == "bio") {
+            utd = this.value;
+            if (utd == "bio") {
                 xbio = 1;
                 xforv = 0;
                 xgeo = 0;
@@ -101,7 +102,7 @@ function r2() {
                 xbot = 0;
                 xskog = 0;
                 xhusd = 0;
-            } else if (edu == "forv") {
+            } else if (utd == "forv") {
                 xbio = 0;
                 xforv = 1;
                 xgeo = 0;
@@ -110,7 +111,7 @@ function r2() {
                 xbot = 0;
                 xskog = 0;
                 xhusd = 0;
-            } else if (edu == "geo") {
+            } else if (utd == "geo") {
                 xbio = 0;
                 xforv = 0;
                 xgeo = 1;
@@ -119,7 +120,7 @@ function r2() {
                 xbot = 0;
                 xskog = 0;
                 xhusd = 0;
-            } else if (edu == "kjm") {
+            } else if (utd == "kjm") {
                 xbio = 0;
                 xforv = 0;
                 xgeo = 0;
@@ -128,7 +129,7 @@ function r2() {
                 xbot = 0;
                 xskog = 0;
                 xhusd = 0;
-            } else if (edu == "mat") {
+            } else if (utd == "mat") {
                 xbio = 0;
                 xforv = 0;
                 xgeo = 0;
@@ -137,7 +138,7 @@ function r2() {
                 xbot = 0;
                 xskog = 0;
                 xhusd = 0;
-            } else if (edu == "bot") {
+            } else if (utd == "bot") {
                 xbio = 0;
                 xforv = 0;
                 xgeo = 0;
@@ -146,7 +147,7 @@ function r2() {
                 xbot = 1;
                 xskog = 0;
                 xhusd = 0;
-            } else if (edu == "skog") {
+            } else if (utd == "skog") {
                 xbio = 0;
                 xforv = 0;
                 xgeo = 0;
@@ -155,7 +156,7 @@ function r2() {
                 xbot = 0;
                 xskog = 1;
                 xhusd = 0;
-            } else if (edu == "husd") {
+            } else if (utd == "husd") {
                 xbio = 0;
                 xforv = 0;
                 xgeo = 0;
@@ -164,7 +165,7 @@ function r2() {
                 xbot = 0;
                 xskog = 0;
                 xhusd = 1;
-            } else if (edu == "andre") {
+            } else if (utd == "andre") {
                 xbio = 0;
                 xforv = 0;
                 xgeo = 0;
