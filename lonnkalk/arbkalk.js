@@ -83,7 +83,7 @@ function r1() {
 }
 
 function r2() {
-    var rad = document.utdr;
+    var rad = document.calcutd.utd;
     var prev = null;
     for (var i = 0; i < rad.length; i++) {
         rad[i].addEventListener('change', function () {
