@@ -59,11 +59,11 @@ header {
 
 article {
     float: left;
-    padding: 20px;
-    margin-left: 10%;
-    width: 95%;
+    padding: 0px;
+    margin-left: 0%;
+    width: 100%;
     max-width: 950px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 }
 
 section:after {
