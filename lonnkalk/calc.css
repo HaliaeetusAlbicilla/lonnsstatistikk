@@ -96,10 +96,10 @@ p {
     font-family: "Open Sans", Arial, Sans-serif;
     color: #2c2c2d;
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     display: block;
     margin-block-start: 0em;
-    margin-block-end: 1em;
+    margin-block-end: 0em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
