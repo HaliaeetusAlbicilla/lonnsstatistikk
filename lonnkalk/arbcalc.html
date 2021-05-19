@@ -29,17 +29,17 @@
             <div class="col-md-auto text-center">
                 <div class="container text-left">
                     <form name="calcutd">
-                        <select class="custom-select">
-                            <label class="form-check-label" id="droptitle">Velg utdanningsretning</label><br />
-                            <option name="utd" id="bio" value="bio">Biologi og biovitenskap</option>
-                            <option name="utd" id="forv" value="forv">Forvaltning, ressurser og økologi</option>
-                            <option name="utd" id="geo" value="geo">Geofag</option>
-                            <option name="utd" id="husd" value="husd">Husdyrfag</option>
-                            <option name="utd" id="kjm" value="kjm">Kjemi, matematikk, fysikk</option>
-                            <option name="utd" id="mat" value="mat">Mat, næringsmidler og ernæring</option>
-                            <option name="utd" id="bot" value="bot">Plantevitenskap</option>
-                            <option name="utd" id="skog" value="skog">Skogfag</option>
-                            <option name="utd" id="andre" value="andre">Andre</option>
+                        <select id="utdanning" class="custom-select">
+                            <div class="form-check-label">Velg utdanningsretning</label><br />
+                                <option name="utd" id="bio" value="bio">Biologi og biovitenskap</option>
+                                <option name="utd" id="forv" value="forv">Forvaltning, ressurser og økologi</option>
+                                <option name="utd" id="geo" value="geo">Geofag</option>
+                                <option name="utd" id="husd" value="husd">Husdyrfag</option>
+                                <option name="utd" id="kjm" value="kjm">Kjemi, matematikk, fysikk</option>
+                                <option name="utd" id="mat" value="mat">Mat, næringsmidler og ernæring</option>
+                                <option name="utd" id="bot" value="bot">Plantevitenskap</option>
+                                <option name="utd" id="skog" value="skog">Skogfag</option>
+                                <option name="utd" id="andre" value="andre">Andre</option>
                         </select>
                     </form>
                 </div>
@@ -73,20 +73,18 @@
 
 
                 <br>
+                <form>
 
-                <div class="container text-left">
-                    <form>
+                    <label class="form-control-input" id="radiotitle" for="eduYear">Velg årstallet du fullførte din
+                        utdanning</label>
+                    <div>
+                        <span class="font-weight-bold text-primary ml-2 valueSpan2" , id="demo"></span>
+                        <br>
+                        <input type="range" class="form-control-range" min="1978" max="2020" value="2000" class="slider"
+                            id="eduYear" step="1">
+                    </div>
+                </form>
 
-                        <label class="form-control-input" id="radiotitle" for="eduYear">Velg årstallet du fullførte din
-                            utdanning</label>
-                        <div>
-                            <span class="font-weight-bold text-primary ml-2 valueSpan2" , id="demo"></span>
-                            <br>
-                            <input type="range" class="form-control-range" min="1978" max="2020" value="2000"
-                                class="slider" id="eduYear" step="1">
-                        </div>
-                    </form>
-                </div>
 
 
                 <!-- <p><span id="demo"></span></p> -->
