@@ -25,7 +25,7 @@ let edY = 2000;
 let edu;
 let utd;
 let salary;
-let experience = new Date().getFullYear() - edY;
+let experience = 2020 - edY;
 var output2 = document.getElementById("exp");
 output2.innerHTML = "(Typisk rundt " + experience + " års arbeidserfaring)";
 
@@ -84,102 +84,105 @@ function r1() {
 }
 
 function r2() {
-    var rad = document.calcutd.utd;
-    var prev = null;
+    var rrad = document.getElementById("utdanning");
+    var rad = rrad.value;
+    let utd = rad;
+    console.log("rad: " + rad)
+    console.log("utd: " + utd)
+
     for (var i = 0; i < rad.length; i++) {
-        rad[i].addEventListener('change', function () {
-            (prev) ? console.log(prev.value) : null;
-            if (this !== prev) {
-                prev = this;
-            }
-            utd = this.value;
-            if (utd == "bio") {
-                xbio = 1;
-                xforv = 0;
-                xgeo = 0;
-                xkjm = 0;
-                xmat = 0;
-                xbot = 0;
-                xskog = 0;
-                xhusd = 0;
-            } else if (utd == "forv") {
-                xbio = 0;
-                xforv = 1;
-                xgeo = 0;
-                xkjm = 0;
-                xmat = 0;
-                xbot = 0;
-                xskog = 0;
-                xhusd = 0;
-            } else if (utd == "geo") {
-                xbio = 0;
-                xforv = 0;
-                xgeo = 1;
-                xkjm = 0;
-                xmat = 0;
-                xbot = 0;
-                xskog = 0;
-                xhusd = 0;
-            } else if (utd == "kjm") {
-                xbio = 0;
-                xforv = 0;
-                xgeo = 0;
-                xkjm = 1;
-                xmat = 0;
-                xbot = 0;
-                xskog = 0;
-                xhusd = 0;
-            } else if (utd == "mat") {
-                xbio = 0;
-                xforv = 0;
-                xgeo = 0;
-                xkjm = 0;
-                xmat = 1;
-                xbot = 0;
-                xskog = 0;
-                xhusd = 0;
-            } else if (utd == "bot") {
-                xbio = 0;
-                xforv = 0;
-                xgeo = 0;
-                xkjm = 0;
-                xmat = 0;
-                xbot = 1;
-                xskog = 0;
-                xhusd = 0;
-            } else if (utd == "skog") {
-                xbio = 0;
-                xforv = 0;
-                xgeo = 0;
-                xkjm = 0;
-                xmat = 0;
-                xbot = 0;
-                xskog = 1;
-                xhusd = 0;
-            } else if (utd == "husd") {
-                xbio = 0;
-                xforv = 0;
-                xgeo = 0;
-                xkjm = 0;
-                xmat = 0;
-                xbot = 0;
-                xskog = 0;
-                xhusd = 1;
-            } else if (utd == "andre") {
-                xbio = 0;
-                xforv = 0;
-                xgeo = 0;
-                xkjm = 0;
-                xmat = 0;
-                xbot = 0;
-                xskog = 0;
-                xhusd = 0;
-            };
-            calculate();
-        });
+        rad.textContent = this.value;
+        if (utd == "bio") {
+            xbio = 1;
+            xforv = 0;
+            xgeo = 0;
+            xkjm = 0;
+            xmat = 0;
+            xbot = 0;
+            xskog = 0;
+            xhusd = 0;
+        } else if (utd == "forv") {
+            xbio = 0;
+            xforv = 1;
+            xgeo = 0;
+            xkjm = 0;
+            xmat = 0;
+            xbot = 0;
+            xskog = 0;
+            xhusd = 0;
+        } else if (utd == "geo") {
+            xbio = 0;
+            xforv = 0;
+            xgeo = 1;
+            xkjm = 0;
+            xmat = 0;
+            xbot = 0;
+            xskog = 0;
+            xhusd = 0;
+        } else if (utd == "kjm") {
+            xbio = 0;
+            xforv = 0;
+            xgeo = 0;
+            xkjm = 1;
+            xmat = 0;
+            xbot = 0;
+            xskog = 0;
+            xhusd = 0;
+        } else if (utd == "mat") {
+            xbio = 0;
+            xforv = 0;
+            xgeo = 0;
+            xkjm = 0;
+            xmat = 1;
+            xbot = 0;
+            xskog = 0;
+            xhusd = 0;
+        } else if (utd == "bot") {
+            xbio = 0;
+            xforv = 0;
+            xgeo = 0;
+            xkjm = 0;
+            xmat = 0;
+            xbot = 1;
+            xskog = 0;
+            xhusd = 0;
+        } else if (utd == "skog") {
+            xbio = 0;
+            xforv = 0;
+            xgeo = 0;
+            xkjm = 0;
+            xmat = 0;
+            xbot = 0;
+            xskog = 1;
+            xhusd = 0;
+        } else if (utd == "husd") {
+            xbio = 0;
+            xforv = 0;
+            xgeo = 0;
+            xkjm = 0;
+            xmat = 0;
+            xbot = 0;
+            xskog = 0;
+            xhusd = 1;
+        } else if (utd == "andre") {
+            xbio = 0;
+            xforv = 0;
+            xgeo = 0;
+            xkjm = 0;
+            xmat = 0;
+            xbot = 0;
+            xskog = 0;
+            xhusd = 0;
+        };
+
     }
-    return;
+    calculate();
+
+    document.getElementById("utdanning").onchange = r2;
 }
+
+
+
 
 function slide() {
     var slider = document.getElementById("eduYear");
@@ -191,7 +194,7 @@ function slide() {
         output.innerHTML = this.value;
         edY = slider.value
         calculate();
-        experience = new Date().getFullYear() - edY;
+        experience = 2020 - edY;
         output2.innerHTML = "(Typisk rundt " + experience + " års arbeidserfaring)";
     }
     return;
@@ -199,7 +202,7 @@ function slide() {
 
 var output3 = document.getElementById("salaryTitle");
 function calculate() {
-    salary = Math.round(B0 + B1 * edY + B2 * edY ** 2 + Bbio * xbio + Bforv * xforv + Bgeo * xgeo + Bkjm * xkjm + Bmat * xmat + Bbot * xbot + Bskog + xskog + Bhusd * xhusd);
+    salary = Math.round(B0 + B1 * edY + B2 * edY ** 2 + Bbio * xbio + Bforv * xforv + Bgeo * xgeo + Bkjm * xkjm + Bmat * xmat + Bbot * xbot + Bskog * xskog + Bhusd * xhusd);
     if (isNaN(salary)) {
         document.getElementById('slr').innerHTML = ""
     } else {
