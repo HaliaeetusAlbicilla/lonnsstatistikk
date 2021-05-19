@@ -2,6 +2,7 @@
 // 	document.querySelector('#eduYearOut').value = vol;
 // }
 
+let lonnYear = 2020;
 let B0;
 let B1;
 let B2;
@@ -25,8 +26,11 @@ let edY = 2000;
 let edu;
 let utd;
 let salary;
-let experience = 2020 - edY;
+let experience = lonnYear - edY;
 var output2 = document.getElementById("exp");
+
+
+
 output2.innerHTML = "(Typisk rundt " + experience + " års arbeidserfaring)";
 
 function r1() {
@@ -87,7 +91,6 @@ function r2() {
     var rrad = document.getElementById("utdanning");
     var rad = rrad.value;
     let utd = rad;
-    console.log("rad: " + rad)
     console.log("utd: " + utd)
 
     for (var i = 0; i < rad.length; i++) {
@@ -194,14 +197,16 @@ function slide() {
         output.innerHTML = this.value;
         edY = slider.value
         calculate();
-        experience = 2020 - edY;
+        experience = lonnYear - edY;
         output2.innerHTML = "(Typisk rundt " + experience + " års arbeidserfaring)";
     }
     return;
 }
 
 var output3 = document.getElementById("salaryTitle");
+var output4 = document.getElementById("lonnyear");
 function calculate() {
+
     salary = Math.round(B0 + B1 * edY + B2 * edY ** 2 + Bbio * xbio + Bforv * xforv + Bgeo * xgeo + Bkjm * xkjm + Bmat * xmat + Bbot * xbot + Bskog * xskog + Bhusd * xhusd);
     if (isNaN(salary)) {
         document.getElementById('slr').innerHTML = ""
@@ -209,10 +214,12 @@ function calculate() {
         if (document.getElementById('slr') !== 0) {
             document.getElementById('slr').innerHTML = "kr " + Intl.NumberFormat('no-NB', { style: 'decimal' }).format(salary)
             output3.innerHTML = "Årslønn";
+            output4.innerHTML = "Tall fra lønnsstatistikken " + lonnYear + " (minimum mastergrad)"
         }
         return salary;
     }
 }
+
 
 
 
