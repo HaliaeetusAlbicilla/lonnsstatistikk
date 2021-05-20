@@ -1,7 +1,3 @@
-// function outputUpdate(vol) {
-// 	document.querySelector('#eduYearOut').value = vol;
-// }
-
 let lonnYear = 2020;
 let B0;
 let B1;
@@ -30,9 +26,10 @@ let sectorSelected = {
 let edY = 2000;
 let salary;
 let experience = lonnYear - edY;
+
+let slider = document.getElementById("eduYear");
+let output = document.getElementById("demo");
 let output2 = document.getElementById("exp");
-
-
 
 output2.innerHTML = "(Typisk rundt " + experience + " års arbeidserfaring)";
 
@@ -45,12 +42,12 @@ function r1() {
             if (this !== prev2) {
                 prev2 = this;
             }
-            let sektor = this.value
+            let sektor = this.value;
 
             if (sektor == "privat") {
-                B0 = -719187559.8803
-                B1 = 728169.1983
-                B2 = -184.1027
+                B0 = -719187559.8803;
+                B1 = 728169.1983;
+                B2 = -184.1027;
                 sectorValues = {
                     'bio': 17319.9796,
                     'forv': 6939.7593,
@@ -62,9 +59,9 @@ function r1() {
                     'husd': -60653.7865,
                 };
             } else if (sektor == "stat") {
-                B0 = -569365091.0101
-                B1 = 575474.4390
-                B2 = -145.2287
+                B0 = -569365091.0101;
+                B1 = 575474.4390;
+                B2 = -145.2287;
                 sectorValues = {
                     'bio': -11246.3845,
                     'forv': -10108.5535,
@@ -76,9 +73,9 @@ function r1() {
                     'husd': -18523.1286,
                 };
             } else if (sektor == "kommune") {
-                B0 = -374049466.2390
-                B1 = 379437.5480
-                B2 = -96.0375
+                B0 = -374049466.2390;
+                B1 = 379437.5480;
+                B2 = -96.0375;
                 sectorValues = {
                     'bio': -6322.7349,
                     'forv': -7672.3669,
@@ -93,15 +90,12 @@ function r1() {
             calculate();
         });
     }
-    return;
 }
 
 function r2() {
     let rrad = document.getElementById("utdanning");
-    let rad = rrad.value;
-    rad.textContent = this.value;
-    let utd = rad;
-    console.log("utd: " + utd);
+    rrad.onchange = r2;
+    const utd = rrad.value;
 
     Object.keys(sectorSelected).forEach(key => { // Loop trough all keys
         sectorSelected[key] = (key === utd) ? 1 : 0; // Set the selected key to 1 and others to 0
@@ -109,46 +103,34 @@ function r2() {
 
     calculate();
 
-    document.getElementById("utdanning").onchange = r2;
+    console.log("utd: " + utd);
 }
 
 function slide() {
-    let slider = document.getElementById("eduYear");
-    let output = document.getElementById("demo");
-    let output2 = document.getElementById("exp");
-
     output.innerHTML = slider.value;
     slider.oninput = function () {
         output.innerHTML = this.value;
-        edY = slider.value
+        edY = slider.value;
         calculate();
         experience = lonnYear - edY;
         output2.innerHTML = "(Typisk rundt " + experience + " års arbeidserfaring)";
     }
-    return;
 }
 
-let output3 = document.getElementById("salaryTitle");
-let output4 = document.getElementById("lonnyear");
 function calculate() {
-    const keys = Object.keys(sectorValues);
     let partialResult = 0;
-    keys.forEach((key, index) => {
+    Object.keys(sectorValues).forEach(key => {
         partialResult += (sectorValues[key] * sectorSelected[key]);
     });
 
-
     salary = Math.round(B0 + B1 * edY + B2 * edY ** 2 + partialResult);
     if (isNaN(salary)) {
-        document.getElementById('slr').innerHTML = ""
-    } else {
-        if (document.getElementById('slr') !== 0) {
-            document.getElementById('slr').innerHTML = "kr " + Intl.NumberFormat('no-NB', { style: 'decimal' }).format(salary)
-            output3.innerHTML = "Årslønn";
-            output4.innerHTML = "Tall fra lønnsstatistikken " + lonnYear + " (minimum mastergrad)"
-        }
-        return salary;
+        document.getElementById('slr').innerHTML = "";
+        return; // Stop the function here
     }
+    document.getElementById('slr').innerHTML = "kr " + Intl.NumberFormat('no-NB', { style: 'decimal' }).format(salary);
+    document.getElementById("salaryTitle").innerHTML = "Årslønn";
+    document.getElementById("lonnyear").innerHTML = "Tall fra lønnsstatistikken " + lonnYear + " (minimum mastergrad)";
 }
 
 r1();
