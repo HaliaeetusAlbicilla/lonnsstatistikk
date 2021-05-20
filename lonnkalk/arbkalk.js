@@ -27,22 +27,22 @@ let edu;
 let utd;
 let salary;
 let experience = lonnYear - edY;
-var output2 = document.getElementById("exp");
+let output2 = document.getElementById("exp");
 
 
 
 output2.innerHTML = "(Typisk rundt " + experience + " års arbeidserfaring)";
 
 function r1() {
-    var rad2 = document.calcSector.sector;
-    var prev2 = null;
-    for (var i = 0; i < rad2.length; i++) {
+    let rad2 = document.calcSector.sector;
+    let prev2 = null;
+    for (let i = 0; i < rad2.length; i++) {
         rad2[i].addEventListener('change', function () {
             (prev2) ? console.log("forrige verdi: " + prev2.value) : null;
             if (this !== prev2) {
                 prev2 = this;
             }
-            var sektor = this.value
+            let sektor = this.value
 
             if (sektor == "privat") {
                 B0 = -719187559.8803
@@ -88,12 +88,12 @@ function r1() {
 }
 
 function r2() {
-    var rrad = document.getElementById("utdanning");
-    var rad = rrad.value;
+    let rrad = document.getElementById("utdanning");
+    let rad = rrad.value;
     let utd = rad;
     console.log("utd: " + utd)
 
-    for (var i = 0; i < rad.length; i++) {
+    for (let i = 0; i < rad.length; i++) {
         rad.textContent = this.value;
         if (utd == "bio") {
             xbio = 1;
@@ -188,9 +188,9 @@ function r2() {
 
 
 function slide() {
-    var slider = document.getElementById("eduYear");
-    var output = document.getElementById("demo");
-    var output2 = document.getElementById("exp");
+    let slider = document.getElementById("eduYear");
+    let output = document.getElementById("demo");
+    let output2 = document.getElementById("exp");
 
     output.innerHTML = slider.value;
     slider.oninput = function () {
@@ -203,8 +203,8 @@ function slide() {
     return;
 }
 
-var output3 = document.getElementById("salaryTitle");
-var output4 = document.getElementById("lonnyear");
+let output3 = document.getElementById("salaryTitle");
+let output4 = document.getElementById("lonnyear");
 function calculate() {
 
     salary = Math.round(B0 + B1 * edY + B2 * edY ** 2 + Bbio * xbio + Bforv * xforv + Bgeo * xgeo + Bkjm * xkjm + Bmat * xmat + Bbot * xbot + Bskog * xskog + Bhusd * xhusd);
