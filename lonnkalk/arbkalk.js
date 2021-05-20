@@ -6,25 +6,28 @@ let lonnYear = 2020;
 let B0;
 let B1;
 let B2;
-let Bbio;
-let Bforv;
-let Bgeo;
-let Bkjm;
-let Bmat;
-let Bbot;
-let Bskog;
-let Bhusd;
-let xbio;
-let xforv;
-let xgeo;
-let xkjm;
-let xmat;
-let xbot;
-let xskog;
-let xhusd;
+let sectorValues = {
+    'bio': 0,
+    'forv': 0,
+    'geo': 0,
+    'kjm': 0,
+    'mat': 0,
+    'bot': 0,
+    'skog': 0,
+    'husd': 0,
+}
+let sectorSelected = {
+    'bio': 0,
+    'forv': 0,
+    'geo': 0,
+    'kjm': 0,
+    'mat': 0,
+    'bot': 0,
+    'skog': 0,
+    'husd': 0,
+};
+
 let edY = 2000;
-let edu;
-let utd;
 let salary;
 let experience = lonnYear - edY;
 let output2 = document.getElementById("exp");
@@ -48,38 +51,44 @@ function r1() {
                 B0 = -719187559.8803
                 B1 = 728169.1983
                 B2 = -184.1027
-                Bbio = 17319.9796
-                Bforv = 6939.7593
-                Bgeo = 142068.4194
-                Bkjm = 105495.5348
-                Bmat = -5515.6457
-                Bbot = -60831.3715
-                Bskog = -38632.8333
-                Bhusd = -60653.7865
+                sectorValues = {
+                    'bio': 17319.9796,
+                    'forv': 6939.7593,
+                    'geo': 142068.4194,
+                    'kjm': 105495.5348,
+                    'mat': -5515.6457,
+                    'bot': -60831.3715,
+                    'skog': -38632.8333,
+                    'husd': -60653.7865,
+                };
             } else if (sektor == "stat") {
                 B0 = -569365091.0101
                 B1 = 575474.4390
                 B2 = -145.2287
-                Bbio = -11246.3845
-                Bforv = -10108.5535
-                Bgeo = 5243.5102
-                Bkjm = 9031.0740
-                Bmat = -49810.6803
-                Bbot = -47561.4874
-                Bskog = -8235.6129
-                Bhusd = -18523.1286
+                sectorValues = {
+                    'bio': -11246.3845,
+                    'forv': -10108.5535,
+                    'geo': 5243.5102,
+                    'kjm': 9031.0740,
+                    'mat': -49810.6803,
+                    'bot': -47561.4874,
+                    'skog': -8235.6129,
+                    'husd': -18523.1286,
+                };
             } else if (sektor == "kommune") {
                 B0 = -374049466.2390
                 B1 = 379437.5480
                 B2 = -96.0375
-                Bbio = -6322.7349
-                Bforv = -7672.3669
-                Bgeo = -5632.6569
-                Bkjm = 15572.3016
-                Bmat = -22646.6145
-                Bbot = -22089.5250
-                Bskog = -12716.9909
-                Bhusd = -34277.7046
+                sectorValues = {
+                    'bio': -6322.7349,
+                    'forv': -7672.3669,
+                    'geo': -5632.6569,
+                    'kjm': 15572.3016,
+                    'mat': -22646.6145,
+                    'bot': -22089.5250,
+                    'skog': -12716.9909,
+                    'husd': -34277.7046,
+                };
             }
             calculate();
         });
@@ -90,102 +99,18 @@ function r1() {
 function r2() {
     let rrad = document.getElementById("utdanning");
     let rad = rrad.value;
+    rad.textContent = this.value;
     let utd = rad;
-    console.log("utd: " + utd)
+    console.log("utd: " + utd);
 
-    for (let i = 0; i < rad.length; i++) {
-        rad.textContent = this.value;
-        if (utd == "bio") {
-            xbio = 1;
-            xforv = 0;
-            xgeo = 0;
-            xkjm = 0;
-            xmat = 0;
-            xbot = 0;
-            xskog = 0;
-            xhusd = 0;
-        } else if (utd == "forv") {
-            xbio = 0;
-            xforv = 1;
-            xgeo = 0;
-            xkjm = 0;
-            xmat = 0;
-            xbot = 0;
-            xskog = 0;
-            xhusd = 0;
-        } else if (utd == "geo") {
-            xbio = 0;
-            xforv = 0;
-            xgeo = 1;
-            xkjm = 0;
-            xmat = 0;
-            xbot = 0;
-            xskog = 0;
-            xhusd = 0;
-        } else if (utd == "kjm") {
-            xbio = 0;
-            xforv = 0;
-            xgeo = 0;
-            xkjm = 1;
-            xmat = 0;
-            xbot = 0;
-            xskog = 0;
-            xhusd = 0;
-        } else if (utd == "mat") {
-            xbio = 0;
-            xforv = 0;
-            xgeo = 0;
-            xkjm = 0;
-            xmat = 1;
-            xbot = 0;
-            xskog = 0;
-            xhusd = 0;
-        } else if (utd == "bot") {
-            xbio = 0;
-            xforv = 0;
-            xgeo = 0;
-            xkjm = 0;
-            xmat = 0;
-            xbot = 1;
-            xskog = 0;
-            xhusd = 0;
-        } else if (utd == "skog") {
-            xbio = 0;
-            xforv = 0;
-            xgeo = 0;
-            xkjm = 0;
-            xmat = 0;
-            xbot = 0;
-            xskog = 1;
-            xhusd = 0;
-        } else if (utd == "husd") {
-            xbio = 0;
-            xforv = 0;
-            xgeo = 0;
-            xkjm = 0;
-            xmat = 0;
-            xbot = 0;
-            xskog = 0;
-            xhusd = 1;
-        } else if (utd == "andre") {
-            xbio = 0;
-            xforv = 0;
-            xgeo = 0;
-            xkjm = 0;
-            xmat = 0;
-            xbot = 0;
-            xskog = 0;
-            xhusd = 0;
-        };
+    Object.keys(sectorSelected).forEach(key => { // Loop trough all keys
+        sectorSelected[key] = (key === utd) ? 1 : 0; // Set the selected key to 1 and others to 0
+    });
 
-    }
     calculate();
 
     document.getElementById("utdanning").onchange = r2;
 }
-
-
-
 
 function slide() {
     let slider = document.getElementById("eduYear");
@@ -206,8 +131,14 @@ function slide() {
 let output3 = document.getElementById("salaryTitle");
 let output4 = document.getElementById("lonnyear");
 function calculate() {
+    const keys = Object.keys(sectorValues);
+    let partialResult = 0;
+    keys.forEach((key, index) => {
+        partialResult += (sectorValues[key] * sectorSelected[key]);
+    });
 
-    salary = Math.round(B0 + B1 * edY + B2 * edY ** 2 + Bbio * xbio + Bforv * xforv + Bgeo * xgeo + Bkjm * xkjm + Bmat * xmat + Bbot * xbot + Bskog * xskog + Bhusd * xhusd);
+
+    salary = Math.round(B0 + B1 * edY + B2 * edY ** 2 + partialResult);
     if (isNaN(salary)) {
         document.getElementById('slr').innerHTML = ""
     } else {
@@ -219,10 +150,6 @@ function calculate() {
         return salary;
     }
 }
-
-
-
-
 
 r1();
 r2();
