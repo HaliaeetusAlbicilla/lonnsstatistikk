@@ -82,6 +82,10 @@ section:after {
     min-height: 3rem;
 }
 
+.lccontainer {
+    min-height: 635px;
+}
+
 .highcharts-container {
     width: 100%;
     height: 500px;
