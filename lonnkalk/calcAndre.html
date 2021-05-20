@@ -20,214 +20,83 @@
 
 <body>
 
+    <article>
 
+        <div class="container p-3 mt-3 border col-12 lccontainer">
+            <div class="row justify-content-left">
+                <div class="col-12 text-left">
 
-    <div class="container p-3 mt-3 border col-12 lccontainer">
-        <div class="row justify-content-left">
-            <div class="col-12 text-left">
-
-                <form name="calcutd">
-                    <select id="utdanning" class="custom-select">
-                        <div class="form-check-label">Velg utdanningsretning</label><br />
-                            <option name="utd" id="bio" value="bio">Biologi og biovitenskap</option>
-                            <option name="utd" id="forv" value="forv">Forvaltning, ressurser og økologi</option>
-                            <option name="utd" id="geo" value="geo">Geofag</option>
-                            <option <!DOCTYPE html>
-                                <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-                                <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-                                <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-                                <!--[if gt IE 8]><!-->
-                                <html class="no-js">
-                                <!--<![endif]-->
-
-                                <head>
-                                    <meta charset="utf-8">
-                                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                                    <title>Lønnskalkulator</title>
-                                    <meta name="description" content="">
-                                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                                    <link rel="stylesheet"
-                                        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-                                        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-                                        crossorigin="anonymous">
-                                    <link rel="stylesheet" href="calc.css">
-                                    <script
-                                        src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                                </head>
-
-                                <body>
-
-
-
-                                    <div class="container p-3 my-3">
-                                        <div class="row justify-content-md-center">
-
-
-                                            <div class="col-md-auto text-left">
-
-                                                <form name="calcutd">
-                                                    <select id="utdanning" class="custom-select">
-                                                        <div class="form-check-label">Velg
-                                                            utdanningsretning</label><br />
-                                                            <option name="utd" id="bio" value="bio">Biologi og
-                                                                biovitenskap</option>
-                                                            <option name="utd" id="forv" value="forv">Forvaltning,
-                                                                ressurser og økologi</option>
-                                                            <option name="utd" id="geo" value="geo">Geofag</option>
-                                                            <option name="utd" id="husd" value="husd">Husdyrfag
-                                                            </option>
-                                                            <option name="utd" id="kjm" value="kjm">Kjemi,
-                                                                matematikk,
-                                                                fysikk</option>
-                                                            <option name="utd" id="mat" value="mat">Mat,
-                                                                næringsmidler
-                                                                og ernæring</option>
-                                                            <option name="utd" id="bot" value="bot">
-                                                                Plantevitenskap
-                                                            </option>
-                                                            <option name="utd" id="skog" value="skog">Skogfag
-                                                            </option>
-                                                            <option selected name="utd" id="andre" value="andre">Andre
-                                                            </option>
-                                                        </div>
-                                                    </select>
-                                                </form>
-                                                <br>
-                                                <form name="calcSector">
-                                                    <label class="form-check-label" id="radiotitle" for="radio">Velg
-                                                        sektor</label><br />
-                                                    <div class="custom-control custom-radio">
-                                                        <input class="form-control-input" type="radio" name="sector"
-                                                            id="stat" value="stat">
-                                                        <label class="form-check-label" for="stat">
-                                                            Stat
-                                                        </label>
-                                                    </div>
-                                                    <div class="custom-control custom-radio">
-                                                        <input class="form-control-input" type="radio" name="sector"
-                                                            id="kommune" value="kommune">
-                                                        <label class="form-check-label" for="kommune">
-                                                            Kommune
-                                                        </label>
-                                                    </div>
-                                                    <div class="custom-control custom-radio">
-                                                        <input class="form-control-input" type="radio" name="sector"
-                                                            id="privat" value="privat">
-                                                        <label class="form-check-label" for="privat">
-                                                            Privat
-                                                        </label>
-                                                    </div>
-                                                </form>
-                                                <br>
-                                                <form>
-                                                    <label class="form-control-input" id="radiotitle" for="eduYear">Velg
-                                                        årstallet du fullførte din
-                                                        mastergrad</label>
-                                                    <div>
-                                                        <span class="font-weight-bold text-primary ml-2 valueSpan2" ,
-                                                            id="demo"></span>
-                                                        <br>
-                                                        <input type="range" class="form-control-range" min="1978"
-                                                            max="2020" value="2000" class="slider" id="eduYear"
-                                                            step="1">
-                                                    </div>
-                                                </form>
-
-                                                <!-- <p><span id="demo"></span></p> -->
-                                                <div class="arbeidserfaring"><span style="font-style:italic"
-                                                        id="exp"></span></div>
-                                                <label class="form-check-label" id="salaryTitle"
-                                                    for="slr"></label><br />
-                                                <p id="slr"></p>
-                                                <div class="arbeidserfaring text-right"><span style="font-style:italic"
-                                                        id="lonnyear"></p>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-
-                                        <script src="arbkalk.js"></script>
-                                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                                            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                                            crossorigin="anonymous"></script>
-                                        <script
-                                            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                                            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                                            crossorigin="anonymous"></script>
-                                        <script
-                                            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                                            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                                            crossorigin="anonymous"></script>
-
-                                </body>
-
-                                </html>name="utd" id="husd" value="husd">Husdyrfag
-                            </option>
-                            <option name="utd" id="kjm" value="kjm">Kjemi, matematikk, fysikk</option>
-                            <option name="utd" id="mat" value="mat">Mat, næringsmidler og ernæring</option>
-                            <option name="utd" id="bot" value="bot">Plantevitenskap</option>
-                            <option name="utd" id="skog" value="skog">Skogfag</option>
-                            <option name="utd" id="andre" value="andre">Andre</option>
+                    <form name="calcutd">
+                        <select id="utdanning" class="custom-select">
+                            <div class="form-check-label">Velg utdanningsretning</label><br />
+                                <option name="utd" id="bio" value="bio">Biologi og biovitenskap</option>
+                                <option name="utd" id="forv" value="forv">Forvaltning, ressurser og økologi</option>
+                                <option name="utd" id="geo" value="geo">Geofag</option>
+                                <option name="utd" id="husd" value="husd">Husdyrfag</option>
+                                <option name="utd" id="kjm" value="kjm">Kjemi, matematikk, fysikk</option>
+                                <option name="utd" id="mat" value="mat">Mat, næringsmidler og ernæring</option>
+                                <option name="utd" id="bot" value="bot">Plantevitenskap</option>
+                                <option name="utd" id="skog" value="skog">Skogfag</option>
+                                <option selected name="utd" id="andre" value="andre">Andre</option>
+                            </div>
+                        </select>
+                    </form>
+                    <br>
+                    <form name="calcSector">
+                        <label class="form-check-label" id="radiotitle" for="radio">Velg sektor</label><br />
+                        <div class="custom-control custom-radio">
+                            <input class="form-control-input" type="radio" name="sector" id="stat" value="stat">
+                            <label class="form-check-label" for="stat">
+                                Stat
+                            </label>
                         </div>
-                    </select>
-                </form>
-                <br>
-                <form name="calcSector">
-                    <label class="form-check-label" id="radiotitle" for="radio">Velg sektor</label><br />
-                    <div class="custom-control custom-radio">
-                        <input class="form-control-input" type="radio" name="sector" id="stat" value="stat">
-                        <label class="form-check-label" for="stat">
-                            Stat
-                        </label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input class="form-control-input" type="radio" name="sector" id="kommune" value="kommune">
-                        <label class="form-check-label" for="kommune">
-                            Kommune
-                        </label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input class="form-control-input" type="radio" name="sector" id="privat" value="privat">
-                        <label class="form-check-label" for="privat">
-                            Privat
-                        </label>
-                    </div>
-                </form>
-                <br>
-                <form>
-                    <label class="form-control-input" id="radiotitle" for="eduYear">Velg årstallet du fullførte din
-                        mastergrad</label>
-                    <div>
-                        <span class="font-weight-bold text-primary ml-2 valueSpan2" , id="demo"></span>
-                        <br>
-                        <input type="range" class="form-control-range" min="1978" max="2020" value="2000" class="slider"
-                            id="eduYear" step="1">
-                    </div>
-                </form>
+                        <div class="custom-control custom-radio">
+                            <input class="form-control-input" type="radio" name="sector" id="kommune" value="kommune">
+                            <label class="form-check-label" for="kommune">
+                                Kommune
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input class="form-control-input" type="radio" name="sector" id="privat" value="privat">
+                            <label class="form-check-label" for="privat">
+                                Privat
+                            </label>
+                        </div>
+                    </form>
+                    <br>
+                    <form>
+                        <label class="form-control-input" id="radiotitle" for="eduYear">Velg årstallet du fullførte din
+                            mastergrad</label>
+                        <div>
+                            <span class="font-weight-bold text-primary ml-2 valueSpan2" , id="demo"></span>
+                            <br>
+                            <input type="range" class="form-control-range" min="1978" max="2020" value="2000"
+                                class="slider" id="eduYear" step="1">
+                        </div>
+                    </form>
 
-                <!-- <p><span id="demo"></span></p> -->
-                <div class="arbeidserfaring"><span style="font-style:italic" id="exp"></span></div>
-                <label class="form-check-label" id="salaryTitle" for="slr"></label><br />
-                <p id="slr"></p>
-                <div class="arbeidserfaring text-right"><span style="font-style:italic" id="lonnyear"></p>
+                    <!-- <p><span id="demo"></span></p> -->
+                    <div class="arbeidserfaring"><span style="font-style:italic" id="exp"></span></div>
+                    <label class="form-check-label" id="salaryTitle" for="slr"></label><br />
+                    <p id="slr"></p>
+                    <div class="arbeidserfaring text-right"><span style="font-style:italic" id="lonnyear"></p>
+                    </div>
+
                 </div>
-
             </div>
-        </div>
 
 
-        <script src="arbkalk.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-
+            <script src="arbkalk.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+    </article>
 </body>
 
 </html>
