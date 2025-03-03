@@ -2,7 +2,7 @@
 // 	document.querySelector('#eduYearOut').value = vol;
 // }
 
-let statYear = 2020
+let statYear = 2024
 let B0;
 let B1;
 let B2;
